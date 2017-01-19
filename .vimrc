@@ -17,6 +17,9 @@ let g:go_highlight_build_constraints = 1
 set hlsearch
 set clipboard=unnamedplus
 set showcmd
+set path+=**
+
+set wildmenu
 
 "Aliases"
 :command Tree NERDTreeToggle 
