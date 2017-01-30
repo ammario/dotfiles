@@ -1,5 +1,5 @@
 set nocompatible              " be iMproved, required
-filetype off                  " required
+"filetype off                  " required
 
 set number
 syntax on
@@ -7,6 +7,9 @@ set backspace=indent,eol,start
 set laststatus=2
 set statusline+=%F
 let g:neocomplete#enable_at_startup = 1
+set hidden
+
+" Go related settings "
 let g:go_fmt_command = "goimports"
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
@@ -14,6 +17,16 @@ let g:go_highlight_fields = 1
 let g:go_highlight_types = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+
+" Rust related settings "
+let g:rustfmt_autosave = 1
+autocmd BufNewFile,BufRead *.rs set filetype=rust
+let g:racer_cmd = "/path/to/racer/bin"
+let g:racer_experimental_completer = 1
+
+" ASM related settings "
+autocmd BufNewFile,BufRead *.s set filetype=nasm
+
 set hlsearch
 set clipboard=unnamedplus
 set showcmd
@@ -37,6 +50,10 @@ Plugin 'fatih/vim-go'
 Plugin 'Shougo/neocomplete.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
+Plugin 'rust-lang/rust.vim'
+Plugin 'racer-rust/vim-racer'
+
+Bundle 'uarun/vim-protobuf'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

@@ -125,7 +125,7 @@ tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | s
 
 export GOPATH=~/Projects/gopath/
 export GOROOT=/usr/local/go
-export PATH=$PATH:~/bin:$GOPATH/bin/:/usr/local/go/bin
+export PATH=$PATH:~/bin:$GOPATH/bin/:/usr/local/go/bin:~/.cargo/bin
 
 PATH="/home/ammar/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/ammar/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
