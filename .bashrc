@@ -144,3 +144,6 @@ tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | s
 # Run twolfson/sexy-bash-prompt
 . ~/.bash_prompt
 alias tb="nc termbin.com 9999"
+
+# Consolidate history for all terminals
+export PROMPT_COMMAND='history -a'
