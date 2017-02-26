@@ -7,6 +7,9 @@
 	insteadOf = https://github.com/
 [mergetool]
 	prompt = false
+	keepBackup = false
 [merge]
 	tool = vimdiff
 	conflictstyle = diff3
+[commit]
+	gpgsign = true
