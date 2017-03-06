@@ -62,8 +62,10 @@ fi
 source ~/.git-prompt.sh
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$$(__git_ps1) '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;36m\]\w\[\033[00m\]\$$(__git_ps1) '
 else
+
+    echo "HELLO!"
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$$(__git_ps1) '
 fi
 unset color_prompt force_color_prompt
@@ -127,11 +129,12 @@ export GOPATH=~/Projects/gopath/
 export GOROOT=/usr/local/go
 export PATH=$PATH:~/bin:$GOPATH/bin/:/usr/local/go/bin:~/.cargo/bin
 
+PATH="/home/ammar/perl5/bin${PATH:+:${PATH}}"; export PATH;
+PERL5LIB="/home/ammar/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/home/ammar/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/home/ammar/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/home/ammar/perl5"; export PERL_MM_OPT;
 
-
-# The next line enables shell command completion for gcloud.
-transfer() { if [ $# -eq 0 ]; then echo "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi 
-tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; } 
 
 # Run twolfson/sexy-bash-prompt
 . ~/.bash_prompt
@@ -139,3 +142,13 @@ alias tb="nc termbin.com 9999"
 
 # Consolidate history for all terminals
 export PROMPT_COMMAND='history -a'
+alias suspend="sudo pm-suspend"
+transfer() { if [ $# -eq 0 ]; then echo "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi 
+	tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; } 
+setxkbmap -option ctrl:nocaps
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/ammar/Downloads/google-cloud-sdk/path.bash.inc' ]; then source '/home/ammar/Downloads/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/ammar/Downloads/google-cloud-sdk/completion.bash.inc' ]; then source '/home/ammar/Downloads/google-cloud-sdk/completion.bash.inc'; fi
