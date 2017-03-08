@@ -1,0 +1,13 @@
+[user]
+	name = Ammar Bandukwala
+	email = ammar@ammar.io
+[push]
+	default = simple
+[mergetool]
+	prompt = false
+	keepBackup = false
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+[credential]
+	helper = cache
