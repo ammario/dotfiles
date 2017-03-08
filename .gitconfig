@@ -1,6 +1,7 @@
 [user]
 	name = Ammar Bandukwala
 	email = ammar@ammar.io
+	signingkey = EF1A4458
 [push]
 	default = simple
 [url "git@github.com:"]
@@ -13,3 +14,5 @@
 	conflictstyle = diff3
 [commit]
 	gpgsign = true
+[credential]
+	helper = cache
