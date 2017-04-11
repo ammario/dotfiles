@@ -1,7 +1,9 @@
 #!/bin/bash
-sudo apt-get install git vim-gnome i3 i3blocks arandr gdebi synergy keepassx tor torbrowser-launcher wget openvpn lsyncd
+sudo apt-get install git vim-gnome i3 i3blocks arandr gdebi synergy keepassx tor torbrowser-launcher wget openvpn lsyncd arc-theme qbittorrent
 
-go get github.com/gsamokovarov/jump
+
+
+cd /tmp
 git clone https://github.com/gsamokovarov/jump
 cd jump
 make

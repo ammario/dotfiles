@@ -151,3 +151,14 @@ if [ -f '/home/ammar/Downloads/google-cloud-sdk/path.bash.inc' ]; then source '/
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/ammar/Downloads/google-cloud-sdk/completion.bash.inc' ]; then source '/home/ammar/Downloads/google-cloud-sdk/completion.bash.inc'; fi
 eval "$(jump shell)"
+
+
+__fp_ls() {
+       COMPREPLY=()
+       cur=${COMP_WORDS[COMP_CWORD]}
+       COMPREPLY=( $( compgen -W '$(fp --bash ls)' -- $cur ) )
+}
+complete -F __fp_ls fp
+
+# disable bluetooth
+rfkill block bluetooth
