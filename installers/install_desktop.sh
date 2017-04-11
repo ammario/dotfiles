@@ -1,6 +1,8 @@
 #!/bin/bash
-sudo apt-get install git vim-gnome i3 i3blocks arandr gdebi synergy keepassx tor torbrowser-launcher wget openvpn lsyncd arc-theme qbittorrent
+sudo apt-get install git vim-gnome i3 i3blocks arandr gdebi synergy keepassx tor torbrowser-launcher wget openvpn lsyncd qbittorrent
 
+#theme stuff
+sudo apt-get install lxappearance arc-theme
 
 
 cd /tmp
