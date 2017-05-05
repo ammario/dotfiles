@@ -1,0 +1,39 @@
+// Place your settings in this file to overwrite the default settings
+{
+        "editor.renderWhitespace": "all",
+        // "go.useCodeSnippetsOnFunctionSuggest": true,
+        "go.formatTool": "goimports",
+        "go.gopath": "/home/ammar/go",
+        "files.associations": {
+            "*.tmpl": "html"
+        },
+        
+        "editor.wordWrap": "on",
+        "window.zoomLevel": 0,
+        "editor.fontFamily": "'Ubuntu Mono'",
+        "workbench.iconTheme": "vscode-icons",
+        "[cpp]": {
+            "editor.quickSuggestions": false
+        },
+        "[c]": {
+            "editor.quickSuggestions": false
+        },
+        "rust.actionOnSave": "clippy",
+        "workbench.colorTheme": "Atom One Dark",
+        "vsicons.projectDetection.disableDetect": true,
+
+        //customizations for Atom One Dark
+        "workbench.colorCustomizations": {
+		"editor.background": "#120F12",
+		"editor.foreground": "#ffffff",
+		"editor.selectionBackground": "#045577",
+		"editor.lineHighlightBackground": "#1e1e1e",
+		"editorCursor.foreground": "#ffffff",
+		"editorWhitespace.foreground": "#404040",
+		"tab.inactiveBackground": "#282828",
+		"panel.background": "#222222",
+		"statusBar.background": "#0f0f0f",
+		"activityBar.background": "#120F12",
+		"sideBar.background": "#1f1f1f"
+        }
+    } 

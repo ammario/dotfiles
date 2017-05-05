@@ -161,3 +161,5 @@ complete -F __fp_ls fp
 
 # disable bluetooth
 rfkill block bluetooth
+
+source ~/.cargo/env 
