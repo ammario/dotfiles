@@ -124,7 +124,7 @@ if ! shopt -oq posix; then
 fi 
 
 export GOROOT=/usr/local/go
-export PATH=$PATH:~/bin:~/go/bin/:/usr/local/go/bin:~/.cargo/bin
+export PATH=$PATH:~/bin:~/go/bin/:/usr/local/go/bin:~/.cargo/bin:~/Projects/coder/bin
 
 PATH="/home/ammar/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/home/ammar/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;

@@ -44,9 +44,10 @@
 		"editorCursor.foreground": "#ffffff",
 		"editorWhitespace.foreground": "#404040",
 		"tab.inactiveBackground": "#282828",
-		"panel.background": "#222222",
+		"panel.background": "#0f0f0f",
 		"statusBar.background": "#0f0f0f",
 		"activityBar.background": "#120F12",
-		"sideBar.background": "#1f1f1f"
-        }
+		"sideBar.background": "#0f0f0f"
+        }, 
+        "rust.showOutput": false
     } 

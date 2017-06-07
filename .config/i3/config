@@ -163,11 +163,11 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-## Custom shit
+## Keybinds
 bindsym $mod+ctrl+l exec i3lock -f -c 04162B 
-bindsym $mod+ctrl+s exec sudo pm-suspend 
+bindsym $mod+ctrl+s exec sudo pm-suspend-hybrid
 
-## Pretty shit
+## UI
 
 #hide_edge_borders both
 
