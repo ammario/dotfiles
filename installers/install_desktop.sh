@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo apt-get install git vim-gnome i3 i3blocks arandr gdebi synergy keepassx tor torbrowser-launcher wget openvpn lsyncd qbittorrent thunar  p7zip-full
+sudo apt-get install git vim-gnome i3 i3blocks arandr gdebi synergy keepassx tor torbrowser-launcher wget openvpn lsyncd qbittorrent thunar  p7zip-full xsel xbacklight
 
 #theme stuff
 sudo apt-get install lxappearance arc-theme
@@ -7,6 +7,7 @@ sudo apt-get install lxappearance arc-theme
 #use thunar as default file manager
 xdg-mime default Thunar.desktop inode/directory
 
+sudo apt-get upgrade
 
 cd /tmp
 git clone https://github.com/gsamokovarov/jump

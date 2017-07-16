@@ -12,12 +12,6 @@
         "window.zoomLevel": 0,
         "editor.fontFamily": "'Ubuntu Mono'",
         "workbench.iconTheme": "vscode-icons",
-        "[cpp]": {
-            "editor.quickSuggestions": false
-        },
-        "[c]": {
-            "editor.quickSuggestions": false
-        },
         "rust.actionOnSave": "clippy",
         "workbench.colorTheme": "Monokai",
         "vsicons.projectDetection.disableDetect": true,
@@ -49,5 +43,14 @@
 		"activityBar.background": "#120F12",
 		"sideBar.background": "#0f0f0f"
         }, 
-        "rust.showOutput": false
-    } 
+        "rust.showOutput": false,
+        "vsicons.dontShowNewVersionMessage": true,
+        "rust.mode": "rls",
+        "rust.rustup": {
+            "nightlyToolchain": "nightly-x86_64-unknown-linux-gnu"
+        },
+        "rust.rls": {
+            "useRustfmt": true
+        },
+        "editor.fontSize": 14
+    }  
