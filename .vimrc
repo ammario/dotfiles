@@ -8,6 +8,7 @@ set laststatus=2
 set statusline+=%F
 let g:neocomplete#enable_at_startup = 1
 set hidden
+set ignorecase
 
 " Go related settings "
 let g:go_fmt_command = "goimports"
@@ -52,6 +53,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'rust-lang/rust.vim'
 Plugin 'racer-rust/vim-racer'
+Plugin 'leafgarland/typescript-vim'
 
 Bundle 'uarun/vim-protobuf'
 
@@ -60,18 +62,8 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 
 "AESTHETICS"
+" not sure why but I have to do this twice for it to run properly
+"
+colorscheme vividchalk
 colorscheme vividchalk
 
-
-
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
