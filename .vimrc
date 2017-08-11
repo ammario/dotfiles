@@ -61,6 +61,9 @@ Bundle 'uarun/vim-protobuf'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
+" Replace selected text within visual mode via Ctrl+R 
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+
 "AESTHETICS"
 " not sure why but I have to do this twice for it to run properly
 "

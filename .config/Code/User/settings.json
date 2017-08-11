@@ -53,5 +53,14 @@
             "useRustfmt": true
         },
         "editor.fontSize": 14,
-        "go.gocodeAutoBuild": false
-    }  
+        "go.gocodeAutoBuild": false,
+        "files.exclude": {
+            "**/.git": true,
+            "**/.svn": true,
+            "**/.hg": true,
+            "**/CVS": true,
+            "**/.DS_Store": true,
+            "**/vendor": true,
+            "vendor/**": true
+        }
+    }   
