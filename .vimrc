@@ -20,6 +20,7 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
 map <F12> :GoDef<CR>
+map <F10> :GoDoc<CR>
 
 " Rust related settings "
 let g:rustfmt_autosave = 1
