@@ -21,6 +21,7 @@ let g:go_highlight_build_constraints = 1
 
 map <F12> :GoDef<CR>
 map <F10> :GoDoc<CR>
+map <F2> :GoRename 
 
 " Rust related settings "
 let g:rustfmt_autosave = 1
@@ -57,6 +58,21 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'rust-lang/rust.vim'
 Plugin 'racer-rust/vim-racer'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'terryma/vim-multiple-cursors'
+
+" Called once right before you start selecting multiple cursors
+function! Multiple_cursors_before()
+  if exists(':NeoCompleteLock')==2
+    exe 'NeoCompleteLock'
+  endif
+endfunction
+
+" Called once only when the multiple selection is canceled (default <Esc>)
+function! Multiple_cursors_after()
+  if exists(':NeoCompleteUnlock')==2
+    exe 'NeoCompleteUnlock'
+  endif
+endfunction
 
 Bundle 'uarun/vim-protobuf'
 
@@ -73,3 +89,8 @@ vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
 colorscheme vividchalk
 colorscheme vividchalk
 
+" Move around windows w/ alt + arrow key
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
