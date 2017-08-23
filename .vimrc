@@ -19,6 +19,8 @@ let g:go_highlight_types = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
+map <F12> :GoDef<CR>
+
 " Rust related settings "
 let g:rustfmt_autosave = 1
 autocmd BufNewFile,BufRead *.rs set filetype=rust
