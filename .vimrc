@@ -19,6 +19,9 @@ let g:go_highlight_types = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 
+" Without this, GoDef is quite slow.
+let g:go_def_use_buffer = 1
+
 map <F12> :GoDef<CR>
 map <F10> :GoDoc<CR>
 map <F2> :GoRename 
