@@ -24,6 +24,8 @@ let g:go_def_use_buffer = 1
 
 map <F12> :GoDef<CR>
 map <F10> :GoDoc<CR>
+map <F9> :GoDecls<CR>
+map <F8> :GoDeclsDir<CR>
 map <F2> :GoRename 
 
 " Rust related settings "
