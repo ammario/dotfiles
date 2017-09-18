@@ -10,7 +10,9 @@
         
         "editor.wordWrap": "on",
         "window.zoomLevel": 0,
-        "editor.fontFamily": "'Ubuntu Mono'",
+        "editor.fontFamily": "'Fira Code'", 
+        "editor.fontSize": 13,
+        "editor.fontLigatures": true,
         "workbench.iconTheme": "vscode-icons",
         "rust.actionOnSave": "clippy",
         "workbench.colorTheme": "Monokai",
@@ -52,7 +54,6 @@
         "rust.rls": {
             "useRustfmt": true
         },
-        "editor.fontSize": 14,
         "go.gocodeAutoBuild": false,
         "files.exclude": {
             "**/.git": true,
