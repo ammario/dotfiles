@@ -63,5 +63,7 @@
             "**/.DS_Store": true,
             "**/vendor": true,
             "vendor/**": true
-        }
+        },
+        "go.lintTool": "gometalinter",
+        "go.lintFlags": ["--fast", "--aggregate", "--disable=gotype"] 
     }   
