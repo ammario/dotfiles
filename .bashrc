@@ -189,4 +189,12 @@ j() {
 complete -o dirnames -C 'jump hint "${COMP_LINE/#j /}" --smart' j
 
 alias glog='git log --oneline --decorate --all --graph'
-alias gfs="git flow feature start"
+
+gfs(){ 
+    # echo hello
+    local cmd="git flow $1 start $2"
+    echo $cmd
+    $cmd
+}
+
+alias gpo='git push -u origin HEAD'
