@@ -1,8 +1,7 @@
 set nocompatible              " be iMproved, required
 "filetype off                  " required
 
-set number
-syntax on
+set number relativenumber
 set backspace=indent,eol,start
 set laststatus=2
 set statusline+=%F
@@ -89,3 +88,5 @@ nmap <silent> <A-Right> :wincmd l<CR>
 set tabstop=4
 
 set incsearch
+
+syntax on

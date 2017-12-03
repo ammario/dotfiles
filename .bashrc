@@ -198,3 +198,4 @@ gfs(){
 }
 
 alias gpo='git push -u origin HEAD'
+alias git=hub
