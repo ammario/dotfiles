@@ -25,7 +25,7 @@ let g:go_def_use_buffer = 1
 let g:go_def_reuse_buffer = 1
 
 map <F12> :GoDef<CR>
-map <F10> :GoDoc<CR>
+map <F10> :GoDoc<CR> <c-w><c-p>
 map <F9> :GoDecls<CR>
 map <F8> :GoDeclsDir<CR>
 map <F2> :GoRename 
