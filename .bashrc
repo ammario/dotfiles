@@ -199,3 +199,4 @@ gfs(){
 
 alias gpo='git push -u origin HEAD'
 alias git=hub
+alias gpr="hub pull-request -b develop"

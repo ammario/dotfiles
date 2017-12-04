@@ -16,4 +16,5 @@ map <F12> :GoDef<CR>
 map <F10> :GoDoc<CR> <c-w><c-p>
 map <F9> :GoDecls<CR>
 map <F8> :GoDeclsDir<CR>
+map <F7> :GoReferrers<CR>
 map <F2> :GoRename 

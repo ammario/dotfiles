@@ -48,6 +48,7 @@ Plugin 'racer-rust/vim-racer'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'tpope/vim-surround' 
 
 " Called once right before you start selecting multiple cursors
 function! Multiple_cursors_before()
@@ -86,7 +87,7 @@ nmap <silent> <A-Right> :wincmd l<CR>
 
 " fit more code on screen w/ smaller tabs
 set tabstop=4
+set shiftwidth=4
 
 set incsearch
-
 syntax on
