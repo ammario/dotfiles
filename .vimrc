@@ -49,6 +49,7 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-surround' 
+Plugin 'tpope/vim-repeat'
 
 " Called once right before you start selecting multiple cursors
 function! Multiple_cursors_before()

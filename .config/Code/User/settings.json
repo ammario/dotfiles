@@ -65,5 +65,23 @@
             "vendor/**": true
         },
         "go.lintTool": "gometalinter",
-        "go.lintFlags": ["--fast", "--aggregate", "--disable=gotype"] 
+        "go.lintFlags": [
+            "--fast",
+            "--aggregate",
+            "--disable=gotype"
+        ],
+        "gitlens.advanced.messages": {
+            "suppressCommitHasNoPreviousCommitWarning": false,
+            "suppressCommitNotFoundWarning": false,
+            "suppressFileNotUnderSourceControlWarning": false,
+            "suppressGitVersionWarning": false,
+            "suppressLineUncommittedWarning": true,
+            "suppressNoRepositoryWarning": false,
+            "suppressUpdateNotice": false,
+            "suppressWelcomeNotice": true
+        },
+        "go.buildFlags": [
+            "--tags=integration"
+        ],
+        "workbench.panel.location": "bottom"
     }   
