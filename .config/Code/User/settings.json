@@ -83,5 +83,7 @@
         "go.buildFlags": [
             "--tags=integration"
         ],
-        "workbench.panel.location": "bottom"
+        "workbench.panel.location": "bottom",
+        "emmet.triggerExpansionOnTab": true,
+        "editor.rulers": [80],
     }   
