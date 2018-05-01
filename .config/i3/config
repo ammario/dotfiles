@@ -227,9 +227,8 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # Wallpaper
 exec_always feh --bg-scale ~/Pictures/wallpaper.jpg
+exec_always compton &
 
 # Sleeping on lid close
-
-
 
 

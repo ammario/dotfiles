@@ -8,6 +8,7 @@ set statusline+=%F
 let g:neocomplete#enable_at_startup = 1
 set hidden
 set ignorecase
+set copyindent
 
 au Filetype go source ~/.vim/go.vim
 

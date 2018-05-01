@@ -1,89 +1,93 @@
 // Place your settings in this file to overwrite the default settings
 {
-        "editor.renderWhitespace": "all",
-        // "go.useCodeSnippetsOnFunctionSuggest": true,
-        "go.formatTool": "goimports",
-        "go.gopath": "/home/ammar/go",
-        "files.associations": {
-            "*.tmpl": "html"
-        },
-        
-        "editor.wordWrap": "on",
-        "window.zoomLevel": 0,
-        "editor.fontFamily": "'Fira Code'", 
-        "editor.fontSize": 13,
-        "editor.fontLigatures": true,
-        "workbench.iconTheme": "vscode-icons",
-        "rust.actionOnSave": "clippy",
-        "workbench.colorTheme": "Monokai",
-        "vsicons.projectDetection.disableDetect": true,
-
-        //customizations for Atom One Dark
-        // "workbench.colorCustomizations": {
-		// "editor.background": "#0A0A0A",
-		// "editor.foreground": "#ffffff",
-		// "editor.lineHighlightBackground": "#1e1e1e",
-		// "editorCursor.foreground": "#ffffff",
-		// "editorWhitespace.foreground": "#404040",
-		// "tab.inactiveBackground": "#282828",
-		// "panel.background": "#222222",
-		// "statusBar.background": "#0f0f0f",
-		// "activityBar.background": "#120F12",
-		// "sideBar.background": "#1f1f1f"
-        // }
-        //customizations for Vibrant_Ink/Monokai
-        "workbench.colorCustomizations": {
-		"editor.background": "#00000A",
-		"editor.foreground": "#ffffff",
+    "editor.renderWhitespace": "all",
+    // "go.useCodeSnippetsOnFunctionSuggest": true,
+    "go.formatTool": "goimports",
+    "go.gopath": "/home/ammar/go",
+    "files.associations": {
+        "*.tmpl": "html"
+    },
+    "editor.wordWrap": "on",
+    "window.zoomLevel": 0,
+    "editor.fontFamily": "'Fira Code'",
+    "editor.fontSize": 13,
+    "editor.fontLigatures": true,
+    "workbench.iconTheme": "vscode-icons",
+    "rust.actionOnSave": "check",
+    "workbench.colorTheme": "Monokai",
+    "vsicons.projectDetection.disableDetect": true,
+    //customizations for Atom One Dark
+    // "workbench.colorCustomizations": {
+    // "editor.background": "#0A0A0A",
+    // "editor.foreground": "#ffffff",
+    // "editor.lineHighlightBackground": "#1e1e1e",
+    // "editorCursor.foreground": "#ffffff",
+    // "editorWhitespace.foreground": "#404040",
+    // "tab.inactiveBackground": "#282828",
+    // "panel.background": "#222222",
+    // "statusBar.background": "#0f0f0f",
+    // "activityBar.background": "#120F12",
+    // "sideBar.background": "#1f1f1f"
+    // }
+    //customizations for Vibrant_Ink/Monokai
+    "workbench.colorCustomizations": {
+        "editor.background": "#00000A",
+        "editor.foreground": "#ffffff",
         "editor.selectionBackground": "#404040",
-		"editor.lineHighlightBackground": "#1e1e1e",
-		"editorCursor.foreground": "#ffffff",
-		"editorWhitespace.foreground": "#404040",
-		"tab.inactiveBackground": "#282828",
-		"panel.background": "#0f0f0f",
-		"statusBar.background": "#0f0f0f",
-		"activityBar.background": "#120F12",
-		"sideBar.background": "#0f0f0f"
-        }, 
-        "rust.showOutput": false,
-        "vsicons.dontShowNewVersionMessage": true,
-        "rust.mode": "rls",
-        "rust.rustup": {
-            "nightlyToolchain": "nightly-x86_64-unknown-linux-gnu"
-        },
-        "rust.rls": {
-            "useRustfmt": true
-        },
-        "go.gocodeAutoBuild": false,
-        "files.exclude": {
-            "**/.git": true,
-            "**/.svn": true,
-            "**/.hg": true,
-            "**/CVS": true,
-            "**/.DS_Store": true,
-            "**/vendor": true,
-            "vendor/**": true
-        },
-        "go.lintTool": "gometalinter",
-        "go.lintFlags": [
-            "--fast",
-            "--aggregate",
-            "--disable=gotype"
-        ],
-        "gitlens.advanced.messages": {
-            "suppressCommitHasNoPreviousCommitWarning": false,
-            "suppressCommitNotFoundWarning": false,
-            "suppressFileNotUnderSourceControlWarning": false,
-            "suppressGitVersionWarning": false,
-            "suppressLineUncommittedWarning": true,
-            "suppressNoRepositoryWarning": false,
-            "suppressUpdateNotice": false,
-            "suppressWelcomeNotice": true
-        },
-        "go.buildFlags": [
-            "--tags=integration"
-        ],
-        "workbench.panel.location": "bottom",
-        "emmet.triggerExpansionOnTab": true,
-        "editor.rulers": [80],
-    }   
+        "editor.lineHighlightBackground": "#1e1e1e",
+        "editorCursor.foreground": "#ffffff",
+        "editorWhitespace.foreground": "#404040",
+        "tab.inactiveBackground": "#282828",
+        "panel.background": "#0f0f0f",
+        "statusBar.background": "#0f0f0f",
+        "activityBar.background": "#120F12",
+        "sideBar.background": "#0f0f0f"
+    },
+    "rust.showOutput": false,
+    "vsicons.dontShowNewVersionMessage": true,
+    "rust.mode": "rls",
+    "rust.rustup": {
+        "nightlyToolchain": "nightly-x86_64-unknown-linux-gnu",
+        "toolchain": "nightly-x86_64-unknown-linux-gnu"
+    },
+    "rust.rls": {
+        "useRustfmt": true
+    },
+    "go.gocodeAutoBuild": false,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/vendor": true,
+        "vendor/**": true
+    },
+    "go.lintTool": "gometalinter",
+    "go.lintFlags": [
+        "--fast",
+        "--aggregate",
+        "--disable=gotype"
+    ],
+    "gitlens.advanced.messages": {
+        "suppressLineUncommittedWarning": true,
+        "suppressShowKeyBindingsNotice": true,
+        "suppressUpdateNotice": true,
+        "suppressWelcomeNotice": true
+    },
+    "go.buildFlags": [
+        "--tags=integration"
+    ],
+    "emmet.triggerExpansionOnTab": true,
+    "editor.rulers": [
+        80
+    ],
+    "editor.formatOnSave": true,
+    "go.useCodeSnippetsOnFunctionSuggest": true,
+    "editor.insertSpaces": false,
+    "git.autofetch": true,
+    "debug.inlineValues": true,
+    "rust-client.rls-name": "rls-preview",
+    "gitlens.keymap": "chorded",
+    "problems.decorations.enabled": false,
+}

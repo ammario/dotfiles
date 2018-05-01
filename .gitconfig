@@ -6,6 +6,10 @@
 	default = simple
 [url "git@github.com:"]
 	insteadOf = https://github.com/
+[url "git@git.coder-internal.com:"]
+	insteadOf = https://git.coder-internal.com/
+[url "git@gh.coder-internal.com:"]
+	insteadOf = https://gh.coder-internal.com/
 [mergetool]
 	prompt = false
 	keepBackup = false
@@ -19,9 +23,30 @@
 [http]
 	cookiefile = /home/ammar/.gitcookies
 [alias]
+	find-merge = "!sh -c 'commit=$0 && branch=${1:-HEAD} && (git rev-list $commit..$branch --ancestry-path | cat -n; git rev-list $commit..$branch --first-parent | cat -n) | sort -k2 -s | uniq -f1 -d | sort -n | tail -1 | cut -f2'"
 	change = codereview change
 	gofmt = codereview gofmt
 	mail = codereview mail
 	pending = codereview pending
 	submit = codereview submit
 	sync = codereview sync
+
+[gitflow "branch"]
+	master = master
+	develop = develop
+[gitflow "prefix"]
+	feature = feature/
+	bugfix = bugfix/
+	release = release/
+	hotfix = hotfix/
+	support = support/
+	versiontag = v
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[core]
+	excludesfile = /home/ammar/.gitignore_global
+[rebase]
+	autosquash = true
