@@ -13,5 +13,21 @@
     {
         "key": "ctrl+e",
         "command": "-workbench.action.quickOpen"
+    },
+    {
+        "key": "ctrl+alt+s",
+        "command": "git.stageSelectedRanges"
+    },
+    {
+        "key": "ctrl+alt+p",
+        "command": "git.openChange"
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "workbench.action.nextEditor"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.previousEditor"
     }
 ]

@@ -7,7 +7,9 @@
 " Based on the Vibrank Ink theme for TextMate
 " Distributable under the same terms as Vim itself (see :help license)
 
-set background=dark
+if has("gui_running")
+    set background=dark
+endif
 hi clear
 if exists("syntax_on")
    syntax reset
@@ -109,9 +111,8 @@ highlight StatusLineNC  guifg=#444444 guibg=#aaaaaa gui=none ctermfg=Black cterm
 highlight Ignore        ctermfg=Black
 highlight WildMenu      guifg=Black   guibg=#ffff00 gui=bold ctermfg=Black ctermbg=Yellow cterm=bold
 highlight Cursor        guifg=Black guibg=White ctermfg=Black ctermbg=White
-call s:hibg("ColorColumn","#333333","DarkGrey",81)
-call s:hibg("CursorLine","#333333","DarkGrey",81)
-call s:hibg("CursorColumn","#333333","DarkGrey",81)
+highlight CursorLine    guibg=#333333 guifg=NONE
+highlight CursorColumn  guibg=#333333 guifg=NONE
 highlight NonText       guifg=#404040 ctermfg=8
 highlight SpecialKey    guifg=#404040 ctermfg=8
 highlight Directory     none

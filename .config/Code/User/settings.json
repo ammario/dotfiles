@@ -90,4 +90,5 @@
     "rust-client.rls-name": "rls-preview",
     "gitlens.keymap": "chorded",
     "problems.decorations.enabled": false,
+    "gitlens.historyExplorer.enabled": false,
 }
