@@ -188,7 +188,7 @@ j() {
 
 complete -o dirnames -C 'jump hint "${COMP_LINE/#j /}" --smart' j
 
-alias glog='git log --oneline --decorate --all --graph'
+alias glog='git log --oneline --decorate --graph'
 
 gfs(){ 
     # echo hello
@@ -198,6 +198,7 @@ gfs(){
 }
 
 alias gpo='git push -u origin HEAD'
+alias gpof='git push --force -u origin HEAD'
 alias git=hub
 alias gpr="hub pull-request -b develop"
 
@@ -206,3 +207,5 @@ alias gcssh="gcloud compute ssh"
 dockerpid() {
 	docker inspect --format "{{.State.Pid}}" $1
 }
+
+alias clip="xsel -i -b"
