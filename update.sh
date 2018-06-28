@@ -1,4 +1,5 @@
 #!/bin/bash
+cp ~/.gitconfig .gitconfig
 cp -r ~/.fonts .
 cp -r ~/.vim/colors .vim/
 cp -r ~/.config/Code/User/snippets/ .config/Code/User

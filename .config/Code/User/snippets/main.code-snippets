@@ -48,6 +48,7 @@
 		"body": [
 			"ctx, cancel $1= context.WithTimeout($2, $3) {",
 			"defer cancel()",
+			"$4",
 		]
 	}
 }

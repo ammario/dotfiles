@@ -6,7 +6,7 @@
 	default = simple
 [url "git@github.com:"]
 	insteadOf = https://github.com/
-[url "git@git.coder-internal.com:"]
+[url "git@gh.coder-internal.com:"]
 	insteadOf = https://git.coder-internal.com/
 [url "git@gh.coder-internal.com:"]
 	insteadOf = https://gh.coder-internal.com/
@@ -30,6 +30,8 @@
 	pending = codereview pending
 	submit = codereview submit
 	sync = codereview sync
+	cfb = !git commit -m \"$(echo $(git rev-parse --abbrev-ref HEAD) | rev | cut -d/ -f1 | rev |  tr \"-\" \" \" | sed \"s/.*/\\u&/\")\" && git commit --amend
+	ane = commit --amend --no-edit 
 
 [gitflow "branch"]
 	master = master
@@ -50,3 +52,5 @@
 	excludesfile = /home/ammar/.gitignore_global
 [rebase]
 	autosquash = true
+[hub]
+	host = gh.coder-internal.com
