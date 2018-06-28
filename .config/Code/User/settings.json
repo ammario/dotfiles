@@ -91,4 +91,5 @@
     "gitlens.keymap": "chorded",
     "problems.decorations.enabled": false,
     "gitlens.historyExplorer.enabled": false,
+    "go.useLanguageServer": false,
 }
