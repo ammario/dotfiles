@@ -82,10 +82,10 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+# bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+# bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -229,6 +229,7 @@ bindsym XF86AudioPrev exec playerctl previous
 exec_always feh --bg-scale ~/Pictures/wallpaper.jpg
 exec_always compton &
 
-# Sleeping on lid close
-
-
+# Named workspaces
+bindsym $mod+m        exec i3-msg workspace $(lsws | dmenu -p "→")
+bindsym $mod+Shift+m  exec i3-msg move container to workspace $(lsws | dmenu -p "|→")
+bindsym $mod+u            workspace back_and_forth

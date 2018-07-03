@@ -92,4 +92,5 @@
     "problems.decorations.enabled": false,
     "gitlens.historyExplorer.enabled": false,
     "go.useLanguageServer": false,
+    "go.autocompleteUnimportedPackages": true,
 }

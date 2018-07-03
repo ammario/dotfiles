@@ -1,4 +1,8 @@
 #!/bin/bash
+# Binaries and scripts
+cp /usr/bin/lsws bin/
+
+# Configs
 cp ~/.gitconfig .gitconfig
 cp -r ~/.fonts .
 cp -r ~/.vim/colors .vim/

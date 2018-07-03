@@ -16,7 +16,7 @@
 	// 	"description": "Log output to console"
 	// }
 	"[Testing] Require no error": {
-		"scope": " go",
+		"scope": "go",
 		"prefix": "rne",
 		"body": [
 			"require.NoError(t, err)",
@@ -46,7 +46,7 @@
 		"scope": "go",
 		"prefix": "ctxto",
 		"body": [
-			"ctx, cancel $1= context.WithTimeout($2, $3) {",
+			"ctx, cancel $1= context.WithTimeout($2, $3)",
 			"defer cancel()",
 			"$4",
 		]

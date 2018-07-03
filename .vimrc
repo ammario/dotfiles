@@ -23,6 +23,13 @@ autocmd BufNewFile,BufRead *.s set filetype=nasm
 
 set hlsearch
 set clipboard=unnamedplus
+
+" Default copying to system clipboard "
+noremap <Leader>y "*y
+noremap <Leader>p "*p
+noremap <Leader>Y "+y
+noremap <Leader>P "+p
+
 set showcmd
 set path+=**
 
