@@ -4,7 +4,8 @@ set -g -x fish_greeting ''
 
 set pink eb54c6
 set teal 54ebc5
-set blue 54c6eb
+set blue 4bb2d3
+set light_blue 54c6eb
 
 set fish_color_cwd $blue
 
@@ -17,7 +18,7 @@ set __fish_git_prompt_showstashstate 'yes'
 set __fish_git_prompt_showuntrackedfiles 'yes'
 set __fish_git_prompt_showupstream 'verbose'
 set __fish_git_prompt_color $pink
-set __fish_git_prompt_color_branch $blue
+set __fish_git_prompt_color_branch $light_blue
 set __fish_git_prompt_color_upstream_ahead green
 set __fish_git_prompt_color_upstream_behind red
 
@@ -35,9 +36,10 @@ set __fish_git_prompt_char_upstream_behind '▿'
 function fish_prompt
   set last_status $status
 
+  set_color -o
   set_color $fish_color_cwd
   printf '%s' (prompt_pwd)
-
+  set_color normal
   printf '%s ' (__fish_git_prompt)
 
   set_color normal
