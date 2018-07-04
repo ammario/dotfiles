@@ -6,8 +6,14 @@ set pink eb54c6
 set teal 54ebc5
 set blue 4bb2d3
 set light_blue 54c6eb
+set magenta a570ff
+set green 83ff70
+set grey 808080
 
-set fish_color_cwd $blue
+
+set fish_color_quote white
+set fish_color_cwd $green
+set fish_color_command $magenta
 
 # Git Prompt
 
@@ -17,7 +23,7 @@ set __fish_git_prompt_showdirtystate 'yes'
 set __fish_git_prompt_showstashstate 'yes'
 set __fish_git_prompt_showuntrackedfiles 'yes'
 set __fish_git_prompt_showupstream 'verbose'
-set __fish_git_prompt_color $pink
+set __fish_git_prompt_color $grey
 set __fish_git_prompt_color_branch $light_blue
 set __fish_git_prompt_color_upstream_ahead green
 set __fish_git_prompt_color_upstream_behind red
