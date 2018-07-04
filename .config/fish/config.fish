@@ -24,9 +24,11 @@ set __fish_git_prompt_showstashstate 'yes'
 set __fish_git_prompt_showuntrackedfiles 'yes'
 set __fish_git_prompt_showupstream 'verbose'
 set __fish_git_prompt_color $grey
+set __fish_git_prompt_color_flags $pink
+set __fish_git_prompt_color_upstream $pink
 set __fish_git_prompt_color_branch $light_blue
-set __fish_git_prompt_color_upstream_ahead green
-set __fish_git_prompt_color_upstream_behind red
+set __fish_git_prompt_color_upstream_ahead $pink
+set __fish_git_prompt_color_upstream_behind $pink
 
 # Status Chars
 set __fish_git_prompt_char_dirtystate '*'
