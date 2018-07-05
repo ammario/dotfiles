@@ -99,5 +99,6 @@
         "/usr/local/include",
         "/usr/src/linux-headers-4.8.0-58-generic/",
     ],
-    "vim.useSystemClipboard": true
+    "vim.useSystemClipboard": true,
+    "editor.smoothScrolling": true
 }
