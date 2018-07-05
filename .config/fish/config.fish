@@ -1,5 +1,3 @@
-set -g -x fish_greeting ''
-
 # Colors
 
 set pink eb54c6
@@ -37,6 +35,7 @@ set __fish_git_prompt_char_untrackedfiles '•'
 set __fish_git_prompt_char_stashstate 's'
 set __fish_git_prompt_char_upstream_ahead '↑ '
 set __fish_git_prompt_char_upstream_behind '↓ '
+set __fish_git_prompt_char_upstream_diverged '⇵ '
 
 # set __fish_git_prompt_show_informative_status "yes"
 
@@ -61,6 +60,17 @@ begin
     end
 end
 
-# git alias
+# git aliases
 alias gpo='git push -u origin HEAD'
 alias gpof='git push --force -u origin HEAD'
+alias glog='git log --oneline --decorate --graph'
+
+# google cloud aliases
+alias gcssh="gcloud compute ssh"
+
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/ammar/Downloads/google-cloud-sdk/path.fish.inc' ]; if type source > /dev/null; source '/home/ammar/Downloads/google-cloud-sdk/path.fish.inc'; else; . '/home/ammar/Downloads/google-cloud-sdk/path.fish.inc'; end; end
+
+# Set special PATH
+set PATH $PATH ~/go/bin ~/bin ~/Projects/coder/bin

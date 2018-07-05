@@ -93,4 +93,11 @@
     "gitlens.historyExplorer.enabled": false,
     "go.useLanguageServer": false,
     "go.autocompleteUnimportedPackages": true,
+    "editor.lineNumbers": "relative",
+    "C_Cpp.default.includePath": [
+        "/usr/include",
+        "/usr/local/include",
+        "/usr/src/linux-headers-4.8.0-58-generic/",
+    ],
+    "vim.useSystemClipboard": true
 }
