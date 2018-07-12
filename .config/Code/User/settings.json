@@ -100,5 +100,6 @@
         "/usr/src/linux-headers-4.8.0-58-generic/",
     ],
     "vim.useSystemClipboard": true,
-    "editor.smoothScrolling": true
+    "editor.smoothScrolling": false,
+    "vim.easymotion": true
 }
