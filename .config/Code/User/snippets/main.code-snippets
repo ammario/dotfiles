@@ -33,6 +33,15 @@
 			"}"
 		]
 	},
+	"if err != nil return err": {
+		"scope": "go",
+		"prefix": "iene",
+		"body": [
+			"if err != nil {",
+			"\treturn $1err",
+			"}"
+		]
+	},
 	"if err != nil return": {
 		"scope": "go",
 		"prefix": "ienr",

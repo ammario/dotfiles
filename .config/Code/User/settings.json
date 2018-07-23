@@ -76,7 +76,7 @@
         "suppressWelcomeNotice": true
     },
     "go.buildFlags": [
-        "--tags=integration"
+        "--tags=\"integration load\""
     ],
     "emmet.triggerExpansionOnTab": true,
     "editor.rulers": [
@@ -101,5 +101,7 @@
     ],
     "vim.useSystemClipboard": true,
     "editor.smoothScrolling": false,
-    "vim.easymotion": true
+    "vim.easymotion": true,
+    "[c]": {},
+    "go.goroot": "/usr/local/go",
 }
