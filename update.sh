@@ -1,6 +1,6 @@
 #!/bin/bash
 # Binaries and scripts
-cp /usr/bin/lsws bin/
+cp ~/bin/lsws bin/
 
 # Configs
 cp ~/.gitconfig .gitconfig
@@ -11,3 +11,5 @@ cp -r ~/.config/Code/User/keybindings.json .config/Code/User
 cp -r ~/.config/Code/User/settings.json .config/Code/User
 cp -r ~/.config/fish/config.fish .config/fish/
 
+cp -r ~/.xinitrc .xinitrc
+cp -r ~/.Xmodmap .Xmodmap

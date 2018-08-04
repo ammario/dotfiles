@@ -1,4 +1,3 @@
-# Colors
 
 set pink eb54c6
 set teal 54ebc5
@@ -74,3 +73,5 @@ if [ -f '/home/ammar/Downloads/google-cloud-sdk/path.fish.inc' ]; if type source
 
 # Set special PATH
 set PATH $PATH ~/go/bin ~/bin ~/Projects/coder/bin
+set fish_greeting ""
+set GOPATH ~/go

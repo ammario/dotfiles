@@ -2,7 +2,6 @@
 {
     "editor.renderWhitespace": "all",
     // "go.useCodeSnippetsOnFunctionSuggest": true,
-    "go.formatTool": "goimports",
     "go.gopath": "/home/ammar/go",
     "files.associations": {
         "*.tmpl": "html"
@@ -76,7 +75,7 @@
         "suppressWelcomeNotice": true
     },
     "go.buildFlags": [
-        "--tags=\"integration load\""
+        "--tags=integration"
     ],
     "emmet.triggerExpansionOnTab": true,
     "editor.rulers": [
@@ -104,4 +103,7 @@
     "vim.easymotion": true,
     "[c]": {},
     "go.goroot": "/usr/local/go",
+    "go.buildOnSave": "package",
+    "go.formatTool": "goimports",
+    "editor.formatOnSaveTimeout": 1000,
 }

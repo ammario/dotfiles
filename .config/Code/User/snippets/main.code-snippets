@@ -24,15 +24,6 @@
 		],
 		"description": "Inserts a require no error call."
 	},
-	"if err != nil": {
-		"scope": "go",
-		"prefix": "ien",
-		"body": [
-			"if err != nil {",
-			"\t$1",
-			"}"
-		]
-	},
 	"if err != nil return err": {
 		"scope": "go",
 		"prefix": "iene",
