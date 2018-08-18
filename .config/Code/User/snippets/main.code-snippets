@@ -24,6 +24,15 @@
 		],
 		"description": "Inserts a require no error call."
 	},
+	"rerror": {
+		"scope": "go",
+		"prefix": "rer",
+		"body": [
+			"rerror(wr, req, $1, \"$2\", err)",
+			"$3",
+		],
+		"description": "Inserts a require no error call."
+	},
 	"if err != nil return err": {
 		"scope": "go",
 		"prefix": "iene",

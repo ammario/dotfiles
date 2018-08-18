@@ -75,3 +75,6 @@ if [ -f '/home/ammar/Downloads/google-cloud-sdk/path.fish.inc' ]; if type source
 set PATH $PATH ~/go/bin ~/bin ~/Projects/coder/bin
 set fish_greeting ""
 set GOPATH ~/go
+
+# VIM MODE!
+fish_vi_key_bindings
