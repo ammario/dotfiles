@@ -38,13 +38,26 @@ set __fish_git_prompt_char_upstream_diverged '⇵ '
 
 # set __fish_git_prompt_show_informative_status "yes"
 
+# We override this below anyways.
+function fish_mode_prompt; end
 
 function fish_prompt
   set last_status $status
-
+	switch $fish_bind_mode
+		case default
+			printf "%sN" (set_color --bold blue)
+		case insert
+			printf "%sI" (set_color --bold green)
+		case visual
+			printf "%sV" (set_color --bold yellow)
+		case replace_one
+			printf "%sR" (set_color --bold red)
+		case "*"
+			printf "%sn" (set_color --bold normal)
+	end
   set_color -o
   set_color $fish_color_cwd
-  printf '%s' (prompt_pwd)
+  printf ' %s' (prompt_pwd)
   set_color normal
   printf '%s ' (__fish_git_prompt)
 
