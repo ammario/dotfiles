@@ -20,7 +20,6 @@
 		"prefix": "rne",
 		"body": [
 			"require.NoError(t, err)",
-			"$1",
 		],
 		"description": "Inserts a require no error call."
 	},
@@ -33,13 +32,24 @@
 		],
 		"description": "Inserts a require no error call."
 	},
+	"if err != nil": {
+		"scope": "go",
+		"prefix": "ien",
+		"body": [
+			"if err != nil {",
+			"\t$1",
+			"}",
+			"$2",
+		]
+	},
 	"if err != nil return err": {
 		"scope": "go",
 		"prefix": "iene",
 		"body": [
 			"if err != nil {",
 			"\treturn $1err",
-			"}"
+			"}",
+			"$2"
 		]
 	},
 	"if err != nil return": {
@@ -48,7 +58,8 @@
 		"body": [
 			"if err != nil {",
 			"\treturn $1, errors.WithStack(err)",
-			"}"
+			"}",
+			"",
 		]
 	},
 	"context.WithTimeout(ctx, timeout)": {

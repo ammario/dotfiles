@@ -66,7 +66,7 @@
     "go.lintFlags": [
         "--fast",
         "--aggregate",
-        "--disable=gotype"
+        "--disable=gotype,gosec"
     ],
     "gitlens.advanced.messages": {
         "suppressLineUncommittedWarning": true,
@@ -106,4 +106,17 @@
     "go.buildOnSave": "package",
     "go.formatTool": "goimports",
     "editor.formatOnSaveTimeout": 1000,
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "/",
+                "/"
+            ],
+            "after": [
+                "y/<C-R>\"<CR>",
+            ]
+        }
+    ],
+    "files.autoSave": "afterDelay",
+    "vim.enableNeovim": true,
 }
