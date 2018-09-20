@@ -62,7 +62,6 @@
         "**/vendor": true,
         "vendor/**": true
     },
-    "go.lintTool": "gometalinter",
     "go.lintFlags": [
         "--fast",
         "--aggregate",
@@ -74,9 +73,7 @@
         "suppressUpdateNotice": true,
         "suppressWelcomeNotice": true
     },
-    "go.buildFlags": [
-        "--tags=integration"
-    ],
+    "go.buildFlags": [],
     "emmet.triggerExpansionOnTab": true,
     "editor.rulers": [
         80
@@ -119,4 +116,15 @@
     ],
     "files.autoSave": "afterDelay",
     "vim.enableNeovim": true,
+    "latex-workshop.view.pdf.viewer": "tab",
+    "go.buildTags": "integration",
+    "workbench.editor.showTabs": false,
+    "go.installDependenciesWhenBuilding": false,
+    "go.coverOnTestPackage": false,
+    "go.liveErrors": {
+        "enabled": true,
+        "delay": 500
+    },
+    "workbench.statusBar.visible": true,
+    "vim.hlsearch": true,
 }

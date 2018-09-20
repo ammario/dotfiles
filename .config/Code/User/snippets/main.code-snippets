@@ -62,6 +62,16 @@
 			"",
 		]
 	},
+	"t.Run": {
+		"scope": "go",
+		"prefix": "trun",
+		"body": [
+			"t.Run(\"$1\", func(t *testing.T) {",
+			"\t$2",
+			"})",
+			"",
+		]
+	},
 	"context.WithTimeout(ctx, timeout)": {
 		"scope": "go",
 		"prefix": "ctxto",

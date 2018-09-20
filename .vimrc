@@ -1,16 +1,116 @@
-set nocompatible              " be iMproved, required
+if &compatible
+ set nocompatible
+endif
+" Add the dein installation directory into runtimepath
+set runtimepath+=/home/ammar/.cache/dein/repos/github.com/Shougo/dein.vim
+
+if dein#load_state('~/.cache/dein')
+ call dein#begin('~/.cache/dein')
+
+	let go_ft_opt = { 'on_ft': 'go' }
+	call dein#add('~/.cache/dein')
+	call dein#add('Shougo/deoplete.nvim')
+	call dein#add('zchee/deoplete-go', go_ft_opt)
+	call dein#add('fatih/vim-go', go_ft_opt)
+	call dein#add('jodosha/vim-godebug', go_ft_opt)
+	call dein#add('fatih/vim-go')
+	call dein#add('tpope/vim-fugitive')
+	call dein#add('rust-lang/rust.vim')
+	call dein#add('racer-rust/vim-racer')
+	call dein#add('leafgarland/typescript-vim')
+	call dein#add('tpope/vim-surround' )
+	call dein#add('tpope/vim-repeat')
+	call dein#add('uarun/vim-protobuf')
+	call dein#add('itchyny/lightline.vim') 
+  	call dein#add('ctrlpvim/ctrlp.vim')
+	call dein#add('airblade/vim-gitgutter') " git diff signs in the gutter
+	call dein#add('w0rp/ale')
+	call dein#add('dracula/vim')
+	call dein#add('Shougo/neosnippet.vim')
+	call dein#add('Shougo/neosnippet-snippets')
+
+
+ if !has('nvim')
+   call dein#add('roxma/nvim-yarp')
+   call dein#add('roxma/vim-hug-neovim-rpc')
+ endif
+	call dein#end()
+	call dein#save_state()
+endif
+
+filetype plugin indent on
+syntax enable
+
 "filetype off                  " required
 
 set number relativenumber
 set backspace=indent,eol,start
 set laststatus=2
 set statusline+=%F
-let g:neocomplete#enable_at_startup = 1
+let g:deoplete#enable_at_startup = 1
 set hidden
 set ignorecase
 set copyindent
 
-au Filetype go source ~/.vim/go.vim
+" Neosnippets
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+" Conceal markers can create difficult errors.
+let g:neosnippet#enable_conceal_markers = 0
+
+" SuperTab like snippets behavior.
+" Note: It must be "imap" and "smap".  It uses <Plug> mappings.
+"imap <expr><TAB>
+" \ pumvisible() ? "\<C-n>" :
+" \ neosnippet#expandable_or_jumpable() ?
+" \    "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+
+" For conceal markers.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
+
+let g:neosnippet#snippets_directory='~/.vim/snippets'
+
+" Deocomplete
+function! s:deoplete_lazy_enable()
+ autocmd! deoplete_lazy_enable
+ augroup! deoplete_lazy_enable
+ call deoplete#enable()
+endfunction
+augroup deoplete_lazy_enable
+ autocmd!
+ autocmd CursorHold * call s:deoplete_lazy_enable()
+ autocmd InsertEnter * call s:deoplete_lazy_enable()
+       \ | silent! doautocmd <nomodeline> deoplete InsertEnter
+augroup END
+let g:deoplete#enable_smart_case = 1
+let g:deoplete#enable_at_startup = 1
+call deoplete#custom#source('emoji', 'filetypes', ['golang'])
+
+" Go language support
+let g:go_fmt_autosave = 1 " disable gofmt because we have ale
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_types = 1
+let g:go_auto_sameids = 1
+let g:go_fmt_command = "goimports"
+let g:go_auto_type_info = 1
+let g:go_build_tags = "integration"
+let g:go_guru_tags = "integration"
+nnoremap <C-A-D> :GoDoc<CR>
+nnoremap <Leader>so :GoDecls<CR>
+nnoremap <Leader>st :GoDeclsDir<CR>
 
 " Rust related settings "
 let g:rustfmt_autosave = 1
@@ -35,48 +135,7 @@ set path+=**
 
 set wildmenu
 
-"Aliases"
-:command Tree NERDTreeToggle 
-:command Copy %y+
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'fatih/vim-go'
-Plugin 'Shougo/neocomplete.vim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-fugitive'
-Plugin 'rust-lang/rust.vim'
-Plugin 'racer-rust/vim-racer'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'tpope/vim-surround' 
-Plugin 'tpope/vim-repeat'
-
-" Called once right before you start selecting multiple cursors
-function! Multiple_cursors_before()
-  if exists(':NeoCompleteLock')==2
-    exe 'NeoCompleteLock'
-  endif
-endfunction
-
-" Called once only when the multiple selection is canceled (default <Esc>)
-function! Multiple_cursors_after()
-  if exists(':NeoCompleteUnlock')==2
-    exe 'NeoCompleteUnlock'
-  endif
-endfunction
-
-Bundle 'uarun/vim-protobuf'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
 filetype plugin indent on    " required
 
 " Replace selected text within visual mode via Ctrl+R 
@@ -100,3 +159,32 @@ set shiftwidth=4
 
 set incsearch
 syntax on
+
+" Split/window management
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+nnoremap <C-x> :q<CR> " Quickly exit buffer
+
+" Async linting/errors
+nnoremap <C-A-E> :ALENext<CR>
+let g:ale_list_window_size = 3
+
+" Git support
+set updatetime=1000 "We want our git gutter to update almost immediately.
+
+" ALE
+let g:ale_open_list = 1
+let g:ale_set_quickfix = 0
+let g:ale_set_loclist = 1
+let g:ale_keep_list_window_open = 0
+let g:ale_lint_on_insert_leave = 1
+let g:ale_lint_on_text_changed = 0
+let g:ale_lint_on_enter = 1
+let g:ale_lint_on_save = 1
+
+" Debug syntax highlighting	
+map <C-A-H> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
