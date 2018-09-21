@@ -6,8 +6,8 @@ options head
 
 snippet trun
 options head
-    t.Run("${0:TestName}", func(t *testing.T){
-        ${1}
+    t.Run("${1:TestName}", func(t *testing.T){
+        ${2}
     })
 
 snippet     ien
@@ -16,3 +16,7 @@ options     head
       return ${1}, err
     }
     ${0}
+
+snippet     ewr
+options     word
+    errors.Wrapf(err, "${1}")
