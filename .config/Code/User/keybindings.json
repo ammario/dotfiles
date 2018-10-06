@@ -50,5 +50,13 @@
     {
         "key": "ctrl+t s",
         "command": "workbench.action.toggleStatusbarVisibility"
+    },
+    {
+        "key": "ctrl+t ctrl+shift+o",
+        "command": "workbench.action.showAllSymbols"
+    },
+    {
+        "key": "ctrl+t",
+        "command": "-workbench.action.showAllSymbols"
     }
 ]

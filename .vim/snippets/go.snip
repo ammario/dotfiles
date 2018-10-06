@@ -13,9 +13,14 @@ options head
 snippet     ien
 options     head
     if err != nil {
+      ${1}
+    }
+
+snippet     iene
+options     head
+    if err != nil {
       return ${1}, err
     }
-    ${0}
 
 snippet     ewr
 options     word

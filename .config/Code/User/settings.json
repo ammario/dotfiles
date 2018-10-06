@@ -1,6 +1,6 @@
 // Place your settings in this file to overwrite the default settings
 {
-    "editor.renderWhitespace": "all",
+    "editor.renderWhitespace": "none",
     // "go.useCodeSnippetsOnFunctionSuggest": true,
     "go.gopath": "/home/ammar/go",
     "files.associations": {
@@ -13,7 +13,6 @@
     "editor.fontLigatures": true,
     "workbench.iconTheme": "vscode-icons",
     "rust.actionOnSave": "check",
-    "workbench.colorTheme": "Monokai",
     "vsicons.projectDetection.disableDetect": true,
     //customizations for Atom One Dark
     // "workbench.colorCustomizations": {
@@ -29,19 +28,19 @@
     // "sideBar.background": "#1f1f1f"
     // }
     //customizations for Vibrant_Ink/Monokai
-    "workbench.colorCustomizations": {
-        "editor.background": "#00000A",
-        "editor.foreground": "#ffffff",
-        "editor.selectionBackground": "#404040",
-        "editor.lineHighlightBackground": "#1e1e1e",
-        "editorCursor.foreground": "#ffffff",
-        "editorWhitespace.foreground": "#404040",
-        "tab.inactiveBackground": "#282828",
-        "panel.background": "#0f0f0f",
-        "statusBar.background": "#0f0f0f",
-        "activityBar.background": "#120F12",
-        "sideBar.background": "#0f0f0f"
-    },
+    // "workbench.colorCustomizations": {
+    //     "editor.background": "#00000A",
+    //     "editor.foreground": "#ffffff",
+    //     "editor.selectionBackground": "#404040",
+    //     "editor.lineHighlightBackground": "#1e1e1e",
+    //     "editorCursor.foreground": "#ffffff",
+    //     "editorWhitespace.foreground": "#404040",
+    //     "tab.inactiveBackground": "#282828",
+    //     "panel.background": "#0f0f0f",
+    //     "statusBar.background": "#0f0f0f",
+    //     "activityBar.background": "#120F12",
+    //     "sideBar.background": "#0f0f0f"
+    // },
     "rust.showOutput": false,
     "vsicons.dontShowNewVersionMessage": true,
     "rust.mode": "rls",
@@ -62,11 +61,11 @@
         "**/vendor": true,
         "vendor/**": true
     },
-    "go.lintFlags": [
-        "--fast",
-        "--aggregate",
-        "--disable=gotype,gosec"
-    ],
+    // "go.lintFlags": [
+    //     "--fast",
+    //     "--aggregate",
+    //     "--disable=gotype,gosec"
+    // ],
     "gitlens.advanced.messages": {
         "suppressLineUncommittedWarning": true,
         "suppressShowKeyBindingsNotice": true,
@@ -87,8 +86,6 @@
     "gitlens.keymap": "chorded",
     "problems.decorations.enabled": false,
     "gitlens.historyExplorer.enabled": false,
-    "go.useLanguageServer": false,
-    "go.autocompleteUnimportedPackages": true,
     "editor.lineNumbers": "relative",
     "C_Cpp.default.includePath": [
         "/usr/include",
@@ -101,7 +98,6 @@
     "[c]": {},
     "go.goroot": "/usr/local/go",
     "go.buildOnSave": "package",
-    "go.formatTool": "goimports",
     "editor.formatOnSaveTimeout": 1000,
     "vim.visualModeKeyBindingsNonRecursive": [
         {
@@ -123,8 +119,24 @@
     "go.coverOnTestPackage": false,
     "go.liveErrors": {
         "enabled": true,
-        "delay": 500
+        "delay": 1000
     },
     "workbench.statusBar.visible": true,
     "vim.hlsearch": true,
+    "go.lintTool": "golint",
+    "go.testFlags": [
+        "--short"
+    ],
+    "breadcrumbs.enabled": true,
+    "go.coverageDecorator": {
+        "type": "gutter",
+        "coveredHighlightColor": "rgba(64,128,128,0.5)",
+        "uncoveredHighlightColor": "rgba(128,64,64,0.25)",
+        "coveredGutterStyle": "blockblue",
+        "uncoveredGutterStyle": "verticalyellow",
+    },
+    "go.coverageOptions": "showUncoveredCodeOnly",
+    "go.testTimeout": "5s",
+    "workbench.colorTheme": "One Dark Pro Vivid",
+    "go.useLanguageServer": true,
 }

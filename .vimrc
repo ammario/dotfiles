@@ -22,7 +22,7 @@ if dein#load_state('~/.cache/dein')
 	call dein#add('tpope/vim-repeat')
 	call dein#add('uarun/vim-protobuf')
 	call dein#add('itchyny/lightline.vim') 
-  	call dein#add('ctrlpvim/ctrlp.vim')
+  	call dein#add('Shougo/denite.nvim')
 	call dein#add('airblade/vim-gitgutter') " git diff signs in the gutter
 	call dein#add('w0rp/ale')
 	call dein#add('dracula/vim')
@@ -31,6 +31,7 @@ if dein#load_state('~/.cache/dein')
 	call dein#add('tpope/vim-commentary')
 	call dein#add('easymotion/vim-easymotion')
 	call dein#add('terryma/vim-smooth-scroll')
+	call dein#add('joshdick/onedark.vim')
 
 
  if !has('nvim')
@@ -58,8 +59,8 @@ set copyindent
 " Smooth scrolling
 noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
 noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
-noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
-noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
+" noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
+" noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
 
 " Neosnippets
 " Note: It must be "imap" and "smap".  It uses <Plug> mappings.
@@ -121,28 +122,28 @@ let g:go_auto_type_info = 1
 let g:go_build_tags = "integration"
 let g:go_guru_tags = "integration"
 nnoremap <C-A-D> :GoDoc<CR>
-nnoremap <Leader>s :GoDecls<CR>
+nnoremap <Leader>s :Denite decls:%<CR>
 nnoremap <F2> :GoRename 
 
 " Allows vim-go to show function signature where mode would normally appear.
 " Mode is already shown by the status line.
 set noshowmode 
 
-function! go#cmd#autowrite() abort
-  if &autowrite == 1 || &autowriteall == 1
-    silent! wall
-  else
-    for l:nr in range(0, bufnr('$'))
-      if buflisted(l:nr) && getbufvar(l:nr, '&modified')
-        " Sleep one second to make sure people see the message. Otherwise it is
-        " often immediacy overwritten by the async messages (which also don't
-        " invoke the "hit ENTER" prompt).
-        call go#util#EchoWarning('[No write since last change]')
-        return
-      endif
-    endfor
-  endif
-endfunction
+" function! go#cmd#autowrite() abort
+"   if &autowrite == 1 || &autowriteall == 1
+"     silent! wall
+"   else
+"     for l:nr in range(0, bufnr('$'))
+"       if buflisted(l:nr) && getbufvar(l:nr, '&modified')
+"         " Sleep one second to make sure people see the message. Otherwise it is
+"         " often immediacy overwritten by the async messages (which also don't
+"         " invoke the "hit ENTER" prompt).
+"         call go#util#EchoWarning('[No write since last change]')
+"         return
+"       endif
+"     endfor
+"   endif
+" endfunction
 
 " Rust related settings "
 let g:rustfmt_autosave = 1
@@ -171,42 +172,54 @@ set wildmenu
 filetype plugin indent on    " required
 
 " Replace selected text within visual mode via Ctrl+R 
-vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+vnoremap // y/<C-R>"<CR>
 
 "AESTHETICS"
 " not sure why but I have to do this twice for it to run properly
-"
-colorscheme vividchalk
-colorscheme vividchalk
+
+set termguicolors
+" colorscheme ammar
+colorscheme onedark
 
 " Move around windows w/ alt + arrow key
-nmap <silent> <A-Up> :wincmd k<CR>
-nmap <silent> <A-Down> :wincmd j<CR>
-nmap <silent> <A-Left> :wincmd h<CR>
-nmap <silent> <A-Right> :wincmd l<CR>
+	nmap <silent> <A-Up> :wincmd k<CR>
+	nmap <silent> <A-Down> :wincmd j<CR>
+	nmap <silent> <A-Left> :wincmd h<CR>
+	nmap <silent> <A-Right> :wincmd l<CR>
 
-" fit more code on screen w/ smaller tabs
-set tabstop=4
-set shiftwidth=4
+	" fit more code on screen w/ smaller tabs
+	set tabstop=4
+	set shiftwidth=4
 
-set incsearch
-syntax on
+	set incsearch
+	syntax on
 
-" Split/window management
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
-nnoremap <C-x> :q<CR> " Quickly exit buffer
-nnoremap <Leader>b :b#<CR> " Quickly go to previous buffer
-nnoremap <C-<gt>> :vertical resize +10<CR>
+	" Split/window management
+	nnoremap <C-J> <C-W><C-J>
+	nnoremap <C-K> <C-W><C-K>
+	nnoremap <C-L> <C-W><C-L>
+	nnoremap <C-H> <C-W><C-H>
+	nnoremap <C-x> :q<CR> " Quickly exit buffer
+	nnoremap <Leader>b :b#<CR> " Quickly go to previous buffer
+	nnoremap <C-<gt>> :vertical resize +10<CR>
+
+	nnoremap <C-p> :Denite file/rec<CR>
+	nnoremap <C-b> :Denite buffer<CR>
+	call denite#custom#map('insert', '<C-j>', '<denite:move_to_next_line>', 'noremap')
+	call denite#custom#map('insert', '<C-n>', '<denite:move_to_next_line>', 'noremap')
+	call denite#custom#map('insert', '<C-k>', '<denite:move_to_previous_line>', 'noremap')
+	call denite#custom#map('insert', '<C-p>', '<denite:move_to_previous_line>', 'noremap')
 
 " Async linting/errors
-nnoremap <C-A-E> :ALENext<CR>
+"
+" nnoremap <C-p> :Denite file/rec<CR>
+nnoremap <C-A-E> :ALENextWrap<CR>
 let g:ale_list_window_size = 3
 
 " Git support
 set updatetime=1000 "We want our git gutter to update almost immediately.
+autocmd VimEnter * let g:gitgutter_enabled = 1
+autocmd VimEnter * :GitGutterEnable
 
 " ALE
 let g:ale_open_list = 1
@@ -217,6 +230,10 @@ let g:ale_lint_on_insert_leave = 1
 let g:ale_lint_on_text_changed = 0
 let g:ale_lint_on_enter = 1
 let g:ale_lint_on_save = 1
+" let g:ale_linters = {
+" \ 'go': [ ''],
+" \}
+let g:ale_go_gometalinter_options = "--fast"
 
 " Debug syntax highlighting	
 map <C-A-H> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'

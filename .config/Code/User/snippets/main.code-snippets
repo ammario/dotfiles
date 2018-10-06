@@ -72,6 +72,16 @@
 			"",
 		]
 	},
+	"b.Run": {
+		"scope": "go",
+		"prefix": "brun",
+		"body": [
+			"b.Run(\"$1\", func(b *testing.B) {",
+			"\t$2",
+			"})",
+			"",
+		]
+	},
 	"context.WithTimeout(ctx, timeout)": {
 		"scope": "go",
 		"prefix": "ctxto",
@@ -80,5 +90,53 @@
 			"defer cancel()",
 			"$4",
 		]
-	}
+	},
+	"context.WithCancel(ctx)": {
+		"scope": "go",
+		"prefix": "ctxc",
+		"body": [
+			"ctx, cancel $1= context.WithCancel($2)",
+			"defer cancel()",
+			"$4",
+		]
+	},
+	"for i := 0; i < n; i++": {
+		"scope": "go",
+		"prefix": "fori",
+		"body": [
+			"for i := 0; i < $1; i++ {",
+			"\t$2",
+			"}",
+		]
+	},
+	"errors.Wrapf(err, )": {
+		"scope": "go",
+		"prefix": "ewr",
+		"body": [
+			"errors.Wrapf(err, \"$1\"$2)",
+		]
+	},
+	"mu.Lock\ndefer mu.Unlock()": {
+		"scope": "go",
+		"prefix": "mul",
+		"body": [
+			"$1.Lock()",
+			"defer $1.Unlock()",
+		]
+	},
+	"trace.NewTask": {
+		"scope": "go",
+		"prefix": "tnt",
+		"body": [
+			"tctx, task := trace.NewTask($1, \"$2\")",
+			"defer task.End()",
+		]
+	},
+	"trace.Log": {
+		"scope": "go",
+		"prefix": "tlogf",
+		"body": [
+			"trace.Logf($1, \"$2\", \"$3\"$4)",
+		]
+	},
 }
