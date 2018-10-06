@@ -32,6 +32,7 @@ if dein#load_state('~/.cache/dein')
 	call dein#add('easymotion/vim-easymotion')
 	call dein#add('terryma/vim-smooth-scroll')
 	call dein#add('joshdick/onedark.vim')
+	call dein#add('NLKNguyen/papercolor-theme')
 
 
  if !has('nvim')
@@ -175,11 +176,13 @@ filetype plugin indent on    " required
 vnoremap // y/<C-R>"<CR>
 
 "AESTHETICS"
-" not sure why but I have to do this twice for it to run properly
 
 set termguicolors
 " colorscheme ammar
-colorscheme onedark
+set background=dark
+colorscheme PaperColor
+let g:airline_theme='PaperColor'
+let g:lightline = { 'colorscheme': 'PaperColor' }
 
 " Move around windows w/ alt + arrow key
 	nmap <silent> <A-Up> :wincmd k<CR>

@@ -14,3 +14,5 @@ cp -r ~/.config/fish/config.fish .config/fish/
 
 cp -r ~/.xinitrc .xinitrc
 cp -r ~/.Xmodmap .Xmodmap
+
+cp -r ~/.GoLand2018.2/config .GoLand2018.2
