@@ -33,6 +33,7 @@ if dein#load_state('~/.cache/dein')
 	call dein#add('terryma/vim-smooth-scroll')
 	call dein#add('joshdick/onedark.vim')
 	call dein#add('NLKNguyen/papercolor-theme')
+	call dein#add('jceb/vim-orgmode')
 
 
  if !has('nvim')
