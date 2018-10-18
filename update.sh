@@ -10,7 +10,7 @@ cp -r ~/.vim .
 cp -r ~/.config/Code/User/snippets/ .config/Code/User
 cp -r ~/.config/Code/User/keybindings.json .config/Code/User
 cp -r ~/.config/Code/User/settings.json .config/Code/User
-cp -r ~/.config/fish/config.fish .config/fish/
+cp -r ~/.config/fish/* .config/fish/
 cp -r ~/.config/rofi .config/
 
 cp -r ~/.xinitrc .xinitrc

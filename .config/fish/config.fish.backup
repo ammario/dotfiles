@@ -1,3 +1,6 @@
+set -g -x fish_greeting ''
+
+# Colors
 
 set pink eb54c6
 set teal 54ebc5
@@ -34,30 +37,16 @@ set __fish_git_prompt_char_untrackedfiles '•'
 set __fish_git_prompt_char_stashstate 's'
 set __fish_git_prompt_char_upstream_ahead '↑ '
 set __fish_git_prompt_char_upstream_behind '↓ '
-set __fish_git_prompt_char_upstream_diverged '⇵ '
 
 # set __fish_git_prompt_show_informative_status "yes"
 
-# We override this below anyways.
-function fish_mode_prompt; end
 
 function fish_prompt
   set last_status $status
-	switch $fish_bind_mode
-		case default
-			printf "%sN" (set_color --bold blue)
-		case insert
-			printf "%sI" (set_color --bold green)
-		case visual
-			printf "%sV" (set_color --bold yellow)
-		case replace_one
-			printf "%sR" (set_color --bold red)
-		case "*"
-			printf "%sn" (set_color --bold normal)
-	end
+
   set_color -o
   set_color $fish_color_cwd
-  printf ' %s' (prompt_pwd)
+  printf '%s' (prompt_pwd)
   set_color normal
   printf '%s ' (__fish_git_prompt)
 
@@ -72,30 +61,8 @@ begin
     end
 end
 
-# git aliases
+# git alias
 alias gpo='git push -u origin HEAD'
 alias gpof='git push --force -u origin HEAD'
-alias glog='git log --oneline --decorate --graph'
-alias g='git'
-
-# google cloud aliases
 alias gcssh="gcloud compute ssh"
 
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/ammar/Downloads/google-cloud-sdk/path.fish.inc' ]; if type source > /dev/null; source '/home/ammar/Downloads/google-cloud-sdk/path.fish.inc'; else; . '/home/ammar/Downloads/google-cloud-sdk/path.fish.inc'; end; end
-
-# Set special PATH
-set PATH ~/go/bin ~/bin ~/Projects/coder/bin $PATH ~/secrets/bin
-set fish_greeting ""
-set GOPATH ~/go
-set GO111MODULE on
-
-# VIM MODE!
-fish_vi_key_bindings
-
-# Secrets
-source ~/secrets/hub
-
-# Misc. files
-source ~/.config/fish/git.fish
