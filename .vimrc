@@ -203,7 +203,7 @@ let g:lightline = { 'colorscheme': 'PaperColor' }
 	nnoremap <C-K> <C-W><C-K>
 	nnoremap <C-L> <C-W><C-L>
 	nnoremap <C-H> <C-W><C-H>
-	nnoremap <C-x> :q<CR> " Quickly exit buffer
+	" nnoremap <C-x> :q<CR> " Quickly exit buffer
 	nnoremap <Leader>b :b#<CR> " Quickly go to previous buffer
 	nnoremap <C-<gt>> :vertical resize +10<CR>
 
