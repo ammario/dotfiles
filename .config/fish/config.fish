@@ -88,7 +88,7 @@ if [ -f '/home/ammar/Downloads/google-cloud-sdk/path.fish.inc' ]; if type source
 # Set special PATH
 set PATH ~/go/bin ~/bin ~/Projects/coder/bin $PATH ~/secrets/bin
 set fish_greeting ""
-set GOPATH ~/go
+set GOPATH /home/ammar/go
 set GO111MODULE on
 
 # VIM MODE!

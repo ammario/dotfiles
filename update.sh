@@ -17,3 +17,4 @@ cp -r ~/.xinitrc .xinitrc
 cp -r ~/.Xmodmap .Xmodmap
 
 cp -r ~/.GoLand2018.2/config .GoLand2018.2
+cp -r ~/.GoLand2018.3/config .GoLand2018.3
