@@ -77,6 +77,9 @@ alias gpo='git push -u origin HEAD'
 alias gpof='git push --force -u origin HEAD'
 alias glog='git log --oneline --decorate --graph'
 alias g='git'
+alias gd='git diff HEAD'
+
+alias l='ls -al'
 
 # google cloud aliases
 alias gcssh="gcloud compute ssh"
@@ -88,7 +91,7 @@ if [ -f '/home/ammar/Downloads/google-cloud-sdk/path.fish.inc' ]; if type source
 # Set special PATH
 set PATH ~/go/bin ~/bin ~/Projects/coder/bin $PATH ~/secrets/bin
 set fish_greeting ""
-set GOPATH /home/ammar/go
+set GOPATH ~/go
 set GO111MODULE on
 
 # VIM MODE!
