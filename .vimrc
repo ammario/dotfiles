@@ -34,6 +34,9 @@ if dein#load_state('~/.cache/dein')
 	call dein#add('joshdick/onedark.vim')
 	call dein#add('NLKNguyen/papercolor-theme')
 	call dein#add('jceb/vim-orgmode')
+	call dein#add('scrooloose/nerdtree')
+	call dein#add('durandj/bazel.vim')
+	call dein#add('hashivim/vim-terraform')
 
 
  if !has('nvim')
@@ -170,6 +173,10 @@ set path+=**
 
 set wildmenu
 
+" File Tree
+map <C-w><C-t> :NERDTreeToggle<CR>
+map <C-t> :NERDTreeFocus<CR>
+
 
 filetype plugin indent on    " required
 
@@ -239,7 +246,8 @@ let g:ale_lint_on_save = 1
 " \}
 let g:ale_go_gometalinter_options = "--fast"
 
-" Debug syntax highlighting	
-map <C-A-H> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
-\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
-\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+" Syntax highlighting
+	" Debug syntax highlighting	
+	map <C-A-H> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
+	\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
+	\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
