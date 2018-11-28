@@ -251,6 +251,8 @@ let g:ale_go_gometalinter_options = "--fast"
 
 " Buffer management
 noremap <C-A-p> :b 
+" Stop accidently exiting buffers.
+noremap <C-c> <Tab>
 
 " Folding confused my simple mind.
 set diffopt+=context:99999
