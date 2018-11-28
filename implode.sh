@@ -12,6 +12,7 @@ cp -r ~/.config/Code/User/keybindings.json .config/Code/User
 cp -r ~/.config/Code/User/settings.json .config/Code/User
 cp -r ~/.config/fish/* .config/fish/
 cp -r ~/.config/rofi .config/
+cp -r ~/.config/i3 .config/
 
 cp -r ~/.xinitrc .xinitrc
 cp -r ~/.Xmodmap .Xmodmap
