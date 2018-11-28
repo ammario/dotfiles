@@ -183,7 +183,7 @@ client.focused_inactive $color2 $color2     $color_text $color_indicator
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        position top
+        position bottom
         colors {
                 background $color1
                 separator #757575
@@ -198,6 +198,7 @@ bar {
 
 # start program launcher (a program launcher)
 bindsym $mod+d exec dmenu_run 
+bindsym $mod+space exec menuplexer
 
 ##FN keys
 
@@ -222,6 +223,12 @@ bindsym XF86AudioPrev exec playerctl previous
 # Wallpaper
 exec_always feh --bg-scale ~/Pictures/wallpaper.jpg
 exec_always compton &
+
+# Network manager
+exec_always nm-applet &
+
+# Custom keymap
+exec_always ~/.xinitrc
 
 # Named workspaces
 bindsym $mod+m        exec i3-msg workspace $(lsws | dmenu -p "→")
