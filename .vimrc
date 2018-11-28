@@ -275,4 +275,4 @@ nnoremap <Leader>s :noh<CR>
 set conceallevel=0
 
 " Simpler terminal escape
-tnoremap <C-\> <C-\><C-N>
+tnoremap <C-x> <C-\><C-N>
