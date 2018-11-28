@@ -32,6 +32,7 @@
 	sync = codereview sync
 	cfb = !git commit -m \"$(echo $(git rev-parse --abbrev-ref HEAD) | rev | cut -d/ -f1 | rev |  tr \"-\" \" \" | sed \"s/.*/\\u&/\")\" && git commit --amend
 	ca  = commit --amend
+	c  = commit
 	cax = commit --amend --no-edit 
 	cb = checkout -b
 	fix = commit --fixup HEAD
