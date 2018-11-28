@@ -37,7 +37,9 @@ if dein#load_state('~/.cache/dein')
 	call dein#add('scrooloose/nerdtree')
 	call dein#add('durandj/bazel.vim')
 	call dein#add('hashivim/vim-terraform')
-
+	call dein#add('chrisbra/Recover.vim')
+	call dein#add('stephpy/vim-yaml')
+	call dein#add('spolu/dwm.vim')
 
  if !has('nvim')
    call dein#add('roxma/nvim-yarp')
@@ -193,11 +195,6 @@ let g:airline_theme='PaperColor'
 let g:lightline = { 'colorscheme': 'PaperColor' }
 
 " Move around windows w/ alt + arrow key
-	nmap <silent> <A-Up> :wincmd k<CR>
-	nmap <silent> <A-Down> :wincmd j<CR>
-	nmap <silent> <A-Left> :wincmd h<CR>
-	nmap <silent> <A-Right> :wincmd l<CR>
-
 	" fit more code on screen w/ smaller tabs
 	set tabstop=4
 	set shiftwidth=4
@@ -206,8 +203,8 @@ let g:lightline = { 'colorscheme': 'PaperColor' }
 	syntax on
 
 	" Split/window management
-	nnoremap <C-J> <C-W><C-J>
-	nnoremap <C-K> <C-W><C-K>
+	" nnoremap <C-J> <C-W><C-J>
+	" nnoremap <C-K> <C-W><C-K>
 	nnoremap <C-L> <C-W><C-L>
 	nnoremap <C-H> <C-W><C-H>
 	" nnoremap <C-x> :q<CR> " Quickly exit buffer
@@ -251,3 +248,29 @@ let g:ale_go_gometalinter_options = "--fast"
 	map <C-A-H> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<'
 	\ . synIDattr(synID(line("."),col("."),0),"name") . "> lo<"
 	\ . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">"<CR>
+
+" Buffer management
+noremap <C-A-p> :b 
+
+" Folding confused my simple mind.
+set diffopt+=context:99999
+
+" Detect bash from shebang
+function! DetectBash()
+   if getline(1) =~ '#!\/bin\/bash'
+     setfiletype sh
+   endif
+endfunction
+
+augroup filetypedetect
+  au BufRead,BufNewFile * call DetectBash()
+augroup END
+
+" Clear search
+nnoremap <Leader>s :noh<CR>
+
+" Disable text concealling. This is normally highly confusing.
+set conceallevel=0
+
+" Simpler terminal escape
+tnoremap <C-\> <C-\><C-N>
