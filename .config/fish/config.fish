@@ -109,5 +109,5 @@ set EDITOR "vim"
 # See https://fishshell.com/docs/current/commands.html#bind for syntax reference.
 # See https://github.com/fish-shell/fish-shell/blob/23ba7b5bfff9393d222cd8e4a045e3439e24aba1/share/functions/fish_default_key_bindings.fish for default bindings.
 bind -M insert \ew nextd-or-forward-word
-bind \ea accept-autosuggestion
+bind -M insert \ea accept-autosuggestion
 
