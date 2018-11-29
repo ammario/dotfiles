@@ -103,7 +103,7 @@ source ~/secrets/hub
 # Misc. files
 source ~/.config/fish/git.fish
 
-set EDITOR "vim"
+set EDITOR "nvim"
 
 # Custom keybinds
 # See https://fishshell.com/docs/current/commands.html#bind for syntax reference.

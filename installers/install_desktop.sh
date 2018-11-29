@@ -1,5 +1,5 @@
 #!/bin/bash
-sudo apt-get install git vim-gnome i3 i3blocks arandr gdebi synergy keepassx tor torbrowser-launcher wget openvpn lsyncd qbittorrent thunar  p7zip-full xsel xbacklight fish compton htop lightdm pavucontrol sshfs xclip jq curl nvim rofi
+sudo apt-get install git vim-gnome i3 i3blocks arandr gdebi synergy keepassx tor torbrowser-launcher wget openvpn lsyncd qbittorrent thunar  p7zip-full xsel xbacklight fish compton htop lightdm pavucontrol sshfs xclip jq curl neovim rofi
 
 sudo chsh ammar -s /usr/bin/fish
 
