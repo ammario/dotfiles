@@ -37,7 +37,8 @@
 	c  = commit --verbose
 	cax = commit --amend --no-edit 
 	cb = checkout -b
-	fix = commit --fixup HEAD
+	f = commit --fixup HEAD
+	d = diff
 
 [gitflow "branch"]
 	master = master
