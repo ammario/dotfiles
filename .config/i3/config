@@ -224,6 +224,8 @@ exec_always nm-applet &
 # Custom keymap
 exec_always ~/.xinitrc
 
+exec_always redshift &
+
 # Named workspaces
 bindsym $mod+m        exec i3-msg workspace $(lsws | dmenu -p "→")
 bindsym $mod+Shift+m  exec i3-msg move container to workspace $(lsws | dmenu -p "|→")
