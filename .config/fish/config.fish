@@ -94,8 +94,15 @@ set fish_greeting ""
 set GOPATH ~/go
 set GO111MODULE on
 
-# VIM MODE!
+# Custom keybinds
+# See https://fishshell.com/docs/current/commands.html#bind for syntax reference.
+# See https://github.com/fish-shell/fish-shell/blob/23ba7b5bfff9393d222cd8e4a045e3439e24aba1/share/functions/fish_default_key_bindings.fish for default bindings.
 fish_vi_key_bindings
+
+function fish_user_key_bindings
+	bind -M insert \ea accept-autosuggestion execute
+	bind -M insert \ew nextd-or-forward-word
+end
 
 # Secrets
 source ~/secrets/hub
@@ -106,8 +113,3 @@ source ~/.config/fish/git.fish
 set EDITOR (which nvim)
 set VISUAL nvim
 
-# Custom keybinds
-# See https://fishshell.com/docs/current/commands.html#bind for syntax reference.
-# See https://github.com/fish-shell/fish-shell/blob/23ba7b5bfff9393d222cd8e4a045e3439e24aba1/share/functions/fish_default_key_bindings.fish for default bindings.
-bind -M insert \ew nextd-or-forward-word
-bind -M insert \ea 'commandline -f accept-autosuggestion execute'
