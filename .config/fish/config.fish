@@ -101,7 +101,7 @@ fish_vi_key_bindings
 
 function fish_user_key_bindings
 	bind -M insert \ea accept-autosuggestion execute
-	bind -M insert \ew nextd-or-forward-word
+bind -M insert \ew nextd-or-forward-word
 end
 
 # Secrets
