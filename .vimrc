@@ -118,7 +118,7 @@ set backspace=indent,eol,start
 	set statusline=
 	set statusline+=%0*\ %{toupper(g:currentmode[mode()])}   " Current mode
 	set statusline+=%8*\ [%n]                                " buffernr
-	set statusline+=%8*\ %<%F\ %{ReadOnly()}\ %m\ %w\        " File+path
+	set statusline+=%8*\ %<%f\ %{ReadOnly()}\ %m\ %w\        " File+path
 	set statusline+=%#warningmsg#
 	set statusline+=%*
 	set statusline+=%9*\ %=                                  " Space
