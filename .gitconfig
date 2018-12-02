@@ -39,6 +39,7 @@
 	cb = checkout -b
 	f = commit --fixup HEAD
 	d = diff
+	s = status
 
 [gitflow "branch"]
 	master = master
