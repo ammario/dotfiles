@@ -117,14 +117,14 @@ set backspace=indent,eol,start
 	set laststatus=2
 	set statusline=
 	set statusline+=%0*\ %{toupper(g:currentmode[mode()])}   " Current mode
-	set statusline+=%8*\ [%n]                                " buffernr
-	set statusline+=%8*\ %<%f\ %{ReadOnly()}\ %m\ %w\        " File+path
+	set statusline+=%0*\ [%n]                                " buffernr
+	set statusline+=%0*\ %<%f\ %{ReadOnly()}\ %m\ %w\        " File+path
 	set statusline+=%#warningmsg#
 	set statusline+=%*
-	set statusline+=%9*\ %=                                  " Space
-	set statusline+=%8*\ %y\                                 " FileType
-	set statusline+=%7*\ %{(&fenc!=''?&fenc:&enc)}\[%{&ff}]\ " Encoding & Fileformat
-	set statusline+=%8*\ %-3(%{FileSize()}%)                 " File size
+	set statusline+=%0*\ %=                                  " Space
+	set statusline+=%0*\ %y\                                 " FileType
+	set statusline+=%0*\ %{(&fenc!=''?&fenc:&enc)}\[%{&ff}]\ " Encoding & Fileformat
+	set statusline+=%0*\ %-3(%{FileSize()}%)                 " File size
 	set statusline+=%0*\ %3p%%\ \ %l:\ %3B\                 " Rownumber/total (%)
 
 let g:deoplete#enable_at_startup = 1
