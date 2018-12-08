@@ -1,0 +1,6 @@
+#!/bin/bash
+# Spotify can take the entire CPU after waking up from a long sleep.
+cpulimit -l 200 /snap/bin/spotify
+
+
+
