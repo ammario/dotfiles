@@ -41,7 +41,7 @@
 	fs = "!f() { git commit --fixup :/$1 ; }; f"	
 	d = diff
 	s = status
-	emoji = !git commit --amend -m \"$(git log -1 --pretty=%B) $(emoj $(git log -1 --pretty=%B) | sed 's/  /\\n/g' | fzf --height 9)\"
+	emoji = !set -e && echo $(git log -1 --pretty=%B) && git commit --amend -m \"$(git log -1 --pretty=%B) $(emoj $(git log -1 --pretty=%B) | sed 's/  /\\n/g' | fzf --height 9)\"
 
 [gitflow "branch"]
 	master = master
