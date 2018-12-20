@@ -215,7 +215,9 @@ exec_always nm-applet &
 # Custom keymap
 exec_always ~/.xinitrc
 
-exec_always redshift &
+# Start up blue light filter.
+# -t controls temperature, and it's usage is -t <DAY>:<NIGHT> where 6500K is the default (no effect) temperature.
+exec_always redshift -t 4500K:2500K &
 
 # Named workspaces
 bindsym $mod+m        exec i3-msg workspace $(lsws | dmenu -p "→")
