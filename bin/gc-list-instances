@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -euf -o pipefail
+
+PROJECT=$1
+
+gcloud --project $PROJECT compute instances list
