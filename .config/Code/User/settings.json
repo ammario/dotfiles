@@ -139,4 +139,6 @@
     "go.testTimeout": "5s",
     "workbench.colorTheme": "One Dark Pro Vivid",
     "go.useLanguageServer": true,
+    "gitlens.views.fileHistory.enabled": false,
+    "gitlens.views.lineHistory.enabled": false,
 }
