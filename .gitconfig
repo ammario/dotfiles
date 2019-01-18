@@ -58,8 +58,7 @@
 [rebase]
 	autosquash = true
 [hub]
-	host = gh.coder-internal.com
-	host = gh.coder-internal.com
+	host = github.com
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
