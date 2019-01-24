@@ -1,1 +1,3 @@
 .vim/bundle
+.fish_history
+config.fish.backup
