@@ -4,6 +4,14 @@ sudo apt-get install git vim-gnome i3 i3blocks arandr gdebi synergy keepassx tor
 # not once
 sudo apt-get remove nano
 
+# Install alactritty.
+(
+	cd /tmp
+	url=https://github.com/jwilm/alacritty/releases/download/v0.2.7/Alacritty-v0.2.7_amd64.deb
+	wget $url 
+	dpkg -i $(basename $url)
+)
+
 sudo chsh ammar -s /usr/bin/fish
 
 #theme stuff
