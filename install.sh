@@ -1,2 +1,2 @@
-cp -r .bashrc .fonts/ .gitconfig .vim/ .vimrc ~
+cp -r .bashrc .fonts/ .gitconfig .vim/ .vimrc .inputrc ~
 

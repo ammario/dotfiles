@@ -16,3 +16,4 @@ cp -r ~/.config/i3 .config/
 
 cp -r ~/.xinitrc .xinitrc
 cp -r ~/.Xmodmap .Xmodmap
+cp -r ~/.inputrc .inputrc
