@@ -37,7 +37,7 @@
 	c  = commit --verbose
 	cax = commit --amend --no-edit 
 	cb = checkout -b
-	f = commit --fixup HEAD
+	f = "! git commit --fixup $(git log --pretty='%H' -1 --invert-grep --grep 'fixup! ')"
 	fs = "!f() { git commit --fixup :/$1 ; }; f"	
 	d = diff
 	s = status
