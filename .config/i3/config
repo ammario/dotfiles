@@ -214,6 +214,8 @@ exec_always feh --bg-scale ~/Pictures/wallpaper.jpg
 # Network manager
 exec_always nm-applet &
 
+exec_always safeeyes -e &
+
 # Custom keymap
 exec_always ~/.xinitrc
 
@@ -225,3 +227,6 @@ exec_always redshift -t 4500K:2500K &
 bindsym $mod+m        exec i3-msg workspace $(lsws | dmenu -p "→")
 bindsym $mod+Shift+m  exec i3-msg move container to workspace $(lsws | dmenu -p "|→")
 bindsym $mod+u            workspace back_and_forth
+
+# Hide shit
+bindsym $mod+Shift+minus move scratchpad

@@ -1,7 +1,7 @@
 {
     "allow_postpone": false,
     "long_break_duration": 60,
-    "long_break_interval": 75,
+    "long_break_interval": 60,
     "long_breaks": [
         {
             "name": "Walk for a while"
@@ -99,7 +99,7 @@
     "pre_break_warning_time": 5,
     "rpc_port": 7200,
     "short_break_duration": 20,
-    "short_break_interval": 15,
+    "short_break_interval": 20,
     "short_breaks": [
         {
             "name": "Focus on a point in the far distance"

@@ -14,6 +14,7 @@ cp -r ~/.config/fish/* .config/fish/
 cp -r ~/.config/rofi .config/
 cp -r ~/.config/i3 .config/
 cp -r ~/.config/safeeyes .config/
+cp -r ~/.config/alacritty .config/
 
 cp -r ~/.xinitrc .xinitrc
 cp -r ~/.Xmodmap .Xmodmap

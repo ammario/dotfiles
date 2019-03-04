@@ -42,6 +42,8 @@ if dein#load_state('~/.cache/dein')
 	call dein#add('stephpy/vim-yaml')
 	call dein#add('spolu/dwm.vim')
 	call dein#add('djoshea/vim-autoread')
+	call dein#add('ElmCast/elm-vim')
+	call dein#add('wannesm/wmgraphviz.vim', { 'on_ft': 'dot' })
 
  if !has('nvim')
    call dein#add('roxma/nvim-yarp')
@@ -346,3 +348,6 @@ set conceallevel=0
 
 " Simpler terminal escape
 tnoremap <C-x> <C-\><C-N>
+
+" Graphviz
+noremap <Leader>g :GraphvizInteractive <CR>
