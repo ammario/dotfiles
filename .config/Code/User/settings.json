@@ -14,6 +14,31 @@
     "workbench.iconTheme": "vscode-icons",
     "rust.actionOnSave": "check",
     "vsicons.projectDetection.disableDetect": true,
+    // Customizations to create PaperColor Dark.
+    // Applied to OneDark Pro.
+    "workbench.colorCustomizations": {
+        "[Atom One Dark]": {
+            "editor.background": "#191919",
+            "editor.foreground": "#ffffff",
+            "editor.lineHighlightBackground": "#1e1e1e",
+            "editorCursor.foreground": "#ffffff",
+            "editorWhitespace.foreground": "#404040",
+            "tab.inactiveBackground": "#282828",
+            "panel.background": "#222222",
+            "statusBar.background": "#0f0f0f",
+            "activityBar.background": "#120F12",
+            "sideBar.background": "#1f1f1f"
+        },
+    },
+    "editor.tokenColorCustomizations": {
+        "[Atom One Dark]": {
+            "functions": "#FFFFFF",
+            "comments": "#808080",
+            "types": "#afd700",
+            "keywords": "#00afaf",
+            "strings": "#d7af5f",
+        }
+    },
     //customizations for Atom One Dark
     // "workbench.colorCustomizations": {
     // "editor.background": "#0A0A0A",
@@ -136,7 +161,7 @@
     },
     "go.coverageOptions": "showUncoveredCodeOnly",
     "go.testTimeout": "5s",
-    "workbench.colorTheme": "PaperColor Dark",
+    "workbench.colorTheme": "Atom One Dark",
     "go.useLanguageServer": true,
     "gitlens.views.fileHistory.enabled": false,
     "gitlens.views.lineHistory.enabled": false,

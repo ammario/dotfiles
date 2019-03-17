@@ -70,7 +70,7 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "f2",
+        "key": "ctrl+f2",
         "command": "editor.action.changeAll",
         "when": "editorTextFocus && !editorReadonly"
     },
@@ -78,5 +78,15 @@
         "key": "ctrl+f2",
         "command": "-editor.action.changeAll",
         "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+alt+7",
+        "command": "references-view.find",
+        "when": "editorHasReferenceProvider"
+    },
+    {
+        "key": "shift+alt+f12",
+        "command": "-references-view.find",
+        "when": "editorHasReferenceProvider"
     }
 ]
