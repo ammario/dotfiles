@@ -10,7 +10,7 @@ SETUVAR fish_color_autosuggestion:555\x1eyellow
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:a570ff
 SETUVAR fish_color_comment:red
-SETUVAR fish_color_cwd:83ff70
+SETUVAR fish_color_cwd:f8f8f0
 SETUVAR fish_color_cwd_root:red
 SETUVAR fish_color_end:brmagenta
 SETUVAR fish_color_error:red\x1e\x2d\x2dbold
@@ -34,3 +34,4 @@ SETUVAR fish_pager_color_completion:normal
 SETUVAR fish_pager_color_description:555\x1eyellow
 SETUVAR fish_pager_color_prefix:cyan
 SETUVAR fish_pager_color_progress:cyan
+SETUVAR fish_user_paths:/home/ammar/\x2efzf/bin

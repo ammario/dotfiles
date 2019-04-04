@@ -1,7 +1,7 @@
 {
     "allow_postpone": false,
     "long_break_duration": 60,
-    "long_break_interval": 60,
+    "long_break_interval": 120,
     "long_breaks": [
         {
             "name": "Walk for a while"
@@ -35,14 +35,16 @@
             "enabled": false,
             "id": "audiblealert",
             "settings": {
+                "post_break_alert": true,
                 "pre_break_alert": true
             },
-            "version": "0.0.2"
+            "version": "0.0.3"
         },
         {
             "enabled": true,
             "id": "trayicon",
             "settings": {
+                "allow_disabling": true,
                 "disable_options": [
                     {
                         "time": 30,
@@ -63,7 +65,7 @@
                 ],
                 "show_time_in_tray": false
             },
-            "version": "0.0.1"
+            "version": "0.0.3"
         },
         {
             "enabled": true,
@@ -87,7 +89,10 @@
         {
             "enabled": false,
             "id": "healthstats",
-            "version": "0.0.1"
+            "settings": {
+                "statistics_reset_interval": 24
+            },
+            "version": "0.0.2"
         },
         {
             "enabled": true,
@@ -98,8 +103,8 @@
     "postpone_duration": 5,
     "pre_break_warning_time": 5,
     "rpc_port": 7200,
-    "short_break_duration": 20,
-    "short_break_interval": 20,
+    "short_break_duration": 60,
+    "short_break_interval": 60,
     "short_breaks": [
         {
             "name": "Focus on a point in the far distance"

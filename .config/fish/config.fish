@@ -1,4 +1,3 @@
-
 set pink eb54c6
 set teal 54ebc5
 set blue 4bb2d3
@@ -9,7 +8,7 @@ set grey 808080
 
 
 set fish_color_quote white
-set fish_color_cwd $green
+set fish_color_cwd f8f8f0
 set fish_color_command $magenta
 
 # Git Prompt
@@ -42,6 +41,14 @@ set __fish_git_prompt_char_upstream_diverged '⇵ '
 function fish_mode_prompt; end
 
 function fish_prompt
+  set bracket_color "f8f8f0"
+  set_color --bold $bracket_color
+  printf '['
+  set_color --bold bf3eff
+  printf '%s' $hostname
+  set_color --bold $bracket_color
+  printf '] '
+
   set last_status $status
 	switch $fish_bind_mode
 		case default
@@ -89,10 +96,9 @@ alias gcssh="gcloud compute ssh"
 if [ -f '/home/ammar/Downloads/google-cloud-sdk/path.fish.inc' ]; if type source > /dev/null; source '/home/ammar/Downloads/google-cloud-sdk/path.fish.inc'; else; . '/home/ammar/Downloads/google-cloud-sdk/path.fish.inc'; end; end
 
 # Set special PATH
-mkdir -p ~/Projects/dotfiles/bin ~/go/bin ~/bin ~/Projects/coder/bin ~/secrets/bin
 set PATH ~/Projects/dotfiles/bin/ ~/go/bin ~/bin ~/Projects/coder/bin $PATH ~/secrets/bin
 set fish_greeting ""
-set GOPATH ~/go 
+set GOPATH ~/go
 set GO111MODULE on
 
 # Custom keybinds
@@ -107,7 +113,6 @@ function fish_user_key_bindings
 end
 
 # Secrets
-touch ~/secrets/hub
 source ~/secrets/hub
 
 # Misc. files

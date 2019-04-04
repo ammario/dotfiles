@@ -351,3 +351,5 @@ tnoremap <C-x> <C-\><C-N>
 
 " Graphviz
 noremap <Leader>g :GraphvizInteractive <CR>
+
+set smartcase

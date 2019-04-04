@@ -139,4 +139,12 @@
 			"trace.Logf($1, \"$2\", \"$3\"$4)",
 		]
 	},
+	"doc": {
+		"scope": "typescript",
+		"prefix": "doc",
+		"body": [
+			"/**",
+			" */",
+		]
+	}
 }

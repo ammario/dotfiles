@@ -161,8 +161,9 @@
     },
     "go.coverageOptions": "showUncoveredCodeOnly",
     "go.testTimeout": "5s",
-    "workbench.colorTheme": "Atom One Dark",
+    "workbench.colorTheme": "Min Dark",
     "go.useLanguageServer": true,
     "gitlens.views.fileHistory.enabled": false,
     "gitlens.views.lineHistory.enabled": false,
+    "vim.neovimPath": "/usr/bin/nvim",
 }
