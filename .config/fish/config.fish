@@ -97,7 +97,8 @@ alias gcssh="gcloud compute ssh"
 if [ -f '/home/ammar/Downloads/google-cloud-sdk/path.fish.inc' ]; if type source > /dev/null; source '/home/ammar/Downloads/google-cloud-sdk/path.fish.inc'; else; . '/home/ammar/Downloads/google-cloud-sdk/path.fish.inc'; end; end
 
 # Set special PATH
-set PATH ~/Projects/dotfiles/bin/ ~/go/bin ~/bin ~/Projects/coder/bin $PATH ~/secrets/bin
+mkdir -p ~/go/bin ~/bin ~/Projects/coder/bin ~/secrets/bin
+set PATH ~/go/bin ~/bin ~/Projects/coder/bin $PATH ~/secrets/bin
 set fish_greeting ""
 set GOPATH ~/go
 set GO111MODULE on
