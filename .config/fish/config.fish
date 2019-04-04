@@ -46,7 +46,7 @@ function fish_prompt
   printf '['
   set_color reset
   set_color bf3eff
-  printf '%s' $hostname
+  printf '%s' (cat /etc/hostname)
   set_color --bold $bracket_color
   printf '] '
 

@@ -1,6 +1,6 @@
 FROM codercom/ubuntu-dev
 
-RUN apt-get -y install fish ripgrep neovim
+RUN apt-get -y install fish ripgrep neovim htop
 RUN chsh root -s $(which fish)
 
 ADD .vimrc /root/
