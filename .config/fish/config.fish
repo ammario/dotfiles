@@ -8,7 +8,7 @@ set grey 808080
 
 
 set fish_color_quote white
-set fish_color_cwd f8f8f0
+set fish_color_cwd green
 set fish_color_command $magenta
 
 # Git Prompt
@@ -44,7 +44,8 @@ function fish_prompt
   set bracket_color "f8f8f0"
   set_color --bold $bracket_color
   printf '['
-  set_color --bold bf3eff
+  set_color reset
+  set_color bf3eff
   printf '%s' $hostname
   set_color --bold $bracket_color
   printf '] '
