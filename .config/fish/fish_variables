@@ -10,7 +10,7 @@ SETUVAR fish_color_autosuggestion:555\x1eyellow
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:a570ff
 SETUVAR fish_color_comment:red
-SETUVAR fish_color_cwd:green
+SETUVAR fish_color_cwd:00daff
 SETUVAR fish_color_cwd_root:red
 SETUVAR fish_color_end:brmagenta
 SETUVAR fish_color_error:red\x1e\x2d\x2dbold

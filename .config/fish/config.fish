@@ -3,12 +3,14 @@ set teal 54ebc5
 set blue 4bb2d3
 set light_blue 54c6eb
 set magenta a570ff
-set green 83ff70
+set green 00ffa5
+# set green 83ff70
 set grey 808080
+set orange FFA500
 
 
 set fish_color_quote white
-set fish_color_cwd green
+set fish_color_cwd 00daff
 set fish_color_command $magenta
 
 # Git Prompt
@@ -41,11 +43,11 @@ set __fish_git_prompt_char_upstream_diverged '⇵ '
 function fish_mode_prompt; end
 
 function fish_prompt
-  set bracket_color "f8f8f0"
+  set bracket_color "ffedcc"
   set_color --bold $bracket_color
   printf '['
   set_color reset
-  set_color bf3eff
+  set_color $orange
   printf '%s' (cat /etc/hostname)
   set_color --bold $bracket_color
   printf '] '
@@ -98,7 +100,7 @@ if [ -f '/home/ammar/Downloads/google-cloud-sdk/path.fish.inc' ]; if type source
 
 # Set special PATH
 mkdir -p ~/go/bin ~/bin ~/Projects/coder/bin ~/secrets/bin
-set PATH ~/go/bin ~/bin ~/Projects/coder/bin $PATH ~/secrets/bin
+set PATH ~/Projects/ammario/dotfiles/bin ~/go/bin ~/bin ~/Projects/coder/bin $PATH ~/secrets/bin
 set fish_greeting ""
 set GOPATH ~/go
 set GO111MODULE on

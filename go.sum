@@ -1,0 +1,7 @@
+github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
+github.com/fatih/color v1.7.0/go.mod h1:Zm6kSWBoL9eyXnKyktHP6abPY2pDugNf5KwzbycvMj4=
+github.com/mattn/go-colorable v0.0.9/go.mod h1:9vuHe8Xs5qXnSaW/c/ABM9alt+Vo+STaOChaDxuIBZU=
+github.com/mattn/go-isatty v0.0.4/go.mod h1:M+lRXTBqGeGNdLjl/ufCoiOlB5xdOkqRJdNxMWT7Zi4=
+go.coder.com/flog v0.0.0-20190129195112-eaed154a0db8/go.mod h1:83JsYgXYv0EOaXjIMnaZ1Fl6ddNB3fJnDZ/8845mUJ8=
+go.coder.com/narwhal v0.0.0-20190401195755-7015f16bf6f8 h1:oAaxNqTecLUGHq7y6DlTTu+gQFDZn03gSObOYF9iVog=
+go.coder.com/narwhal v0.0.0-20190401195755-7015f16bf6f8/go.mod h1:l5r13W34FFXzUdtjnK8y3GzM2tJl9nqFaUk81M6abWE=
