@@ -39,7 +39,6 @@
 			"if err != nil {",
 			"\t$1",
 			"}",
-			"$2",
 		]
 	},
 	"if err != nil return err": {
@@ -113,7 +112,7 @@
 		"scope": "go",
 		"prefix": "ewr",
 		"body": [
-			"errors.Wrapf(err, \"$1\"$2)",
+			"xerrors.Errorf(\"failed to $1: %w\", err)",
 		]
 	},
 	"mu.Lock\ndefer mu.Unlock()": {

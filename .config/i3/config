@@ -151,11 +151,11 @@ bindsym $mod+ctrl+s exec sus
 #hide_edge_borders both
 
 #set $color1 #2f343f
-set $color1 #000003
+set $color1 #000000
 set $color2 #000000
 set $color_text #f3f4f5
 set $color_inactive_text #656666
-set $color4 #280040
+set $color4 #323235
 set $color5 #40484a
 set $color_urgent #ffae1a
 set $color_indicator #894478

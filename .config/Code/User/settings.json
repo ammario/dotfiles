@@ -2,11 +2,12 @@
 {
     "editor.renderWhitespace": "none",
     // "go.useCodeSnippetsOnFunctionSuggest": true,
-    "go.gopath": "/home/ammar/go",
+    "go.gopath": "~/go",
     "files.associations": {
         "*.tmpl": "html"
     },
     "editor.wordWrap": "on",
+    "explorer.openEditors.visible": 0,
     "window.zoomLevel": 0,
     "editor.fontFamily": "'Fira Code'",
     "editor.fontSize": 13,
@@ -161,9 +162,33 @@
     },
     "go.coverageOptions": "showUncoveredCodeOnly",
     "go.testTimeout": "5s",
-    "workbench.colorTheme": "Min Dark",
-    "go.useLanguageServer": true,
+    "workbench.colorTheme": "Min Light",
     "gitlens.views.fileHistory.enabled": false,
     "gitlens.views.lineHistory.enabled": false,
     "vim.neovimPath": "/usr/bin/nvim",
+    "editor.minimap.enabled": false,
+    "go.useLanguageServer": true,
+    "go.alternateTools": {
+        "go-langserver": "gopls"
+    },
+    "go.languageServerExperimentalFeatures": {
+        "format": true,
+        "autoComplete": true,
+        "diagnostics": true,
+        "goToTypeDefinition": false,
+        "hover": true,
+        "signatureHelp": false,
+        "documentSymbols": false,
+        "workspaceSymbols": false,
+    },
+    "go.buildOnSave": "off",
+    "go.vetOnSave": "off",
+    "[go]": {
+        "editor.snippetSuggestions": "none",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        },
+    },
+    "go.autocompleteUnimportedPackages": true
 }

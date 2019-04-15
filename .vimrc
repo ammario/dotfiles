@@ -353,3 +353,6 @@ tnoremap <C-x> <C-\><C-N>
 noremap <Leader>g :GraphvizInteractive <CR>
 
 set smartcase
+
+" 80 char line indiciation
+set colorcolumn=80
