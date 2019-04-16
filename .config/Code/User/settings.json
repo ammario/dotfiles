@@ -162,12 +162,11 @@
     },
     "go.coverageOptions": "showUncoveredCodeOnly",
     "go.testTimeout": "5s",
-    "workbench.colorTheme": "Min Light",
+    "workbench.colorTheme": "Min Dark",
     "gitlens.views.fileHistory.enabled": false,
     "gitlens.views.lineHistory.enabled": false,
     "vim.neovimPath": "/usr/bin/nvim",
     "editor.minimap.enabled": false,
-    "go.useLanguageServer": true,
     "go.alternateTools": {
         "go-langserver": "gopls"
     },
@@ -184,11 +183,12 @@
     "go.buildOnSave": "off",
     "go.vetOnSave": "off",
     "[go]": {
-        "editor.snippetSuggestions": "none",
         "editor.formatOnSave": true,
         "editor.codeActionsOnSave": {
             "source.organizeImports": true
         },
     },
-    "go.autocompleteUnimportedPackages": true
+    "go.autocompleteUnimportedPackages": true,
+    "editor.snippetSuggestions": "top",
+    "go.useLanguageServer": true
 }

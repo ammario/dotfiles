@@ -33,7 +33,7 @@
 		"description": "Inserts a require no error call."
 	},
 	"if err != nil": {
-		"scope": "go",
+		"scope": "any",
 		"prefix": "ien",
 		"body": [
 			"if err != nil {",
@@ -42,7 +42,6 @@
 		]
 	},
 	"if err != nil return err": {
-		"scope": "go",
 		"prefix": "iene",
 		"body": [
 			"if err != nil {",
