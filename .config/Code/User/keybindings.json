@@ -265,5 +265,9 @@
         "key": "up",
         "command": "-selectPrevSuggestion",
         "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "ctrl+/",
+        "command": "search.action.clearSearchResults"
     }
 ]

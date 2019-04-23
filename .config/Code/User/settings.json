@@ -122,7 +122,6 @@
     "vim.easymotion": true,
     "[c]": {},
     "go.goroot": "/usr/local/go",
-    "go.buildOnSave": "package",
     "editor.formatOnSaveTimeout": 1000,
     "vim.visualModeKeyBindingsNonRecursive": [
         {
@@ -180,7 +179,6 @@
         "documentSymbols": false,
         "workspaceSymbols": false,
     },
-    "go.buildOnSave": "off",
     "go.vetOnSave": "off",
     "[go]": {
         "editor.formatOnSave": true,
@@ -190,5 +188,6 @@
     },
     "go.autocompleteUnimportedPackages": true,
     "editor.snippetSuggestions": "top",
-    "go.useLanguageServer": true
+    "go.useLanguageServer": true,
+    "terminal.integrated.rendererType": "dom",
 }
