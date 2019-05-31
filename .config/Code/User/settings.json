@@ -8,7 +8,7 @@
     },
     "editor.wordWrap": "on",
     "explorer.openEditors.visible": 0,
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 2,
     "editor.fontFamily": "'Fira Code'",
     "editor.fontSize": 13,
     "editor.fontLigatures": true,
@@ -134,7 +134,7 @@
             ]
         }
     ],
-    "files.autoSave": "afterDelay",
+    // "files.autoSave": "afterDelay",
     "vim.enableNeovim": true,
     "latex-workshop.view.pdf.viewer": "tab",
     "go.buildTags": "integration",
@@ -174,7 +174,7 @@
         "autoComplete": true,
         "diagnostics": true,
         "goToTypeDefinition": false,
-        "hover": true,
+        "hover": false,
         "signatureHelp": false,
         "documentSymbols": false,
         "workspaceSymbols": false,
@@ -188,6 +188,7 @@
     },
     "go.autocompleteUnimportedPackages": true,
     "editor.snippetSuggestions": "top",
-    "go.useLanguageServer": true,
+    "go.useLanguageServer": false,
     "terminal.integrated.rendererType": "dom",
+    "html.format.indentHandlebars": true,
 }

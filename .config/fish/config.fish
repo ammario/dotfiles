@@ -10,7 +10,8 @@ set orange FFA500
 
 
 set fish_color_quote white
-set fish_color_cwd 00daff
+set fish_color_cwd 5778c7
+
 set fish_color_command $magenta
 
 # Git Prompt
@@ -43,7 +44,7 @@ set __fish_git_prompt_char_upstream_diverged '⇵ '
 function fish_mode_prompt; end
 
 function fish_prompt
-  set bracket_color "ffedcc"
+  set bracket_color "262626"
   set_color --bold $bracket_color
   printf '['
   set_color reset

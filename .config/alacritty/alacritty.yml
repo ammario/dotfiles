@@ -158,8 +158,9 @@ draw_bold_text_with_bright_colors: true
 colors:
   # Default colors
   primary:
-    background: '0x000000'
-    foreground: '0xeaeaea'
+    # Flip these around to get a dark theme.
+    foreground: '0x000000'
+    background: '0xf2f2f2'
 
     # Bright and dim foreground colors
     #
