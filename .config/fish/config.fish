@@ -86,7 +86,6 @@ end
 # git aliases
 alias gpo='git push -u origin HEAD'
 alias gpof='git push --force -u origin HEAD'
-alias glog='git log --oneline --decorate --graph'
 alias g='git'
 alias gd='git diff HEAD'
 

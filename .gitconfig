@@ -31,7 +31,7 @@
 	submit = codereview submit
 	sync = codereview sync
 	cfb = !git commit -m \"$(echo $(git rev-parse --abbrev-ref HEAD) | rev | cut -d/ -f1 | rev |  tr \"-\" \" \" | sed \"s/.*/\\u&/\")\" && git commit --amend
-	ca  = commit --amend
+	ca  = commit --amend --verbose
 	ap = add -p
 	a = add -A
 	c  = commit --verbose

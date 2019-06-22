@@ -261,7 +261,7 @@ vnoremap // y/<C-R>"<CR>
 
 set termguicolors
 " colorscheme ammar
-set background=light
+set background=dark
 colorscheme PaperColor
 let g:airline_theme='PaperColor'
 let g:lightline = { 'colorscheme': 'PaperColor' }
