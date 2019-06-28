@@ -4,4 +4,4 @@ if [ -n "$1" ]; then
 	nFlag="-n $1"	
 fi
 
-git log --oneline --decorate --graph $nFlag
+git log --pretty=short --decorate --graph $nFlag
