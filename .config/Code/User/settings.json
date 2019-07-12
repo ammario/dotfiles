@@ -8,7 +8,7 @@
     },
     "editor.wordWrap": "on",
     "explorer.openEditors.visible": 0,
-    "window.zoomLevel": 2,
+    "window.zoomLevel": 0,
     "editor.fontFamily": "'Fira Code'",
     "editor.fontSize": 13,
     "editor.fontLigatures": true,
@@ -188,7 +188,7 @@
     },
     "go.autocompleteUnimportedPackages": true,
     "editor.snippetSuggestions": "top",
-    "go.useLanguageServer": false,
+    "go.useLanguageServer": true,
     "terminal.integrated.rendererType": "dom",
     "html.format.indentHandlebars": true,
 }

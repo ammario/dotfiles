@@ -125,3 +125,4 @@ source ~/.config/fish/git.fish
 set EDITOR (which nvim)
 set VISUAL nvim
 
+alias c="clear"

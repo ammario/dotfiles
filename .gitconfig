@@ -45,6 +45,7 @@
 	issues = "! hub issue -f '%U %t %l %n'"
 	openpr = "! git_open_pr.sh"
 	releasenotes = "! set -u; f() { git log  --no-merges --pretty=format:\"- %h %s\" $1; }; f"	
+	search = "!f() { git log --pickaxe-regex -S $@ ; }; f"
 
 [gitflow "branch"]
 	master = master

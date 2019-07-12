@@ -347,6 +347,8 @@ nnoremap <Leader>s :noh<CR>
 set conceallevel=0
 
 " Simpler terminal escape
+" unmap C-x because it defaults to decrementing a number, which is obnoxious.
+nnoremap <C-x> <Nop>
 tnoremap <C-x> <C-\><C-N>
 
 " Graphviz
