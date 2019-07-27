@@ -1,194 +1,199 @@
 // Place your settings in this file to overwrite the default settings
 {
-    "editor.renderWhitespace": "none",
-    // "go.useCodeSnippetsOnFunctionSuggest": true,
-    "go.gopath": "~/go",
-    "files.associations": {
-        "*.tmpl": "html"
-    },
-    "editor.wordWrap": "on",
-    "explorer.openEditors.visible": 0,
-    "window.zoomLevel": 0,
-    "editor.fontFamily": "'Fira Code'",
-    "editor.fontSize": 13,
-    "editor.fontLigatures": true,
-    "workbench.iconTheme": "vscode-icons",
-    "rust.actionOnSave": "check",
-    "vsicons.projectDetection.disableDetect": true,
-    // Customizations to create PaperColor Dark.
-    // Applied to OneDark Pro.
-    "workbench.colorCustomizations": {
-        "[Atom One Dark]": {
-            "editor.background": "#191919",
-            "editor.foreground": "#ffffff",
-            "editor.lineHighlightBackground": "#1e1e1e",
-            "editorCursor.foreground": "#ffffff",
-            "editorWhitespace.foreground": "#404040",
-            "tab.inactiveBackground": "#282828",
-            "panel.background": "#222222",
-            "statusBar.background": "#0f0f0f",
-            "activityBar.background": "#120F12",
-            "sideBar.background": "#1f1f1f"
-        },
-    },
-    "editor.tokenColorCustomizations": {
-        "[Atom One Dark]": {
-            "functions": "#FFFFFF",
-            "comments": "#808080",
-            "types": "#afd700",
-            "keywords": "#00afaf",
-            "strings": "#d7af5f",
-        }
-    },
-    //customizations for Atom One Dark
-    // "workbench.colorCustomizations": {
-    // "editor.background": "#0A0A0A",
-    // "editor.foreground": "#ffffff",
-    // "editor.lineHighlightBackground": "#1e1e1e",
-    // "editorCursor.foreground": "#ffffff",
-    // "editorWhitespace.foreground": "#404040",
-    // "tab.inactiveBackground": "#282828",
-    // "panel.background": "#222222",
-    // "statusBar.background": "#0f0f0f",
-    // "activityBar.background": "#120F12",
-    // "sideBar.background": "#1f1f1f"
-    // }
-    //customizations for Vibrant_Ink/Monokai
-    // "workbench.colorCustomizations": {
-    //     "editor.background": "#00000A",
-    //     "editor.foreground": "#ffffff",
-    //     "editor.selectionBackground": "#404040",
-    //     "editor.lineHighlightBackground": "#1e1e1e",
-    //     "editorCursor.foreground": "#ffffff",
-    //     "editorWhitespace.foreground": "#404040",
-    //     "tab.inactiveBackground": "#282828",
-    //     "panel.background": "#0f0f0f",
-    //     "statusBar.background": "#0f0f0f",
-    //     "activityBar.background": "#120F12",
-    //     "sideBar.background": "#0f0f0f"
-    // },
-    "rust.showOutput": false,
-    "vsicons.dontShowNewVersionMessage": true,
-    "rust.mode": "rls",
-    "rust.rustup": {
-        "nightlyToolchain": "nightly-x86_64-unknown-linux-gnu",
-        "toolchain": "nightly-x86_64-unknown-linux-gnu"
-    },
-    "rust.rls": {
-        "useRustfmt": true
-    },
-    "go.gocodeAutoBuild": false,
-    "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-        "**/.DS_Store": true,
-        "**/vendor": true,
-        "vendor/**": true
-    },
-    // "go.lintFlags": [
-    //     "--fast",
-    //     "--aggregate",
-    //     "--disable=gotype,gosec"
-    // ],
-    "gitlens.advanced.messages": {
-        "suppressLineUncommittedWarning": true,
-        "suppressShowKeyBindingsNotice": true,
-        "suppressUpdateNotice": true,
-        "suppressWelcomeNotice": true
-    },
-    "go.buildFlags": [],
-    "emmet.triggerExpansionOnTab": true,
-    "editor.rulers": [
-        80
-    ],
+  "editor.renderWhitespace": "none",
+  // "go.useCodeSnippetsOnFunctionSuggest": true,
+  "go.gopath": "~/go",
+  "files.associations": {
+    "*.tmpl": "html"
+  },
+  "editor.wordWrap": "on",
+  "explorer.openEditors.visible": 0,
+  "window.zoomLevel": 0,
+  "editor.fontFamily": "'Fira Code'",
+  "editor.fontSize": 13,
+  "editor.fontLigatures": true,
+  "workbench.iconTheme": "vscode-icons",
+  "rust.actionOnSave": "check",
+  "vsicons.projectDetection.disableDetect": true,
+  // Customizations to create PaperColor Dark.
+  // Applied to OneDark Pro.
+  "workbench.colorCustomizations": {
+    "[Atom One Dark]": {
+      "editor.background": "#191919",
+      "editor.foreground": "#ffffff",
+      "editor.lineHighlightBackground": "#1e1e1e",
+      "editorCursor.foreground": "#ffffff",
+      "editorWhitespace.foreground": "#404040",
+      "tab.inactiveBackground": "#282828",
+      "panel.background": "#222222",
+      "statusBar.background": "#0f0f0f",
+      "activityBar.background": "#120F12",
+      "sideBar.background": "#1f1f1f"
+    }
+  },
+  "editor.tokenColorCustomizations": {
+    "[Atom One Dark]": {
+      "functions": "#FFFFFF",
+      "comments": "#808080",
+      "types": "#afd700",
+      "keywords": "#00afaf",
+      "strings": "#d7af5f"
+    }
+  },
+  //customizations for Atom One Dark
+  // "workbench.colorCustomizations": {
+  // "editor.background": "#0A0A0A",
+  // "editor.foreground": "#ffffff",
+  // "editor.lineHighlightBackground": "#1e1e1e",
+  // "editorCursor.foreground": "#ffffff",
+  // "editorWhitespace.foreground": "#404040",
+  // "tab.inactiveBackground": "#282828",
+  // "panel.background": "#222222",
+  // "statusBar.background": "#0f0f0f",
+  // "activityBar.background": "#120F12",
+  // "sideBar.background": "#1f1f1f"
+  // }
+  //customizations for Vibrant_Ink/Monokai
+  // "workbench.colorCustomizations": {
+  //     "editor.background": "#00000A",
+  //     "editor.foreground": "#ffffff",
+  //     "editor.selectionBackground": "#404040",
+  //     "editor.lineHighlightBackground": "#1e1e1e",
+  //     "editorCursor.foreground": "#ffffff",
+  //     "editorWhitespace.foreground": "#404040",
+  //     "tab.inactiveBackground": "#282828",
+  //     "panel.background": "#0f0f0f",
+  //     "statusBar.background": "#0f0f0f",
+  //     "activityBar.background": "#120F12",
+  //     "sideBar.background": "#0f0f0f"
+  // },
+  "rust.showOutput": false,
+  "vsicons.dontShowNewVersionMessage": true,
+  "rust.mode": "rls",
+  "rust.rustup": {
+    "nightlyToolchain": "nightly-x86_64-unknown-linux-gnu",
+    "toolchain": "nightly-x86_64-unknown-linux-gnu"
+  },
+  "rust.rls": {
+    "useRustfmt": true
+  },
+  "go.gocodeAutoBuild": false,
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/vendor": true,
+    "vendor/**": true
+  },
+  // "go.lintFlags": [
+  //     "--fast",
+  //     "--aggregate",
+  //     "--disable=gotype,gosec"
+  // ],
+  "gitlens.advanced.messages": {
+    "suppressLineUncommittedWarning": true,
+    "suppressShowKeyBindingsNotice": true,
+    "suppressUpdateNotice": true,
+    "suppressWelcomeNotice": true
+  },
+  "go.buildFlags": [],
+  "emmet.triggerExpansionOnTab": true,
+  "editor.rulers": [80],
+  "editor.formatOnSave": true,
+  "go.useCodeSnippetsOnFunctionSuggest": true,
+  "git.autofetch": true,
+  "debug.inlineValues": true,
+  "rust-client.rls-name": "rls-preview",
+  "gitlens.keymap": "chorded",
+  "problems.decorations.enabled": false,
+  "gitlens.historyExplorer.enabled": false,
+  "editor.lineNumbers": "relative",
+  "C_Cpp.default.includePath": [
+    "/usr/include",
+    "/usr/local/include",
+    "/usr/src/linux-headers-4.8.0-58-generic/"
+  ],
+  "vim.useSystemClipboard": true,
+  "editor.smoothScrolling": false,
+  "vim.easymotion": true,
+  "[c]": {},
+  "go.goroot": "/usr/local/go",
+  "editor.formatOnSaveTimeout": 1000,
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["/", "/"],
+      "after": ["y/<C-R>\"<CR>"]
+    }
+  ],
+  // "files.autoSave": "afterDelay",
+  "vim.enableNeovim": true,
+  "latex-workshop.view.pdf.viewer": "tab",
+  "go.buildTags": "integration",
+  "workbench.editor.showTabs": false,
+  "go.installDependenciesWhenBuilding": false,
+  "go.coverOnTestPackage": false,
+  "go.liveErrors": {
+    "enabled": true,
+    "delay": 1000
+  },
+  "workbench.statusBar.visible": true,
+  "vim.hlsearch": true,
+  "go.lintTool": "golint",
+  "go.testFlags": ["--short"],
+  "breadcrumbs.enabled": true,
+  "go.coverageDecorator": {
+    "type": "gutter",
+    "coveredHighlightColor": "rgba(64,128,128,0.5)",
+    "uncoveredHighlightColor": "rgba(128,64,64,0.25)",
+    "coveredGutterStyle": "blockblue",
+    "uncoveredGutterStyle": "verticalyellow"
+  },
+  "go.coverageOptions": "showUncoveredCodeOnly",
+  "go.testTimeout": "5s",
+  "workbench.colorTheme": "Min Dark",
+  "gitlens.views.fileHistory.enabled": false,
+  "gitlens.views.lineHistory.enabled": false,
+  "vim.neovimPath": "/usr/bin/nvim",
+  "editor.minimap.enabled": false,
+  "go.alternateTools": {
+    "go-langserver": "gopls"
+  },
+  "go.languageServerExperimentalFeatures": {
+    "format": true,
+    "autoComplete": true,
+    "diagnostics": true,
+    "goToTypeDefinition": false,
+    "hover": false,
+    "signatureHelp": false,
+    "documentSymbols": false,
+    "workspaceSymbols": false
+  },
+  "go.vetOnSave": "off",
+  "[go]": {
     "editor.formatOnSave": true,
-    "go.useCodeSnippetsOnFunctionSuggest": true,
-    "git.autofetch": true,
-    "debug.inlineValues": true,
-    "rust-client.rls-name": "rls-preview",
-    "gitlens.keymap": "chorded",
-    "problems.decorations.enabled": false,
-    "gitlens.historyExplorer.enabled": false,
-    "editor.lineNumbers": "relative",
-    "C_Cpp.default.includePath": [
-        "/usr/include",
-        "/usr/local/include",
-        "/usr/src/linux-headers-4.8.0-58-generic/",
-    ],
-    "vim.useSystemClipboard": true,
-    "editor.smoothScrolling": false,
-    "vim.easymotion": true,
-    "[c]": {},
-    "go.goroot": "/usr/local/go",
-    "editor.formatOnSaveTimeout": 1000,
-    "vim.visualModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                "/",
-                "/"
-            ],
-            "after": [
-                "y/<C-R>\"<CR>",
-            ]
-        }
-    ],
-    // "files.autoSave": "afterDelay",
-    "vim.enableNeovim": true,
-    "latex-workshop.view.pdf.viewer": "tab",
-    "go.buildTags": "integration",
-    "workbench.editor.showTabs": false,
-    "go.installDependenciesWhenBuilding": false,
-    "go.coverOnTestPackage": false,
-    "go.liveErrors": {
-        "enabled": true,
-        "delay": 1000
-    },
-    "workbench.statusBar.visible": true,
-    "vim.hlsearch": true,
-    "go.lintTool": "golint",
-    "go.testFlags": [
-        "--short"
-    ],
-    "breadcrumbs.enabled": true,
-    "go.coverageDecorator": {
-        "type": "gutter",
-        "coveredHighlightColor": "rgba(64,128,128,0.5)",
-        "uncoveredHighlightColor": "rgba(128,64,64,0.25)",
-        "coveredGutterStyle": "blockblue",
-        "uncoveredGutterStyle": "verticalyellow",
-    },
-    "go.coverageOptions": "showUncoveredCodeOnly",
-    "go.testTimeout": "5s",
-    "workbench.colorTheme": "Min Dark",
-    "gitlens.views.fileHistory.enabled": false,
-    "gitlens.views.lineHistory.enabled": false,
-    "vim.neovimPath": "/usr/bin/nvim",
-    "editor.minimap.enabled": false,
-    "go.alternateTools": {
-        "go-langserver": "gopls"
-    },
-    "go.languageServerExperimentalFeatures": {
-        "format": true,
-        "autoComplete": true,
-        "diagnostics": true,
-        "goToTypeDefinition": false,
-        "hover": false,
-        "signatureHelp": false,
-        "documentSymbols": false,
-        "workspaceSymbols": false,
-    },
-    "go.vetOnSave": "off",
-    "[go]": {
-        "editor.formatOnSave": true,
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": true
-        },
-    },
-    "go.autocompleteUnimportedPackages": true,
-    "editor.snippetSuggestions": "top",
-    "go.useLanguageServer": true,
-    "terminal.integrated.rendererType": "dom",
-    "html.format.indentHandlebars": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  },
+  "go.autocompleteUnimportedPackages": true,
+  "editor.snippetSuggestions": "top",
+  "go.useLanguageServer": true,
+  "terminal.integrated.rendererType": "dom",
+  "html.format.indentHandlebars": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "eslint.alwaysShowStatus": true,
+  "eslint.packageManager": "yarn",
+  "prettier.eslintIntegration": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 10000
 }

@@ -19,3 +19,4 @@ cp -r ~/.config/alacritty .config/
 cp -r ~/.xinitrc .xinitrc
 cp -r ~/.Xmodmap .Xmodmap
 cp -r ~/.inputrc .inputrc
+cp -r ~/.Xresources .Xresources
