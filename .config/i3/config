@@ -153,11 +153,11 @@ bindsym $mod+ctrl+s exec sus
 #set $color1 #2f343f
 set $color1 #000000
 # darkest purple
-set $color2 #2d1e3d
+set $color2 #180024
 set $color_text #f3f4f5
 set $color_inactive_text #656666
 # purple
-set $color4 #4c3366
+set $color4 #2f1939
 set $color5 #40484a
 set $color_urgent #ffae1a
 set $color_indicator #894478
@@ -172,7 +172,7 @@ client.focused_inactive $color2 $color2     $color_text $color_indicator
 bar {
         position top
         colors {
-                background #180024
+                background #13001c
                 separator #757575
                 focused_workspace $color2 $color4 $color_text
                 inactive_workspace $color1 $color1 $color_inactive_text
