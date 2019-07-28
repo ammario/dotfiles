@@ -153,11 +153,12 @@ bindsym $mod+ctrl+s exec sus
 #set $color1 #2f343f
 set $color1 #000000
 # darkest purple
-set $color2 #180024
+set $color2 #2a233b
+
 set $color_text #f3f4f5
 set $color_inactive_text #656666
 # purple
-set $color4 #2f1939
+set $color4 #695895
 set $color5 #40484a
 set $color_urgent #ffae1a
 set $color_indicator #894478
