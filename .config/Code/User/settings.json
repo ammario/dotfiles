@@ -8,7 +8,7 @@
   },
   "editor.wordWrap": "on",
   "explorer.openEditors.visible": 0,
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 1,
   "editor.fontFamily": "'Fira Code'",
   "editor.fontSize": 13,
   "editor.fontLigatures": true,
@@ -195,5 +195,8 @@
     "typescriptreact"
   ],
   "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 10000
+  "files.autoSaveDelay": 10000,
+  "[scss]": {
+    "editor.defaultFormatter": "michelemelluso.code-beautifier"
+  }
 }

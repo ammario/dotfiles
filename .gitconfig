@@ -47,6 +47,7 @@
 	openc = "! git_open_commit.sh $1"
 	releasenotes = "! set -u; f() { git log  --no-merges --pretty=format:\"- %h %s\" $1; }; f"	
 	search = "!f() { q=\"$1\"; shift; git log --pickaxe-regex -S \"$q\" $@ ; }; f"
+	slog = "shortlog -n --no-merges"
 
 [gitflow "branch"]
 	master = master
@@ -66,3 +67,6 @@
 	host = github.com
 [rerere]
 	enabled = true
+[pretty]
+	# Extended one line.
+	xol = "format: %ai %<(20) %Cblue%an %Cgreen%h %Creset %s"
