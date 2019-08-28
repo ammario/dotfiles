@@ -85,35 +85,12 @@ set $workspace1 "1  "
 set $workspace2 "2  "
 set $workspace3 "3  "
 set $workspace4 "4  "
-set $workspace5 "'1 "
-set $workspace6 "'2 "
-set $workspace7 "'3 "
-set $workspace8 "'4 "
-# I don't really need these workspaces, and there's
-# no good way to make them keyboard-ergonomic.
-# set $workspace9 "9: "
-# set $workspace0 "Z: "
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
 bindsym $mod+2 workspace $workspace2
 bindsym $mod+3 workspace $workspace3
 bindsym $mod+4 workspace $workspace4
-
-bindsym $mod+ctrl+1 workspace $workspace5
-bindsym $mod+ctrl+2 workspace $workspace6
-bindsym $mod+ctrl+3 workspace $workspace7
-bindsym $mod+ctrl+4 workspace $workspace8
-
-bindsym $mod+apostrophe mode "Move Prime"
-mode "Move Prime" {
-	bindsym 1 move container to workspace $workspace5; mode "default"
-	bindsym 2 move container to workspace $workspace6; mode "default"
-	bindsym 3 move container to workspace $workspace7; mode "default"
-	bindsym 4 move container to workspace $workspace8; mode "default"
-
-	bindsym Escape mode "default"
-}
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $workspace1
