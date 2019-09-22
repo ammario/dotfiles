@@ -48,6 +48,7 @@
 	releasenotes = "! set -u; f() { git log  --no-merges --pretty=format:\"- %h %s\" $1; }; f"	
 	search = "!f() { q=\"$1\"; shift; git log --pickaxe-regex -S \"$q\" $@ ; }; f"
 	slog = "shortlog -n --no-merges"
+	find-issue = "! hub issue | fzf"
 
 [gitflow "branch"]
 	master = master

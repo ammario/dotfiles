@@ -215,3 +215,6 @@ bindsym $mod+u            workspace back_and_forth
 
 # Hide shit
 bindsym $mod+Shift+minus move scratchpad
+
+# Take screenshot
+bindsym Print exec gnome-screenshot -a

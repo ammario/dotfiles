@@ -198,5 +198,8 @@
   "files.autoSaveDelay": 10000,
   "[scss]": {
     "editor.defaultFormatter": "michelemelluso.code-beautifier"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
