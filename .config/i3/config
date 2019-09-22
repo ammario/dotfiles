@@ -8,8 +8,10 @@
 # i3 config file (v4)q
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
+#
 
 set $mod Mod4
+
 
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -217,4 +219,5 @@ bindsym $mod+u            workspace back_and_forth
 bindsym $mod+Shift+minus move scratchpad
 
 # Take screenshot
-bindsym Print exec screenshot
+# TODO: this doesn't work??!?!?!?!?
+# bindsym --release Print exec notify-send screenshot
