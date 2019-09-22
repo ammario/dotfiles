@@ -217,4 +217,4 @@ bindsym $mod+u            workspace back_and_forth
 bindsym $mod+Shift+minus move scratchpad
 
 # Take screenshot
-bindsym Print exec gnome-screenshot -a
+bindsym Print exec screenshot

@@ -1,0 +1,21 @@
+#!/bin/bash
+
+set -euf -o pipefail
+
+
+dir="/tmp/screenshots"
+mkdir -p ${dir}
+
+name="$(date "+%F_%H-%M-%S")_$(openssl rand -hex 12).png"
+file="${dir}/${name}"
+
+gnome-screenshot -a -f "${file}"
+
+gsutil cp "${file}" gs://ammar-screenshots/
+
+url="https://storage.googleapis.com/ammar-screenshots/${name}"
+echo "${url}"
+echo "${url}" | xsel -ib
+notify-send -t 2000 "Screenshot URL on clipboard."
+
+
