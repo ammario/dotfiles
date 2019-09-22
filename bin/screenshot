@@ -1,4 +1,7 @@
 #!/bin/bash
+# You may have to add this to a different $PATH location with
+# 	sudo ln -s (which screenshot) /usr/bin/screenshot
+# Most system utilities won't have this dotfiles bin directory in $PATH.
 
 set -euf -o pipefail
 
