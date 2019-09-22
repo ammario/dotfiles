@@ -1,14 +1,14 @@
 # dotfiles
 
-Welcome to Ammar's dotfiles repo.
+Welcome to my dotfiles repo.
 
-Some of the stuff has my username hardcoded into it :/
+**Warning:** My username is hardcoded into many of these configurations.
 
 
 ## Basic Usage
 
-`implode.sh` moves the installed scripts into the dotfiles repo. Some folders which may contain
+`implode.sh` moves dotfiles from around the system into the repo.
 
-`install.sh` moves the scripts in the dotfiles repo into the wider system.
+`install.sh` installs the dotfiles into the system.
 
-`backup.sh` backs up certain non-configuration files (e.g `~/.Goland*`) to some cloud provider (e.g Google Drive).
+`backup.sh` backs up large non-configuration files (e.g `~/.Goland*`) to Google Drive.
