@@ -219,5 +219,4 @@ bindsym $mod+u            workspace back_and_forth
 bindsym $mod+Shift+minus move scratchpad
 
 # Take screenshot
-# TODO: this doesn't work??!?!?!?!?
-# bindsym --release Print exec notify-send screenshot
+bindsym --release Print exec screenshot

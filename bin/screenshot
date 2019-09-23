@@ -1,10 +1,9 @@
 #!/bin/bash
-# You may have to add this to a different $PATH location with
+# You may have to add this and gsutil to a different $PATH location with
 # 	sudo ln -s (which screenshot) /usr/bin/screenshot
-# Most system utilities won't have this dotfiles bin directory in $PATH.
+# 	sudo ln -s (which gsutil) /usr/bin/gsutil
 
 set -euf -o pipefail
-
 
 dir="/tmp/screenshots"
 mkdir -p ${dir}
