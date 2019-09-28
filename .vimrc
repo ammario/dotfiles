@@ -35,7 +35,6 @@ if dein#load_state('~/.cache/dein')
 	call dein#add('joshdick/onedark.vim')
 	call dein#add('NLKNguyen/papercolor-theme')
 	call dein#add('jceb/vim-orgmode')
-	call dein#add('scrooloose/nerdtree')
 	call dein#add('durandj/bazel.vim')
 	call dein#add('hashivim/vim-terraform')
 	call dein#add('chrisbra/Recover.vim')
@@ -44,6 +43,10 @@ if dein#load_state('~/.cache/dein')
 	call dein#add('djoshea/vim-autoread')
 	call dein#add('ElmCast/elm-vim')
 	call dein#add('wannesm/wmgraphviz.vim', { 'on_ft': 'dot' })
+	" Haskell
+	call dein#add('ndmitchell/ghcid')
+	call dein#add('neovimhaskell/haskell-vim')
+	call dein#add('eagletmt/ghcmod-vim')
 
  if !has('nvim')
    call dein#add('roxma/nvim-yarp')
@@ -234,9 +237,11 @@ let g:racer_experimental_completer = 1
 autocmd BufNewFile,BufRead *.s set filetype=nasm
 
 set hlsearch
-set clipboard=unnamedplus
 
 " Default copying to system clipboard "
+set clipboard=unnamedplus
+" let g:loaded_clipboard_provider = 1
+
 noremap <Leader>y "*y
 noremap <Leader>p "*p
 noremap <Leader>Y "+y
