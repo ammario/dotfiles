@@ -220,3 +220,6 @@ bindsym $mod+Shift+minus move scratchpad
 
 # Take screenshot
 bindsym --release Print exec screenshot
+
+# Bluetooth
+exec_always blueman-applet
