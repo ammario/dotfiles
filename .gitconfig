@@ -41,6 +41,7 @@
 	fs = "!f() { git commit --fixup :/$1 ; }; f"	
 	d = diff
 	s = status
+	rc = rebase --continue
 	emoji = !set -e && echo $(git log -1 --pretty=%B) && git commit --amend -m \"$(git log -1 --pretty=%B) $(emoj $(git log -1 --pretty=%B) | sed 's/  /\\n/g' | fzf --height 9)\"
 	issues = "! hub issue -f '%U %t %l %n'"
 	openpr = "! git_open_pr.sh"
@@ -62,6 +63,7 @@
 	versiontag = v
 [core]
 	excludesfile = ~/.gitignore_global
+	hooksPath = ihatehooks
 [rebase]
 	autosquash = true
 [hub]
