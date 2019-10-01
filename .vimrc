@@ -47,6 +47,8 @@ if dein#load_state('~/.cache/dein')
 	call dein#add('ndmitchell/ghcid')
 	call dein#add('neovimhaskell/haskell-vim')
 	call dein#add('eagletmt/ghcmod-vim')
+	" Python
+	call dein#add('python-mode/python-mode')
 
  if !has('nvim')
    call dein#add('roxma/nvim-yarp')
@@ -363,3 +365,7 @@ set smartcase
 
 " 80 char line indiciation
 set colorcolumn=80
+
+" Command mode navigation
+cnoremap <C-k> <Up>
+cnoremap <C-j> <Down>
