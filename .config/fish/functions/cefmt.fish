@@ -1,5 +1,6 @@
+# Defined in /tmp/fish.AqNH84/cefmt.fish @ line 2
 function cefmt
-	cd (groot)
-ci/steps/fmt.sh
-cd -
+	pushd (groot)
+	ci/steps/fmt.sh
+	popd
 end

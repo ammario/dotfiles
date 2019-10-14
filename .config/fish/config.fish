@@ -100,7 +100,7 @@ if [ -f '/home/ammar/Downloads/google-cloud-sdk/path.fish.inc' ]; if type source
 
 # Set special PATH
 mkdir -p ~/go/bin ~/bin ~/Projects/coder/bin ~/secrets/bin
-set PATH ~/Projects/ammario/dotfiles/bin ~/go/bin ~/bin ~/Projects/coder/bin $PATH ~/secrets/bin
+set PATH ~/Projects/ammario/dotfiles/bin ~/Projects/cdr/environments/devbin ~/go/bin ~/bin ~/Projects/coder/bin $PATH ~/secrets/bin
 set fish_greeting ""
 set GOPATH ~/go
 set GO111MODULE on
