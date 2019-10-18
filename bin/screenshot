@@ -22,4 +22,4 @@ gsutil cp "${file}" "gs://${bucket_name}"
 url="https://screen.ammar.io/${name}"
 echo "${url}"
 echo "${url}" | xsel -ib
-notify-send -u critical -t 2000 "Screenshot URL on clipboard."
+zenity --timeout=2 --info --text="Screenshot URL on clipboard."
