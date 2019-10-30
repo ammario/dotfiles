@@ -223,3 +223,6 @@ bindsym --release Print exec screenshot
 
 # Bluetooth
 exec_always blueman-applet
+
+# Find Emoji
+bindsym $mod+Shift+e exec find-emoji
