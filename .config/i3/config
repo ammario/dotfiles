@@ -207,8 +207,9 @@ exec_always safeeyes -e &
 exec_always ~/.xinitrc
 
 # Start up blue light filter.
-# -t controls temperature, and it's usage is -t <DAY>:<NIGHT> where 6500K is the default (no effect) temperature.
-# exec_always redshift -t 4500K:2500K &
+# -t controls temperature, and its usage is -t <DAY>:<NIGHT> where 6500K is the
+# neutral temperature.
+exec_always redshift -t 6500K:3500K &
 
 # Named workspaces
 bindsym $mod+m        exec i3-msg workspace $(lsws | dmenu -p "→")
