@@ -49,7 +49,7 @@ function fish_prompt
   printf '['
   set_color reset
   set_color $orange
-  printf '%s' (cat /etc/hostname)
+  printf '%s' (hostname)
   set_color --bold $bracket_color
   printf '] '
 
@@ -116,9 +116,6 @@ function fish_user_key_bindings
 	bind -M insert \ew nextd-or-forward-word
 end
 
-# Secrets
-source ~/secrets/hub
-
 # Misc. files
 source ~/.config/fish/git.fish
 
@@ -126,3 +123,8 @@ set EDITOR (which nvim)
 set VISUAL nvim
 
 alias c="clear"
+
+if test -f /Users/ammar/.autojump/share/autojump/autojump.fish; . /Users/ammar/.autojump/share/autojump/autojump.fish; end
+
+# Secrets
+source ~/secrets/hub

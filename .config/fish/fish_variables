@@ -6,6 +6,7 @@ SETUVAR __fish_init_1_50_0:\x1d
 SETUVAR __fish_init_2_39_8:\x1d
 SETUVAR __fish_init_2_3_0:\x1d
 SETUVAR __fish_init_3_x:\x1d
+SETUVAR __fish_initialized:3100
 SETUVAR fish_color_autosuggestion:555\x1eyellow
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:a570ff
@@ -17,6 +18,7 @@ SETUVAR fish_color_error:red\x1e\x2d\x2dbold
 SETUVAR fish_color_escape:cyan
 SETUVAR fish_color_history_current:cyan
 SETUVAR fish_color_host:\x2do\x1ecyan
+SETUVAR fish_color_host_remote:yellow
 SETUVAR fish_color_match:cyan
 SETUVAR fish_color_normal:normal
 SETUVAR fish_color_operator:cyan
