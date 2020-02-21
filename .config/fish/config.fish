@@ -125,6 +125,3 @@ set VISUAL nvim
 alias c="clear"
 
 if test -f /Users/ammar/.autojump/share/autojump/autojump.fish; . /Users/ammar/.autojump/share/autojump/autojump.fish; end
-
-# Secrets
-source ~/secrets/hub
