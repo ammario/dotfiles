@@ -63,6 +63,7 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	hooksPath = ihatehooks
+	editor = vim
 [rebase]
 	autosquash = true
 [hub]
