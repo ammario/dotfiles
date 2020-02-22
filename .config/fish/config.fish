@@ -49,7 +49,7 @@ function fish_prompt
   printf '['
   set_color reset
   set_color $orange
-  printf '%s' (hostname)
+  printf '%s' (basename (hostname) .local)
   set_color --bold $bracket_color
   printf '] '
 
