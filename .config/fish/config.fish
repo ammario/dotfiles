@@ -108,6 +108,7 @@ end
 
 add_path ~/Projects/ammario/dotfiles/bin
 add_path ~/Projects/cdr/enterprise/devbin
+add_path ~/go/bin
 
 set fish_greeting ""
 set GOPATH ~/go
@@ -132,4 +133,9 @@ set VISUAL nvim
 
 alias c="clear"
 
+# Let GPG prompt for password.
+# See https://stackoverflow.com/a/42265848
+set -x GPG_TTY (tty)
+
 if test -f /Users/ammar/.autojump/share/autojump/autojump.fish; . /Users/ammar/.autojump/share/autojump/autojump.fish; end
+
