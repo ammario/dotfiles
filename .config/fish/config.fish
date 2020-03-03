@@ -95,9 +95,6 @@ alias l='ls -al'
 alias gcssh="gcloud compute ssh"
 
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/ammar/Downloads/google-cloud-sdk/path.fish.inc' ]; if type source > /dev/null; source '/home/ammar/Downloads/google-cloud-sdk/path.fish.inc'; else; . '/home/ammar/Downloads/google-cloud-sdk/path.fish.inc'; end; end
-
 # Set special PATH
 
 function add_path -a dir
@@ -106,9 +103,11 @@ function add_path -a dir
   end
 end
 
+add_path /usr/local/opt/findutils/libexec/gnubin
 add_path ~/Projects/ammario/dotfiles/bin
 add_path ~/Projects/cdr/enterprise/devbin
 add_path ~/go/bin
+add_path ~/bin
 
 set fish_greeting ""
 set GOPATH ~/go
@@ -139,3 +138,6 @@ set -x GPG_TTY (tty)
 
 if test -f /Users/ammar/.autojump/share/autojump/autojump.fish; . /Users/ammar/.autojump/share/autojump/autojump.fish; end
 
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/ammar/google-cloud-sdk/path.fish.inc' ]; . '/Users/ammar/google-cloud-sdk/path.fish.inc'; end
