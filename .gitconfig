@@ -61,7 +61,7 @@
 	support = support/
 	versiontag = v
 [core]
-	excludesfile = ~/.gitignore_global
+	excludesfile = ~/.gitignore
 	hooksPath = ihatehooks
 	editor = vim
 [rebase]
