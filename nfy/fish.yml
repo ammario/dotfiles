@@ -1,0 +1,14 @@
+fish:
+  install: "apt-get install -y fish && chsh -s fish"
+  check: "fish --version"
+pam-chsh:
+  # See https://askubuntu.com/questions/812420/chsh-always-asking-a-password-and-get-pam-authentication-failure
+  install: sed -i "s/required/sufficient/g" /etc/pam.d/chsh
+fish-shell:
+  install: "chsh -s fish"
+  deps:
+    - pam-chsh
+fish-config:
+  install: >
+          ln -s $(pwd)/.config/fish ~/.config
+  check: ls ~/.config
