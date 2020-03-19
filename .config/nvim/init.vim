@@ -5,6 +5,11 @@ call plug#begin(stdpath('data') . '/plugged')
 	Plug 'bling/vim-bufferline'
 	Plug 'dag/vim-fish'
 	Plug 'spolu/dwm.vim'
+	" :G git commands.
+	Plug 'tpope/vim-fugitive'
+	" + - etc on the sidebar.
+	Plug 'airblade/vim-gitgutter'
+	Plug 'jreybert/vimagit'
 call plug#end()
 
 " Clipboard
