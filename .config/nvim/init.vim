@@ -9,7 +9,8 @@ call plug#begin(stdpath('data') . '/plugged')
 	Plug 'tpope/vim-fugitive'
 	" + - etc on the sidebar.
 	Plug 'airblade/vim-gitgutter'
-	Plug 'jreybert/vimagit'
+	" Folds, etc.
+	Plug 'plasticboy/vim-markdown'
 call plug#end()
 
 " Clipboard
@@ -27,6 +28,9 @@ call plug#end()
 
 	" Clear search register
 	nmap <Leader>s :let @/=""<cr>
+	
+	" Copy buffer then close it
+	nmap <Leader>c yG :bw<cr>
 
 " Buffer Switching
 	map <Leader>] :bn<cr>

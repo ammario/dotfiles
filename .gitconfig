@@ -34,12 +34,15 @@
 	ap = add -p
 	a = add -A
 	c  = commit --verbose
+	# Add-Commit-Push is aliased to fish for better in-vim integration.
+	acp  = "! fish -c acp"
 	cax = commit --amend --no-edit 
 	cb = checkout -b
 	f = "! git commit --fixup $(git log --pretty='%H' -1 --invert-grep --grep 'fixup! ')"
 	fs = "!f() { git commit --fixup :/$1 ; }; f"	
 	d = diff
 	s = status
+	last = log -1
 	rc = rebase --continue
 	emoji = !set -e && echo $(git log -1 --pretty=%B) && git commit --amend -m \"$(git log -1 --pretty=%B) $(emoj $(git log -1 --pretty=%B) | sed 's/  /\\n/g' | fzf --height 9)\"
 	issues = "! hub issue -f '%U %t %l %n'"
@@ -62,7 +65,7 @@
 	versiontag = v
 [core]
 	excludesfile = ~/.gitignore
-	hooksPath = ihatehooks
+	# hooksPath = ihatehooks
 	editor = vim
 [rebase]
 	autosquash = true
