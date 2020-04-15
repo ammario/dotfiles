@@ -29,8 +29,11 @@ call plug#end()
 	" Clear search register
 	nmap <Leader>s :let @/=""<cr>
 	
-	" Copy buffer then close it
+	" Copy buffer then close it (git commit patches)
 	nmap <Leader>c yG :bw<cr>
+
+	" Reload file from disk
+	nmap <Leader>e :e!<cr>
 
 " Buffer Switching
 	map <Leader>] :bn<cr>

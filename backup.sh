@@ -18,7 +18,7 @@ echo "Uploading ${backup_name} with ID ${file_id}"
 fifo_name=$(mktemp -u)
 mkfifo $fifo_name
 
-tar -cvz - ~/.vscode ~/.config/Code ~/.GoLand2019.2 ~/.WebStorm2018.3 ~/bin 2>/dev/null > $fifo_name &
+tar -cvz - ~/Library/Preferences/GoLand* 2>/dev/null > $fifo_name &
 
 gdrive update --name ${backup_name} $file_id $fifo_name
 

@@ -44,14 +44,16 @@ set __fish_git_prompt_char_upstream_diverged '⇵ '
 function fish_mode_prompt; end
 
 function fish_prompt
-  set bracket_color "262626"
-  set_color --bold $bracket_color
-  printf '['
-  set_color reset
-  set_color $orange
-  printf '%s' (hostname | cut -d "." -f 1)
-  set_color --bold $bracket_color
-  printf '] '
+  if [ (uname) != "Darwin" ]
+	  set bracket_color "262626"
+	  set_color --bold $bracket_color
+	  printf '['
+	  set_color reset
+	  set_color $orange
+	  printf '%s' (hostname | cut -d "." -f 1)
+	  set_color --bold $bracket_color
+	  printf '] '
+  end
 
   set last_status $status
 	switch $fish_bind_mode
@@ -104,10 +106,13 @@ function add_path -a dir
 end
 
 add_path /usr/local/opt/findutils/libexec/gnubin
+add_path /usr/local/opt/make/libexec/gnubin
+
 add_path ~/Projects/ammario/dotfiles/bin
 add_path ~/Projects/cdr/enterprise/devbin
 add_path ~/go/bin
 add_path ~/bin
+add_path ~/.cargo/bin
 
 set fish_greeting ""
 set GOPATH ~/go
