@@ -8,6 +8,11 @@ apt-basics:
         deps:
                 - apt
                 - apt-update
+brew:
+  check: "brew -h"
+pacman:
+  check: "pacman -h"
+
 go:
         install: >
                 curl https://storage.googleapis.com/golang/go1.13.4.linux-amd64.tar.gz | tar -C /usr/local -xzf - ;

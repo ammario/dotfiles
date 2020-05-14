@@ -1,10 +1,14 @@
 vim:
         check: "vim -h"
         install_apt:
-                script: "apt-get install -y vim"
-        deps:
-                - apt
+          script: "apt-get install -y vim"
+          deps:
+                  - apt
         install_brew:
-                script: "apt-get install -y vim"
-        deps:
-                - apt
+          script: "brew install vim"
+          deps:
+                  - brew
+        install_pacman:
+          script: "yes | sudo pacman -Syu vim"
+          deps:
+                  - pacman
