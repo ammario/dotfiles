@@ -1,14 +1,9 @@
-vim:
-        check: "vim -h"
-        install_apt:
-          script: "apt-get install -y vim"
-          deps:
-                  - apt
-        install_brew:
-          script: "brew install vim"
-          deps:
-                  - brew
+nvim:
+        check: "nvim -h"
         install_pacman:
-          script: "yes | sudo pacman -Syu vim"
+          script: "yes | sudo pacman -S neovim"
           deps:
                   - pacman
+vim:
+  check: "vim --version | grep NVIM"
+  install: "sudo rm $(which vim); sudo ln -s $(which nvim) /usr/bin/vim"

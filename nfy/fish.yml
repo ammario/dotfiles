@@ -1,14 +1,22 @@
 fish:
-  install: "apt-get install -y fish && chsh -s fish"
   check: "fish --version"
+  install_apt:
+    script: "sudo apt-get install -y fish"
+    deps:
+      - apt
+  install_pacman:
+    script: "yes | sudo pacman -Syu fish"
+    deps:
+      - pacman
 pam-chsh:
   # See https://askubuntu.com/questions/812420/chsh-always-asking-a-password-and-get-pam-authentication-failure
-  install: sed -i "s/required/sufficient/g" /etc/pam.d/chsh
+  install: sudo sed -i "s/required/sufficient/g" /etc/pam.d/chsh
 fish-shell:
-  install: "chsh -s fish"
+  install: "sudo chsh -s $(which fish) $USER"
   deps:
     - pam-chsh
+    - fish
 fish-config:
   install: >
           ln -s $(pwd)/.config/fish ~/.config
-  check: ls ~/.config
+  check: ls ~/.config/fish

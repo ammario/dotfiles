@@ -27,3 +27,4 @@ git-config:
 import:
         - fish.yml
         - vim.yml
+        - git.yml
