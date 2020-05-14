@@ -21,3 +21,4 @@ git-config:
         check: ls ~/.gitconfig
 import:
         - fish.yml
+        - vim.yml
