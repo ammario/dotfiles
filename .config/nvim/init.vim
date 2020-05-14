@@ -55,3 +55,7 @@ call plug#end()
 
 " Sidebar
 	set number relativenumber
+
+" Markdown
+	" Disable auto folding
+ 	let g:vim_markdown_folding_disabled = 1
