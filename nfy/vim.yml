@@ -7,3 +7,5 @@ nvim:
 vim:
   check: "vim --version | grep NVIM"
   install: "sudo rm $(which vim); sudo ln -s $(which nvim) /usr/bin/vim"
+  deps:
+    - nvim
