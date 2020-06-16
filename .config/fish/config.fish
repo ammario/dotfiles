@@ -110,6 +110,7 @@ add_path /usr/local/opt/make/libexec/gnubin
 
 add_path ~/Projects/ammario/dotfiles/bin
 add_path ~/Projects/cdr/enterprise/devbin
+add_path ~/Projects/enterprise/devbin
 add_path ~/go/bin
 add_path ~/bin
 add_path ~/.cargo/bin
