@@ -4,7 +4,7 @@
 # It reads the commit pointed at by HEAD.
 set -e
 commit=$(git rev-parse HEAD)
-msg=$(git log -1 --pretty=%B | head -n 1)
+msg=$(git log -1 --pretty=%B)
 branch=$(echo $msg | tr -s ' :' '-' | tr A-Z a-z | cut -d'-' -f1-3)
 echo $commit
 echo $msg
