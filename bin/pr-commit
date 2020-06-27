@@ -1,4 +1,7 @@
 #!/bin/bash
+# Usage: pr-commit when HEAD points to the commit you want to send
+# It is popped from the current branch and put into a new one named
+# by the commit message.
 commit=$(git rev-parse HEAD)
 msg=$(git log -1 --pretty=%B | head -n 1)
 branch=$(echo $msg | tr -s ' ' '-' | tr A-Z a-z | cut -d'-' -f1-3)
