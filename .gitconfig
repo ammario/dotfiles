@@ -52,6 +52,7 @@
 	search = "!f() { q=\"$1\"; shift; git log --pickaxe-regex -S \"$q\" $@ ; }; f"
 	slog = "shortlog -n --no-merges"
 	find-issue = "! hub issue | fzf"
+	m = "checkout master"
 
 [gitflow "branch"]
 	master = master
