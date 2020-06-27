@@ -1,0 +1,6 @@
+#!/bin/bash
+commit=$(git rev-parse HEAD)
+msg=$(git log -1 --pretty=%B | head -n 1)
+echo $commit
+echo $msg
+hub pull-request -m $msg

@@ -76,3 +76,5 @@
 [pretty]
 	# Extended one line.
 	xol = "format: %ai %<(20) %Cblue%an %Cgreen%h %Creset %s"
+[pack]
+	useSparse = true
