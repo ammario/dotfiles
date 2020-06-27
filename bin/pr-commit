@@ -1,7 +1,7 @@
 #!/bin/bash
-# Usage: pr-commit when HEAD points to the commit you want to send
-# It is popped from the current branch and put into a new one named
-# by the commit message.
+# Usage: Use pr-commit to quickly open a Pull Request for a single commit.
+# It creates a new branch for the commit and pops it into that branch.
+# It reads the commit pointed at by HEAD.
 set -e
 commit=$(git rev-parse HEAD)
 msg=$(git log -1 --pretty=%B | head -n 1)
@@ -9,6 +9,7 @@ branch=$(echo $msg | tr -s ' ' '-' | tr A-Z a-z | cut -d'-' -f1-3)
 echo $commit
 echo $msg
 echo $branch
+# Validate the branch name before losing work
 git checkout -b $branch
 git checkout -
 git reset --hard HEAD~1
