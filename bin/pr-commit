@@ -6,4 +6,4 @@ echo $commit
 echo $msg
 # Ensure branch is on the remote
 git push --set-upstream origin $branch
-hub pull-request -m "${msg}"
+hub pull-request -m "${msg}" $@
