@@ -13,7 +13,6 @@ git checkout -b $branch
 git checkout -
 git reset --hard HEAD~1
 git checkout $branch
-git cherry-pick $commit
 # Ensure branch is on the remote
 git push --set-upstream origin $branch
 hub pull-request -m "${msg}" $@
