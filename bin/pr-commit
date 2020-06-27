@@ -1,12 +1,15 @@
 #!/bin/bash
+set -e
 commit=$(git rev-parse HEAD)
 msg=$(git log -1 --pretty=%B | head -n 1)
 branch=$(echo $msg | tr -s ' ' '-' | tr A-Z a-z | cut -d'-' -f1-3)
 echo $commit
 echo $msg
 echo $branch
-git reset --hard HEAD~1
 git checkout -b $branch
+git checkout -
+git reset --hard HEAD~1
+git checkout $branch
 git cherry-pick $commit
 # Ensure branch is on the remote
 git push --set-upstream origin $branch
