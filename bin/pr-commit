@@ -2,15 +2,17 @@
 # Usage: pr-commit when HEAD points to the commit you want to send
 # It is popped from the current branch and put into a new one named
 # by the commit message.
+set -e
 commit=$(git rev-parse HEAD)
 msg=$(git log -1 --pretty=%B | head -n 1)
 branch=$(echo $msg | tr -s ' ' '-' | tr A-Z a-z | cut -d'-' -f1-3)
 echo $commit
 echo $msg
 echo $branch
-git reset --hard HEAD~1
 git checkout -b $branch
-git cherry-pick $commit
+git checkout -
+git reset --hard HEAD~1
+git checkout $branch
 # Ensure branch is on the remote
 git push --set-upstream origin $branch
 hub pull-request -m "${msg}" $@
