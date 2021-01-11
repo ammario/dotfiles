@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sudo ln -s ~/go/bin/nfy /usr/bin/nfy || true
+~/nfy.sh
+
+yes | sudo pacman -Syu pv ncdu
