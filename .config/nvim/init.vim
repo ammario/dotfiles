@@ -1,4 +1,6 @@
 " Install Plugins
+" Refer to https://github.com/junegunn/vim-plug#neovim
+" for new box installation instructions.
 call plug#begin(stdpath('data') . '/plugged')
 	Plug 'arzg/vim-colors-xcode'
 	Plug 'junegunn/vim-easy-align'
