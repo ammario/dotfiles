@@ -1,3 +1,0 @@
-gitconfig:
-  check: "stat ~/.gitconfig"
-  install: ln .gitconfig ~/.gitconfig
