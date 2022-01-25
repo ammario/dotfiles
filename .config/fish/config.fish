@@ -85,6 +85,11 @@ begin
     end
 end
 
+set autojump_preload "/usr/share/autojump/autojump.fish"
+if test -e $autojump_preload
+	source $autojump_preload
+end
+
 # git aliases
 alias gpo='git push -u origin HEAD'
 alias gpof='git push --force -u origin HEAD'

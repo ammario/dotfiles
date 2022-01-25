@@ -7,7 +7,7 @@ fi
 
 set -e
 if $(which apt > /dev/null); then
-	sudo apt install -y neovim fish
+	sudo apt install -y neovim fish autojump
 fi
 
 # Replace 'vim' command with neovim.
@@ -27,4 +27,3 @@ fi
 
 # Change default shell to fish.
 sudo chsh -s $(which fish) $USER
-
