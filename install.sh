@@ -7,6 +7,7 @@ fi
 
 set -e
 if $(which apt > /dev/null); then
+	sudo apt-get update
 	sudo apt install -y neovim fish autojump
 fi
 
