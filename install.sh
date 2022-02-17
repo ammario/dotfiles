@@ -8,7 +8,7 @@ fi
 set -e
 if $(which apt > /dev/null); then
 	sudo apt-get update
-	sudo apt install -y neovim fish autojump
+	sudo apt install -y neovim fish autojump dstat pg-activity
 fi
 
 # Replace 'vim' command with neovim.

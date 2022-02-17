@@ -140,6 +140,7 @@ end
 source ~/.config/fish/git.fish
 
 set EDITOR (which nvim)
+set KUBE_EDITOR $EDITOR
 set VISUAL nvim
 
 alias c="clear"
