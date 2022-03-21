@@ -1,0 +1,13 @@
+#!/bin/bash
+
+sudo ln -s ~/go/bin/nfy /usr/bin/nfy || true
+~/nfy.sh
+
+pushd /tmp
+	git clone https://github.com/cdr/pure
+	pushd pure
+		go install
+	popd
+popd
+
+yes | sudo pacman -Syu pv ncdu

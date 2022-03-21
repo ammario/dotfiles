@@ -85,6 +85,11 @@ begin
     end
 end
 
+set autojump_preload "/usr/share/autojump/autojump.fish"
+if test -e $autojump_preload
+	source $autojump_preload
+end
+
 # git aliases
 alias gpo='git push -u origin HEAD'
 alias gpof='git push --force -u origin HEAD'
@@ -110,8 +115,8 @@ add_path /usr/local/opt/make/libexec/gnubin
 
 add_path ~/Projects/ammario/dotfiles/bin
 add_path ~/Projects/dotfiles/bin
-add_path ~/Projects/cdr/enterprise/devbin
-add_path ~/enterprise/devbin
+add_path ~/m/devbin
+add_path ~/c/devbin
 add_path ~/go/bin
 add_path ~/bin
 add_path ~/.cargo/bin
@@ -135,6 +140,7 @@ end
 source ~/.config/fish/git.fish
 
 set EDITOR (which nvim)
+set KUBE_EDITOR $EDITOR
 set VISUAL nvim
 
 alias c="clear"
@@ -148,3 +154,5 @@ if test -f /Users/ammar/.autojump/share/autojump/autojump.fish; . /Users/ammar/.
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/ammar/google-cloud-sdk/path.fish.inc' ]; . '/Users/ammar/google-cloud-sdk/path.fish.inc'; end
+
+set SHELL (which fish)
