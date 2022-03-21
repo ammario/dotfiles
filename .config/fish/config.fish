@@ -156,3 +156,7 @@ if test -f /Users/ammar/.autojump/share/autojump/autojump.fish; . /Users/ammar/.
 if [ -f '/Users/ammar/google-cloud-sdk/path.fish.inc' ]; . '/Users/ammar/google-cloud-sdk/path.fish.inc'; end
 
 set SHELL (which fish)
+
+if which exa > /dev/null
+	alias ls="exa"
+end
