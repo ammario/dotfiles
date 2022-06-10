@@ -1,10 +1,10 @@
 #!/bin/bash
-set -e
-
-if $(which apt >/dev/null); then
+if $(which apt-get >/dev/null); then
 	sudo apt-get update
-	sudo apt install -y neovim fish autojump dstat pg-activity stow
+	sudo apt-get install -y neovim fish autojump dstat pg-activity stow exa bat
 fi
+
+set -e
 
 stow -t ~/.config/ .config/
 stow git
