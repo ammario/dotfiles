@@ -24,4 +24,4 @@ sudo chsh -s $(which fish) $USER
 
 # Install rust goodies
 CARGO_NET_GIT_FETCH_WITH_CLI=true
-cargo install exa bat
+cargo install exa bat ripgrep
