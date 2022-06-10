@@ -16,7 +16,7 @@
 	tool = vimdiff
 	conflictstyle = diff3
 [commit]
-	gpgsign = true
+	gpgsign = false
 [credential]
 	helper = cache
 [http]
@@ -67,7 +67,7 @@
 [core]
 	excludesfile = ~/.gitignore
 	# hooksPath = ihatehooks
-	editor = vim
+	editor = nvim
 [rebase]
 	autosquash = true
 [hub]
