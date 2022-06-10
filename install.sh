@@ -23,5 +23,5 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 sudo chsh -s $(which fish) $USER
 
 # Install rust goodies
-CARGO_NET_GIT_FETCH_WITH_CLI=true
+export CARGO_NET_GIT_FETCH_WITH_CLI=true
 cargo install exa bat ripgrep
