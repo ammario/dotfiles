@@ -142,6 +142,7 @@ source ~/.config/fish/git.fish
 set EDITOR (which nvim)
 set KUBE_EDITOR $EDITOR
 set VISUAL nvim
+alias v="nvim"
 
 alias c="clear"
 
@@ -161,14 +162,16 @@ if which exa > /dev/null
 	alias ls="exa"
 end
 
-function edit_cmd --description 'Edit cmdline in editor'
-        set -l f (mktemp --tmpdir=.)
-        set -l p (commandline -C)
-        commandline -b > $f
-        vim -c set\ ft=fish $f
-        commandline -r (more $f)
-        commandline -C $p
-        rm $f
+function edit_cmd --description 'Input command in external editor'
+	set -l f (mktemp /tmp/fish.cmd.XXXXXXXX)
+	if test -n "$f"
+	    set -l p (commandline -C)
+	    commandline -b > $f
+	    $EDITOR -c 'set ft=fish' $f
+	    commandline -r (cat $f)
+	    commandline -C $p
+	    command rm $f
+	end
 end
 
 bind \cE edit_cmd
