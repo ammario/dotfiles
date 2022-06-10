@@ -1,4 +1,0 @@
-#!/bin/bash
-# This command finds the top-level git directory.
-set -e
-git rev-parse --show-toplevel

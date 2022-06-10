@@ -1,5 +1,0 @@
-#!/bin/bash
-sudo pm-suspend &
-# mitigation against weird bug where lock occurs during suspend and everything freezes
-sleep 1s
-lock

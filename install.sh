@@ -1,9 +1,7 @@
 #!/bin/bash
-cp -r .bashrc .fonts/ .vim/ .vimrc .inputrc ~
-
 set -e
 
-if $(which apt > /dev/null); then
+if $(which apt >/dev/null); then
 	sudo apt-get update
 	sudo apt install -y neovim fish autojump dstat pg-activity stow
 fi
@@ -12,9 +10,9 @@ stow -t ~/.config/ .config/
 stow git
 
 # Replace 'vim' command with neovim.
-if $(which vim > /dev/null); then
+if $(which vim >/dev/null); then
 	sudo mv $(which vim) $(mktemp -d)
-	sudo ln -s $(which nvim) /usr/bin/vim	
+	sudo ln -s $(which nvim) /usr/bin/vim
 fi
 
 # Install vim-plug
