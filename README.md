@@ -1,3 +1,10 @@
 # dotfiles
 
-Welcome to my dotfiles repo.
+Become me:
+
+```
+$ git clone https://github.com/ammario/dotfiles
+$ pushd dotfiles
+$ ./install.sh
+```
+
