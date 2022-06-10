@@ -175,3 +175,8 @@ function edit_cmd --description 'Input command in external editor'
 end
 
 bind \cE edit_cmd
+
+if which bat > /dev/null
+	alias cat="bat"
+end
+
