@@ -37,6 +37,9 @@ call plug#end()
 	" Reload file from disk
 	nmap <Leader>e :e!<cr>
 
+" Sidebar
+	set nu
+
 " Buffer Switching
 	map <Leader>] :bn<cr>
 	map <Leader>[ :bp<cr>
@@ -54,9 +57,6 @@ call plug#end()
 	execute "colorscheme " . dark_theme
 	execute "command Light colorscheme " . light_theme
 	execute "command Dark colorscheme " . dark_theme
-
-" Sidebar
-	set number relativenumber
 
 " Markdown
 	" Disable auto folding
