@@ -161,6 +161,10 @@ if which exa > /dev/null
 	alias ls="exa"
 end
 
+if which bat > /dev/null
+	alias cat="bat"
+end
+
 function edit_cmd --description 'Edit cmdline in editor'
         set -l f (mktemp --tmpdir=.)
         set -l p (commandline -C)

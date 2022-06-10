@@ -1,7 +1,7 @@
 #!/bin/bash
-if $(which apt-get >/dev/null); then
-	sudo apt-get update
-	sudo apt-get install -y neovim fish autojump dstat pg-activity stow exa bat
+if $(which apt >/dev/null); then
+	sudo apt update
+	sudo apt install -y neovim fish autojump dstat pg-activity stow cargo
 fi
 
 set -e
@@ -21,3 +21,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 # Change default shell to fish.
 sudo chsh -s $(which fish) $USER
+
+# Install rust goodies
+CARGO_NET_GIT_FETCH_WITH_CLI=true
+cargo install exa bat
