@@ -143,6 +143,7 @@ set EDITOR (which nvim)
 set KUBE_EDITOR $EDITOR
 set VISUAL nvim
 alias v="nvim"
+alias vim="nvim"
 
 alias c="clear"
 

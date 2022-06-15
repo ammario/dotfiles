@@ -9,12 +9,6 @@ set -e
 stow -t ~/.config/ .config/
 stow git
 
-# Replace 'vim' command with neovim.
-if $(which vim >/dev/null); then
-	sudo mv $(which vim) $(mktemp -d)
-	sudo ln -s $(which nvim) /usr/bin/vim
-fi
-
 # Install vim-plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
