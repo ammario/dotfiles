@@ -120,6 +120,7 @@ add_path ~/c/devbin
 add_path ~/go/bin
 add_path ~/bin
 add_path ~/.cargo/bin
+add_path /usr/local/opt/ruby/bin
 
 set fish_greeting ""
 set GOPATH ~/go
