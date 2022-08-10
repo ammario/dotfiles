@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# This script implements personalize as described
+# here: https://coder.com/docs/coder-oss/latest/dotfiles#persistent-home.
+
+set -e
+if [ ! -d dotfiles ]; then
+    git clone https://github.com/ammario/dotfiles
+fi
+
+pushd dotfiles
+./install
