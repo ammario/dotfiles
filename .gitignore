@@ -1,3 +1,4 @@
 .vim/bundle
-fish_history
-config.fish.backup
+# WARNING: fish_history may contain secrets.
+**/fish_history
+**/config.fish.backup
