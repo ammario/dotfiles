@@ -1,0 +1,98 @@
+{
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "markdownlint.run": "onSave",
+  "editor.formatOnSave": true,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.detectIndentation": true,
+  "editor.fontFamily": "JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "commands": ["undo"],
+      "before": ["u"]
+    },
+    {
+      "commands": ["redo"],
+      "before": ["<C-r>"]
+    }
+  ],
+  "security.workspace.trust.untrustedFiles": "open",
+  "redhat.telemetry.enabled": true,
+  "vim.useCtrlKeys": true,
+  "editor.accessibilitySupport": "off",
+  "workbench.colorTheme": "Min Dark",
+  "remote.SSH.remotePlatform": {
+    "coder.c2": "linux",
+    "coder.ab": "linux",
+    "coder.moria": "linux",
+    "coder.c": "linux"
+  },
+  "gopls": {
+    "ui.semanticTokens": true
+  },
+  "explorer.confirmDragAndDrop": false,
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "workbench.iconTheme": "vscode-icons",
+  "terminal.integrated.commandsToSkipShell": ["language-julia.interrupt"],
+  "julia.symbolCacheDownload": true,
+  "julia.enableTelemetry": true,
+  "editor.rulers": [80],
+  "editor.fontLigatures": true,
+  "julia.persistentSession.shell": "/bin/fish",
+  "gitlens.advanced.messages": {
+    "suppressLineUncommittedWarning": true
+  },
+  "julia.additionalArgs": ["--threads=10"],
+  "julia.enableCrashReporter": true,
+  "go.toolsManagement.autoUpdate": true,
+  "vsicons.dontShowNewVersionMessage": true,
+  "remote.SSH.connectTimeout": 30,
+  "remote.SSH.useLocalServer": false,
+  "evenBetterToml.formatter.arrayAutoExpand": true,
+  "diffEditor.codeLens": true,
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.defaultProfile.linux": "fish",
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js, ${capture}.typegen.ts",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts, ${capture}.typegen.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml",
+    "*.mts": "${capture}.typegen.ts",
+    "*.cts": "${capture}.typegen.ts"
+  },
+  "github.copilot.enable": {
+    "*": false,
+    "yaml": false,
+    "plaintext": false,
+    "markdown": false
+  },
+  "editor.renderWhitespace": "none",
+  "shellformat.effectLanguages": [
+    "shellscript",
+    "dotenv",
+    "hosts",
+    "jvmoptions",
+    "ignore",
+    "gitignore",
+    "properties",
+    "spring-boot-properties",
+    "azcli",
+    "bats"
+  ],
+  "[dockerfile]": {
+    "editor.formatOnSave": false
+  },
+  "git.mergeEditor": true,
+  "editor.inlineSuggest.enabled": true,
+  "go.coverageOptions": "showUncoveredCodeOnly",
+  "go.coverOnTestPackage": false,
+  "terminal.integrated.localEchoEnabled": "off"
+}
