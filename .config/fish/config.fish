@@ -101,6 +101,7 @@ alias l='ls -al'
 # google cloud aliases
 alias gcssh="gcloud compute ssh"
 
+alias we="watchexec -r -c --"
 
 # Set special PATH
 
