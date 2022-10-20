@@ -4,6 +4,7 @@
 # here: https://coder.com/docs/coder-oss/latest/dotfiles#persistent-home.
 
 set -e
+pushd ~
 if [ ! -d dotfiles ]; then
     git clone https://github.com/ammario/dotfiles
 fi
