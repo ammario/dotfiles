@@ -6,8 +6,7 @@ fi
 
 set -e
 
-stow -t ~/.config/ .config/
-stow git
+./stow
 
 # Install vim-plug
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \

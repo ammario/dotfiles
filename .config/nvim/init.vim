@@ -13,6 +13,7 @@ call plug#begin(stdpath('data') . '/plugged')
 	Plug 'airblade/vim-gitgutter'
 	" Folds, etc.
 	Plug 'plasticboy/vim-markdown'
+	Plug 'LnL7/vim-nix'
 call plug#end()
 
 " Clipboard
