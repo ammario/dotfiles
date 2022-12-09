@@ -11,12 +11,20 @@
   "editor.fontFamily": "JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "commands": ["undo"],
-      "before": ["u"]
+      "commands": [
+        "undo"
+      ],
+      "before": [
+        "u"
+      ]
     },
     {
-      "commands": ["redo"],
-      "before": ["<C-r>"]
+      "commands": [
+        "redo"
+      ],
+      "before": [
+        "<C-r>"
+      ]
     }
   ],
   "security.workspace.trust.untrustedFiles": "open",
@@ -38,16 +46,22 @@
     "FIG_NEW_SESSION": "1"
   },
   "workbench.iconTheme": "vscode-icons",
-  "terminal.integrated.commandsToSkipShell": ["language-julia.interrupt"],
+  "terminal.integrated.commandsToSkipShell": [
+    "language-julia.interrupt"
+  ],
   "julia.symbolCacheDownload": true,
   "julia.enableTelemetry": true,
-  "editor.rulers": [80],
+  "editor.rulers": [
+    80
+  ],
   "editor.fontLigatures": true,
   "julia.persistentSession.shell": "/bin/fish",
   "gitlens.advanced.messages": {
     "suppressLineUncommittedWarning": true
   },
-  "julia.additionalArgs": ["--threads=10"],
+  "julia.additionalArgs": [
+    "--threads=10"
+  ],
   "julia.enableCrashReporter": true,
   "go.toolsManagement.autoUpdate": true,
   "vsicons.dontShowNewVersionMessage": true,
@@ -94,5 +108,17 @@
   "editor.inlineSuggest.enabled": true,
   "go.coverageOptions": "showUncoveredCodeOnly",
   "go.coverOnTestPackage": false,
-  "terminal.integrated.localEchoEnabled": "off"
+  "terminal.integrated.localEchoEnabled": "off",
+  "window.zoomLevel": 1,
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        "<C-m>",
+      ],
+      "after": [
+        "@",
+        "@"
+      ],
+    },
+  ]
 }
