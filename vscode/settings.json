@@ -86,7 +86,7 @@
     "editor.formatOnSave": false
   },
   "git.mergeEditor": true,
-  "editor.inlineSuggest.enabled": true,
+  // "editor.inlineSuggest.enabled": true,
   "go.coverageOptions": "showUncoveredCodeOnly",
   "go.coverOnTestPackage": false,
   "terminal.integrated.localEchoEnabled": "off",
@@ -96,5 +96,28 @@
       "after": ["@", "@"]
     }
   ],
-  "window.zoomLevel": 1,"remote": {"SSH":{"remotePlatform":{"coder.c2":"linux","coder.ab":"linux","coder.moria":"linux","coder.c":"linux","coder-vscode--ammar--c":"linux"}}}
+  "window.zoomLevel": 1,
+  "remote": {
+    "SSH": {
+      "remotePlatform": {
+        "coder.c2": "linux",
+        "coder.ab": "linux",
+        "coder.moria": "linux",
+        "coder.c": "linux",
+        "coder-vscode--ammar--c": "linux"
+      }
+    }
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.tabCompletion": "off",
+  "editor.snippetSuggestions": "top",
+  "[go]": {
+    // "editor.suggest.snippetsPreventQuickSuggestions": true,
+    // "editor.quickSuggestions": {
+    //   "strings": "on"
+    // }
+  },
+  "emmet.showSuggestionsAsSnippets": true
 }

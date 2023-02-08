@@ -88,5 +88,9 @@
     "key": "f5",
     "command": "language-julia.executeActiveFile",
     "when": "editorLangId == julia"
+  },
+  {
+    "key": "shift+cmd+i",
+    "command": "editor.action.showSnippets"
   }
 ]
