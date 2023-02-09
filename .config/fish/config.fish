@@ -116,6 +116,7 @@ add_path /usr/local/opt/make/libexec/gnubin
 
 add_path ~/Projects/ammario/dotfiles/bin
 add_path ~/Projects/dotfiles/bin
+add_path ~/dotfiles/bin
 add_path ~/m/devbin
 add_path ~/c/devbin
 add_path ~/go/bin
