@@ -8,7 +8,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.detectIndentation": true,
-  "editor.fontFamily": "JetBrains Mono, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "Berkeley Mono, Menlo, Monaco, 'Courier New', monospace",
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "commands": ["undo"],
@@ -26,7 +26,8 @@
   "workbench.colorTheme": "Min Dark",
   "remote.SSH.remotePlatform": {"coder.c2":"linux","coder.ab":"linux","coder.moria":"linux","coder.c":"linux","coder-vscode--ammar--c":"linux"},
   "gopls": {
-    "ui.semanticTokens": true
+    "ui.semanticTokens": true,
+    "formatting.gofumpt": true
   },
   "explorer.confirmDragAndDrop": false,
   "terminal.integrated.env.osx": {
@@ -64,10 +65,10 @@
     "*.cts": "${capture}.typegen.ts"
   },
   "github.copilot.enable": {
-    "*": false,
-    "yaml": false,
+    "*": true,
+    "yaml": true,
     "plaintext": false,
-    "markdown": false
+    "markdown": true
   },
   "editor.renderWhitespace": "none",
   "shellformat.effectLanguages": [
@@ -96,7 +97,6 @@
       "after": ["@", "@"]
     }
   ],
-  "window.zoomLevel": 1,
   "remote": {
     "SSH": {
       "remotePlatform": {
@@ -119,5 +119,16 @@
     //   "strings": "on"
     // }
   },
-  "emmet.showSuggestionsAsSnippets": true
+  "emmet.showSuggestionsAsSnippets": true,
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.inlineSuggest.enabled": true,
+  "[markdown]": {
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "go.gocodeAutoBuild": true
 }

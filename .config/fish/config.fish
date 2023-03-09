@@ -125,6 +125,7 @@ add_path ~/.cargo/bin
 add_path /usr/local/opt/ruby/bin
 add_path ~/.airplane/bin
 add_path ~/.local/bin
+add_path /usr/local/bin/
 set fish_greeting ""
 set GOPATH ~/go
 set GO111MODULE on

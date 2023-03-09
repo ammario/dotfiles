@@ -14,7 +14,7 @@ key_bindings:
 
 font:
   normal:
-    family: JetBrains Mono
+    family: Berkeley Mono
   size: 15.0
 
   # offset.y` can be thought of as modifying the line spacing
