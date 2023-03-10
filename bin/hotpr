@@ -4,5 +4,6 @@ set -eu -o pipefail
 
 reviewer=$1
 
-gh pr create -f -r $reviewer
+git push -u origin HEAD
+gh pr create -a ammario -f -r $reviewer
 gh pr merge --auto -ds
