@@ -24,7 +24,7 @@
   "vim.useCtrlKeys": true,
   "editor.accessibilitySupport": "off",
   "workbench.colorTheme": "Min Dark",
-  "remote.SSH.remotePlatform": {"coder.c2":"linux","coder.ab":"linux","coder.moria":"linux","coder.c":"linux","coder-vscode--ammar--c":"linux"},
+  "remote.SSH.remotePlatform": {"coder.c2":"linux","coder.ab":"linux","coder.moria":"linux","coder.c":"linux","coder-vscode--ammar--c":"linux","coder-vscode--ammar--c0":"linux"},
   "gopls": {
     "ui.semanticTokens": true,
     "formatting.gofumpt": true
@@ -70,7 +70,7 @@
     "plaintext": false,
     "markdown": true
   },
-  "editor.renderWhitespace": "none",
+  "editor.renderWhitespace": "all",
   "shellformat.effectLanguages": [
     "shellscript",
     "dotenv",
@@ -130,5 +130,6 @@
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
-  "go.gocodeAutoBuild": true
+  "go.gocodeAutoBuild": true,
+  "go.buildTags": "mage"
 }
