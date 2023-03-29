@@ -182,3 +182,5 @@ if which bat > /dev/null
 	alias cat="bat"
 end
 
+# Not sure how this keeps getting set.
+set -e GITHUB_TOKEN
