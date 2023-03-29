@@ -141,15 +141,11 @@ function fish_user_key_bindings
 	bind -M insert \ew nextd-or-forward-word
 end
 
-# Misc. files
-source ~/.config/fish/git.fish
-
 set EDITOR (which nvim)
 set KUBE_EDITOR $EDITOR
 set VISUAL nvim
 alias v="nvim"
 alias vim="nvim"
-
 alias c="clear"
 
 # Let GPG prompt for password.

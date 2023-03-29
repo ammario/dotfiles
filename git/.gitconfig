@@ -53,6 +53,7 @@
 	find-issue = "! hub issue | fzf"
 	m = "checkout master"
 	emoji = "! ~/go/bin/gitemoji"
+	co = "checkout"
 
 [gitflow "branch"]
 	master = master
