@@ -24,7 +24,7 @@
   "vim.useCtrlKeys": true,
   "editor.accessibilitySupport": "off",
   "workbench.colorTheme": "Min Dark",
-  "remote.SSH.remotePlatform": {"coder.c2":"linux","coder.ab":"linux","coder.moria":"linux","coder.c":"linux","coder-vscode--ammar--c":"linux","coder-vscode--ammar--c0":"linux"},
+  "remote.SSH.remotePlatform": {"coder.c2":"linux","coder.ab":"linux","coder.moria":"linux","coder.c":"linux","coder-vscode--ammar--c":"linux","coder-vscode--ammar--c0":"linux","coder-vscode--ammar--powershell":"windows"},
   "gopls": {
     "ui.semanticTokens": true,
     "formatting.gofumpt": true
@@ -35,20 +35,14 @@
   },
   "workbench.iconTheme": "vscode-icons",
   "terminal.integrated.commandsToSkipShell": ["language-julia.interrupt"],
-  "julia.symbolCacheDownload": true,
-  "julia.enableTelemetry": true,
+
   "editor.rulers": [80],
   "editor.fontLigatures": true,
-  "julia.persistentSession.shell": "/bin/fish",
-  "gitlens.advanced.messages": {
-    "suppressLineUncommittedWarning": true
-  },
-  "julia.additionalArgs": ["--threads=10"],
-  "julia.enableCrashReporter": true,
-  "go.toolsManagement.autoUpdate": true,
+
   "vsicons.dontShowNewVersionMessage": true,
-  "remote.SSH.connectTimeout": 30,
-  "remote.SSH.useLocalServer": false,
+  "remote.SSH.connectTimeout": 60,
+  "remote.SSH.useLocalServer": true,
+  "terminal.integrated.inheritEnv": false,
   "evenBetterToml.formatter.arrayAutoExpand": true,
   "diffEditor.codeLens": true,
   "terminal.integrated.enableMultiLinePasteWarning": false,
@@ -63,12 +57,6 @@
     "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml",
     "*.mts": "${capture}.typegen.ts",
     "*.cts": "${capture}.typegen.ts"
-  },
-  "github.copilot.enable": {
-    "*": true,
-    "yaml": true,
-    "plaintext": false,
-    "markdown": true
   },
   "editor.renderWhitespace": "all",
   "shellformat.effectLanguages": [
@@ -97,17 +85,6 @@
       "after": ["@", "@"]
     }
   ],
-  "remote": {
-    "SSH": {
-      "remotePlatform": {
-        "coder.c2": "linux",
-        "coder.ab": "linux",
-        "coder.moria": "linux",
-        "coder.c": "linux",
-        "coder-vscode--ammar--c": "linux"
-      }
-    }
-  },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -131,5 +108,21 @@
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
   "go.gocodeAutoBuild": true,
-  "go.buildTags": "mage"
+  "go.buildTags": "mage",
+  "remote.SSH.logLevel": "trace",
+  "remote.SSH.showLoginTerminal": true,
+  "julia.symbolCacheDownload": true,
+  "julia.enableTelemetry": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": false,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": false
+  },
+  "notebook.formatOnSave.enabled": true,
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "jupyter.interactiveWindow.codeLens.enable": true
 }

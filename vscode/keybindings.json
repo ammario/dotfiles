@@ -119,5 +119,9 @@
     "key": "alt+a",
     "command": "editor.action.inlineSuggest.commit",
     "when": "inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorTabMovesFocus"
+  },
+  {
+    "key": "shift+f5",
+    "command": "notebook.execute"
   }
 ]
