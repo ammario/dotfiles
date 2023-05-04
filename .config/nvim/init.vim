@@ -5,7 +5,6 @@ call plug#begin(stdpath('data') . '/plugged')
 	Plug 'arzg/vim-colors-xcode'
 	Plug 'junegunn/vim-easy-align'
 	Plug 'bling/vim-bufferline'
-	Plug 'dag/vim-fish'
 	Plug 'spolu/dwm.vim'
 	" :G git commands.
 	Plug 'tpope/vim-fugitive'
@@ -14,6 +13,9 @@ call plug#begin(stdpath('data') . '/plugged')
 	" Folds, etc.
 	Plug 'plasticboy/vim-markdown'
 	Plug 'jvirtanen/vim-hcl.git'
+	" Language support
+	Plug 'pangloss/vim-javascript'
+	Plug 'dag/vim-fish'
 call plug#end()
 
 " Clipboard
