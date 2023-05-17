@@ -115,14 +115,15 @@
   "julia.enableTelemetry": true,
   "github.copilot.enable": {
     "*": true,
-    "yaml": false,
     "plaintext": true,
     "markdown": true,
-    "scminput": false
+    "scminput": false,
+    "yaml": true
   },
   "notebook.formatOnSave.enabled": true,
   "[python]": {
     "editor.formatOnType": true
   },
-  "jupyter.interactiveWindow.codeLens.enable": true
+  "jupyter.interactiveWindow.codeLens.enable": true,
+  "githubPullRequests.pullBranch": "never"
 }

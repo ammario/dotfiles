@@ -123,5 +123,15 @@
   {
     "key": "shift+f5",
     "command": "notebook.execute"
+  },
+  {
+    "key": "cmd+n",
+    "command": "markdowntable.nextCell",
+    "when": "editorTextFocus && markdowntable.contextkey.selection.InMarkdownTable && !editorReadonly && !editorTabMovesFocus && !inSnippetMode && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+  },
+  {
+    "key": "tab",
+    "command": "-markdowntable.nextCell",
+    "when": "editorTextFocus && markdowntable.contextkey.selection.InMarkdownTable && !editorReadonly && !editorTabMovesFocus && !inSnippetMode && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
   }
 ]
