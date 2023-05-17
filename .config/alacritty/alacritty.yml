@@ -11,6 +11,9 @@ window:
 
 key_bindings:
   - { key: T, mods: Command, action: CreateNewWindow }
+  # For my fish alt keybinds
+  - { key: A,  mods: Alt, chars: "\x1ba" }
+  - { key: W,  mods: Alt, chars: "\x1bw" }
 
 font:
   normal:
