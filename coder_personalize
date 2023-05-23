@@ -9,7 +9,7 @@ if [ ! -d dotfiles ]; then
     git clone https://github.com/ammario/dotfiles
 fi
 
-sudo apt-get install -y stow autojump
+sudo apt-get install -y stow autojump redis
 
 pushd dotfiles
 ./install
