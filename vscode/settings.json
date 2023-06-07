@@ -125,5 +125,8 @@
     "editor.formatOnType": true
   },
   "jupyter.interactiveWindow.codeLens.enable": true,
-  "githubPullRequests.pullBranch": "never"
+  "githubPullRequests.pullBranch": "never",
+  "terminal.integrated.macOptionIsMeta": true,
+  "extensions.ignoreRecommendations": true,
+  "window.zoomLevel": 1
 }
