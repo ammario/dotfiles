@@ -2,8 +2,6 @@
 
 set -eu -o pipefail
 
-reviewer=$1
-
 git push -u origin HEAD
-gh pr create -a ammario -f -r $reviewer
+gh pr create -a ammario -f $@
 gh pr merge --auto -ds
