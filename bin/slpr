@@ -1,0 +1,19 @@
+#!/bin/bash
+
+set -e
+
+if [ ! -d ".sl" ]; then
+    echo "No .sl directory found."
+    exit 1
+fi
+
+prnum=$(sl | awk '{print substr($7, 2); exit 0}')
+
+if [ -z "$prnum" ]; then
+    echo "No PR number found."
+    exit 1
+fi
+
+repo=$(sl config | awk -F'=' '/default.*github/ {print $2}')
+
+echo $repo/pull/$prnum
