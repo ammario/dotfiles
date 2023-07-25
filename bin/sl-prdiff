@@ -1,0 +1,5 @@
+#!/bin/bash
+
+set -e
+
+sl diff -r remote/pr$(sl-prnum)
