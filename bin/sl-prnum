@@ -5,7 +5,7 @@ set -e
 root=$(sl root)
 cd $root
 
-prnum=$(sl | awk '{print substr($7, 2); exit 0}')
+prnum=$(sl | grep "@" | grep -o -m 1 -w '#\w*' | cut -c 2-)
 
 if [ -z "$prnum" ]; then
     echo "No PR number found."
