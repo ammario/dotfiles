@@ -2,10 +2,8 @@
 
 set -e
 
-if [ ! -d ".sl" ]; then
-    echo "No .sl directory found."
-    exit 1
-fi
+root=$(sl root)
+cd $root
 
 prnum=$(sl | awk '{print substr($7, 2); exit 0}')
 
