@@ -64,3 +64,12 @@ call plug#end()
 " Markdown
 	" Disable auto folding
  	let g:vim_markdown_folding_disabled = 1
+
+" Sapling commit
+	augroup filetypes
+		autocmd!
+		autocmd BufRead,BufNewFile *commit.hg.txt setlocal 
+			\ colorcolumn=80
+			\ textwidth=80
+			\ filetype=gitcommit
+	augroup END
