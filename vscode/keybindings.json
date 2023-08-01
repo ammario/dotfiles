@@ -133,5 +133,9 @@
     "key": "tab",
     "command": "-markdowntable.nextCell",
     "when": "editorTextFocus && markdowntable.contextkey.selection.InMarkdownTable && !editorReadonly && !editorTabMovesFocus && !inSnippetMode && !suggestWidgetMultipleSuggestions && !suggestWidgetVisible"
+  },
+  {
+    "key": "cmd+enter",
+    "command": "pr.createComment"
   }
 ]
