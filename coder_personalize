@@ -13,5 +13,10 @@ sudo apt-get install -y stow autojump redis
 
 sudo npm install -g n
 
+pushd /tmp
+	curl -L -o sapling_0.2.20230523-092610+f12b7eee_amd64.Ubuntu22.04.deb https://github.com/facebook/sapling/releases/download/0.2.20230523-092610%2Bf12b7eee/sapling_0.2.20230523-092610%2Bf12b7eee_amd64.Ubuntu22.04.deb
+	sudo apt install -y ./sapling_0.2.20230523-092610+f12b7eee_amd64.Ubuntu22.04.deb
+popd
+
 pushd dotfiles
 ./install
