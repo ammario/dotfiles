@@ -128,7 +128,6 @@
   "githubPullRequests.pullBranch": "never",
   "terminal.integrated.macOptionIsMeta": true,
   "extensions.ignoreRecommendations": true,
-  "window.zoomLevel": 1,
   "css.lint.unknownAtRules": "ignore",
   "scss.lint.unknownAtRules": "ignore",
   "[scss]": {
@@ -136,5 +135,6 @@
   },
   "files.exclude": {
     "**/.sl": true
-  }
+  },
+  "window.zoomLevel": 1
 }
