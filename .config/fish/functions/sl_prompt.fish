@@ -1,4 +1,8 @@
 function sl_prompt
+    set TMP (mktemp -d)
+    set STATUS_PATH $TMP/status
+    sl st > $STATUS_PATH &
+
     set LOG_TEMPLATE '{node}|{activebookmark}|{branch}|{github_pull_request_number}|{diffstat}|'
     set LOG (sl log -l 1 --template $LOG_TEMPLATE 2>/tmp/sl_prompt_error)
     if test $status -ne 0
@@ -9,22 +13,29 @@ function sl_prompt
     echo -n " ("
     set_color $green
 
-    set PR_NUM (echo $LOG | awk -v FS='|' '{printf("%s", $4)}' | tr -d '[blank]')
-    set COMMIT (echo $LOG | awk -v FS='|' '{printf("%s", substr($1, 0, 8))}')
-    set BOOKMARK (echo $LOG | awk -v FS='|' '{printf("%s", $2)}')
+    # Each call to awk was taking 0.1s, which became quite noticeable.
+    echo $LOG | awk -F'|' '
+    {
+        pr_num = $4; gsub(/[ \t]+$/, "", pr_num)
+        commit = substr($1, 0, 8)
+        bookmark = $2
 
+        if (pr_num != "") {
+            printf "#%s", pr_num
+        } else if (bookmark != "") {
+            printf "%s", bookmark
+        } else {
+            printf "@%s", commit
+        }
+    }'
 
-
-    if test -n "$PR_NUM"
-        echo -n '#'
-        echo -n $PR_NUM
-    else if test -n "$BOOKMARK"
-        echo -n $BOOKMARK
-    else
-        echo -n "@"
-        echo -n $COMMIT
+    wait;
+    if test -s $STATUS_PATH
+        set_color $pink
+        echo -n "*"
     end
 
     set_color $grey
     echo -n ")"
+    rm -rf $TMP
 end

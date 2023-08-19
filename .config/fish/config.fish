@@ -72,7 +72,8 @@ function fish_prompt
   set_color $fish_color_cwd
   printf ' %s' (prompt_pwd)
   set_color normal
-  printf '%s%s ' (__fish_git_prompt) (sl_prompt)
+  printf '%s' (__fish_git_prompt)
+  printf '%s ' (sl_prompt)
 
   set_color normal
 end
