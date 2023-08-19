@@ -8,7 +8,6 @@ cd $root
 prnum=$(sl | grep "@" | grep -o -m 1 -w '#\w*' | cut -c 2-)
 
 if [ -z "$prnum" ]; then
-    echo "No PR number found."
     exit 1
 fi
 

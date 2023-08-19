@@ -24,7 +24,7 @@
   "vim.useCtrlKeys": true,
   "editor.accessibilitySupport": "off",
   "workbench.colorTheme": "Min Dark",
-  "remote.SSH.remotePlatform": {"coder.c2":"linux","coder.ab":"linux","coder.moria":"linux","coder.c":"linux","coder-vscode--ammar--c":"linux","coder-vscode--ammar--c0":"linux","coder-vscode--ammar--powershell":"windows"},
+  "remote.SSH.remotePlatform": {"coder.c2":"linux","coder.ab":"linux","coder.moria":"linux","coder.c":"linux","coder-vscode--ammar--c":"linux","coder-vscode--ammar--c0":"linux","coder-vscode--ammar--powershell":"windows","coder-vscode--ammar--c0--dev":"linux"},
   "gopls": {
     "ui.semanticTokens": true,
     "formatting.gofumpt": true
@@ -135,6 +135,5 @@
   },
   "files.exclude": {
     "**/.sl": true
-  },
-  "window.zoomLevel": 1
+  }
 }
