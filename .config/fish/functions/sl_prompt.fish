@@ -20,13 +20,14 @@ function sl_prompt
         commit = substr($1, 0, 8)
         bookmark = $2
         remote = $6
+        sub("remote/", "", remote)
 
         if (pr_num != "") {
             printf "#%s", pr_num
         } else if (bookmark != "") {
             printf "%s", bookmark
         } else if (remote != "") {
-            printf "%s", remote
+            printf "=️ %s", remote
         } else {
             printf "@%s", commit
         }
