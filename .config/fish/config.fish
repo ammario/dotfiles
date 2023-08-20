@@ -76,8 +76,10 @@ function fish_prompt
   set git_prompt (__fish_git_prompt)
   printf '%s' $git_prompt
   if test -z "$git_prompt"
-  	printf '%s ' (sl_prompt)
+	# Avoids performance penalty of sl_prompt startup.
+  	printf '%s' (sl_prompt)
   end
+  printf ' '
 
   set_color normal
 end

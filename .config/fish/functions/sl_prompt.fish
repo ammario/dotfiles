@@ -42,5 +42,6 @@ function sl_prompt
 
     set_color $grey
     echo -n ")"
+    set_color $reset_color
     rm -rf $TMP
 end
