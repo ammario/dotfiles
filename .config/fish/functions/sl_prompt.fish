@@ -28,7 +28,7 @@ function sl_prompt
         } else if (bookmark != "") {
             printf "%s", bookmark
         } else if (remote != "") {
-            printf "=️ %s", remote
+            printf "= %s", remote
         } else {
             printf "@%s", commit
         }
