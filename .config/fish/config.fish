@@ -72,8 +72,12 @@ function fish_prompt
   set_color $fish_color_cwd
   printf ' %s' (prompt_pwd)
   set_color normal
-  printf '%s' (__fish_git_prompt)
-  printf '%s ' (sl_prompt)
+
+  set git_prompt (__fish_git_prompt)
+  printf '%s' $git_prompt
+  if test -z "$git_prompt"
+  	printf '%s ' (sl_prompt)
+  end
 
   set_color normal
 end
