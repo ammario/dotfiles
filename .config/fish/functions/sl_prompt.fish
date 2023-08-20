@@ -2,7 +2,9 @@ function sl_prompt
     # run in background to avoid slowing down prompt
     set TMP (mktemp -d)
     set STATUS_PATH $TMP/status
-    sl st 2>/dev/null > $STATUS_PATH &
+    sl st 2>/dev/null | \
+        awk '{unique[$1] = 1} END {for (i in unique) {printf("%s", i)} print ""}' \
+        > $STATUS_PATH &
 
     set LOG_TEMPLATE '{node}|{activebookmark}|{branch}|{github_pull_request_number}|{diffstat}|{remotenames}'
     set LOG (sl log -l 1 --template $LOG_TEMPLATE 2>/tmp/sl_prompt_error)
@@ -37,7 +39,8 @@ function sl_prompt
     wait;
     if test -s $STATUS_PATH
         set_color $pink
-        echo -n " *"
+        set symbols (cat $STATUS_PATH)
+        echo -n " $symbols"
     end
 
     set_color $grey
