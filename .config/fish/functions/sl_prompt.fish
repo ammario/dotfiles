@@ -40,7 +40,9 @@ function sl_prompt
     if test -s $STATUS_PATH
         set_color $pink
         set symbols (cat $STATUS_PATH)
-        echo -n " $symbols"
+        if test -n "$symbols"
+            echo -n " $symbols"
+        end
     end
 
     set_color $grey
