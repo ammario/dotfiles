@@ -29,12 +29,12 @@ function sl_prompt
         remote = $6
         sub("remote/", "", remote)
 
-        if (pr_num != "") {
-            printf "#%s", pr_num
-        } else if (bookmark != "") {
+        if (bookmark != "") {
             printf "%s", bookmark
         } else if (remote != "") {
             printf "= %s", remote
+        } else if (pr_num != "") {
+            printf "#%s", pr_num
         } else {
             printf "@%s", commit
         }
