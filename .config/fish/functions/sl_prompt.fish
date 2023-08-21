@@ -1,9 +1,13 @@
 function sl_prompt
+    function csort
+        fold -w1 | command sort | tr -d '\n'
+    end
+
     # run in background to avoid slowing down prompt
     set TMP (mktemp -d)
     set STATUS_PATH $TMP/status
     sl st 2>/dev/null | \
-        awk '{unique[$1] = 1} END {for (i in unique) {printf("%s", i)} print ""}' \
+        awk '{unique[$1] = 1} END {for (i in unique) {printf("%s", i)} print ""}' | csort \
         > $STATUS_PATH &
 
     set LOG_TEMPLATE '{node}|{activebookmark}|{branch}|{github_pull_request_number}|{diffstat}|{remotenames}'
