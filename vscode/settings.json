@@ -20,7 +20,6 @@
     }
   ],
   "security.workspace.trust.untrustedFiles": "open",
-  "redhat.telemetry.enabled": true,
   "vim.useCtrlKeys": true,
   "editor.accessibilitySupport": "off",
   "workbench.colorTheme": "Min Dark",
@@ -107,14 +106,13 @@
   "[yaml]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
-  "go.gocodeAutoBuild": true,
   "go.buildTags": "mage",
   "remote.SSH.logLevel": "trace",
   "remote.SSH.showLoginTerminal": true,
   "julia.symbolCacheDownload": true,
   "julia.enableTelemetry": true,
   "github.copilot.enable": {
-    "*": true,
+    "*": false,
     "plaintext": true,
     "markdown": true,
     "scminput": false,
@@ -135,5 +133,14 @@
   },
   "files.exclude": {
     "**/.sl": true
-  }
+  },
+  "go.formatTool": "gofumpt",
+  "go.inlayHints.compositeLiteralFields": true,
+  "codeium.enableConfig": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true
+  },
+  "codeium.enableSearch": true,
+  "sapling.showInlineBlame": true
 }
