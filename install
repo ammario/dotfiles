@@ -16,7 +16,4 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 # Change default shell to fish.
 sudo chsh -s $(which fish) $USER
 
-# Install rust goodies
-export CARGO_NET_GIT_FETCH_WITH_CLI=true
-cargo install ripgrep killport
-# exa, bat and typos-cli are already installed
+./cargo_install

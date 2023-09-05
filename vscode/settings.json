@@ -112,7 +112,7 @@
   "julia.symbolCacheDownload": true,
   "julia.enableTelemetry": true,
   "github.copilot.enable": {
-    "*": false,
+    "*": true,
     "plaintext": true,
     "markdown": true,
     "scminput": false,
@@ -137,10 +137,11 @@
   "go.formatTool": "gofumpt",
   "go.inlayHints.compositeLiteralFields": true,
   "codeium.enableConfig": {
-    "*": true,
+    "*": false,
     "plaintext": true,
     "markdown": true
   },
   "codeium.enableSearch": true,
-  "sapling.showInlineBlame": true
+  "sapling.showInlineBlame": true,
+  "window.zoomLevel": 1
 }
