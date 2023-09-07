@@ -77,7 +77,7 @@ function fish_prompt
   printf '%s' $git_prompt
   if test -z "$git_prompt"
 	# Avoids performance penalty of sl_prompt startup.
-  	printf '%s' (sl_prompt)
+  	sl_prompt
   end
   printf ' '
 
