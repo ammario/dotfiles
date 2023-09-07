@@ -191,3 +191,7 @@ end
 
 # Not sure how this keeps getting set.
 set -e GITHUB_TOKEN
+
+
+# Helpful when working across multiple machines.
+export TZ='America/Chicago'
