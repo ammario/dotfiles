@@ -3,6 +3,7 @@ function sl-pr-msg
 	set COMMIT_HASH (sl log | head -n 1 | awk '{print substr($2, 0, 8)}')
 	set DATE (date +"%b %d - %I:%M%p")
 	echo '#!/bin/bash
+	echo "" >> $1
 	echo "'"**$DATE - $COMMIT_HASH"'**" >> $1
 	nvim $1
 	' > $ED
