@@ -17,7 +17,7 @@ pushd /tmp
 	sudo apt install -y ./sapling_0.2.20230523-092610+f12b7eee_amd64.Ubuntu22.04.deb
 popd
 
-sudo npm install -g n
+sudo npm install -g n @withgraphite/graphite-cli@stable 
 
 pushd dotfiles
 ./install
