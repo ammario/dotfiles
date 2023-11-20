@@ -195,3 +195,6 @@ set -e GITHUB_TOKEN
 
 # Helpful when working across multiple machines.
 export TZ='America/Chicago'
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH

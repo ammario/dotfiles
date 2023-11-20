@@ -143,5 +143,11 @@
   },
   "codeium.enableSearch": true,
   "sapling.showInlineBlame": true,
-  "window.zoomLevel": 1
+  "yaml.schemas": {},
+  "yaml.schemaStore.enable": false,
+  "window.zoomLevel": 1,
+  "notebook.lineNumbers": "on",
+  "autoimport.showNotifications": true,
+  "javascript.suggest.includeCompletionsForImportStatements": false,
+  "go.toolsManagement.autoUpdate": true
 }

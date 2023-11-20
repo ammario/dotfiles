@@ -12,6 +12,11 @@ if (!fs.existsSync(archiveDir)) {
 
 fs.readdirSync(downloadsDir).forEach((file) => {
   const filePath = path.join(downloadsDir, file);
+
+    if (filePath == archiveDir) {
+	    return
+    }
+
   const fileStats = fs.statSync(filePath);
   const fileAgeInDays = (Date.now() - fileStats.mtime) / (1000 * 60 * 60 * 24);
 
