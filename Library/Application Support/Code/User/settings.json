@@ -145,9 +145,14 @@
   "sapling.showInlineBlame": true,
   "yaml.schemas": {},
   "yaml.schemaStore.enable": false,
-  "window.zoomLevel": 1,
   "notebook.lineNumbers": "on",
   "autoimport.showNotifications": true,
   "javascript.suggest.includeCompletionsForImportStatements": false,
-  "go.toolsManagement.autoUpdate": true
+  "go.toolsManagement.autoUpdate": true,
+  "editor.unicodeHighlight.allowedCharacters": {
+    "’": true
+  },
+  "editor.unicodeHighlight.includeStrings": false,
+  "typescript.tsserver.log": "verbose",
+  "window.zoomLevel": 1
 }
