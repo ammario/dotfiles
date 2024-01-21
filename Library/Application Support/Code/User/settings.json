@@ -135,7 +135,7 @@
     "**/.sl": true
   },
   "go.formatTool": "gofumpt",
-  "go.inlayHints.compositeLiteralFields": true,
+  "go.inlayHints.compositeLiteralFields": false,
   "codeium.enableConfig": {
     "*": false,
     "plaintext": true,
