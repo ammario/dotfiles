@@ -201,3 +201,7 @@ set --export PATH $BUN_INSTALL/bin $PATH
 
 # opam configuration
 source /Users/ammar/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
+
+# disable GOPROXY while Go is broken in dogfood
+#
+set --export GOPROXY ""
