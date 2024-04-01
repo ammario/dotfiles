@@ -1,4 +1,4 @@
 #!/bin/bash
 
 export CARGO_NET_GIT_FETCH_WITH_CLI=true
-cargo install ripgrep killport hyperfine ag
+cargo install ripgrep killport hyperfine ag fd-find
