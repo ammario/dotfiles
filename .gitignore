@@ -1,4 +1,5 @@
 .vim/bundle
+.config/fish/fish_variables
 # WARNING: fish_history may contain secrets.
 **/fish_history
 **/config.fish.backup
