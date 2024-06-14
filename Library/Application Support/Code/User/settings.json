@@ -39,7 +39,7 @@
   "editor.fontLigatures": true,
 
   "vsicons.dontShowNewVersionMessage": true,
-  "remote.SSH.connectTimeout": 60,
+  "remote.SSH.connectTimeout": 1800,
   "remote.SSH.useLocalServer": true,
   "terminal.integrated.inheritEnv": false,
   "evenBetterToml.formatter.arrayAutoExpand": true,
