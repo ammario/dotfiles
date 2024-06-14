@@ -1,1 +1,10 @@
-{}
+links:
+    - .config/fish
+    - .config/i3
+    - .config/nvim
+    - .config/sapling
+    - Library/Application Support/Code/User/snippets
+    - Library/Application Support/Code/User/keybindings.json
+    - Library/Application Support/Code/User/settings.json
+    - .gitconfig
+    - .gitconfig
