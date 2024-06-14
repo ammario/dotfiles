@@ -23,7 +23,17 @@
   "vim.useCtrlKeys": true,
   "editor.accessibilitySupport": "off",
   "workbench.colorTheme": "Min Dark",
-  "remote.SSH.remotePlatform": {"coder.c2":"linux","coder.ab":"linux","coder.moria":"linux","coder.c":"linux","coder-vscode--ammar--c":"linux","coder-vscode--ammar--c0":"linux","coder-vscode--ammar--powershell":"windows","coder-vscode--ammar--c0--dev":"linux"},
+  "remote.SSH.remotePlatform": {
+    "s": "linux",
+    "coder.c2": "linux",
+    "coder.ab": "linux",
+    "coder.moria": "linux",
+    "coder.c": "linux",
+    "coder-vscode--ammar--c": "linux",
+    "coder-vscode--ammar--c0": "linux",
+    "coder-vscode--ammar--powershell": "windows",
+    "coder-vscode--ammar--c0--dev": "linux"
+  },
   "gopls": {
     "ui.semanticTokens": true,
     "formatting.gofumpt": true
@@ -39,7 +49,7 @@
   "editor.fontLigatures": true,
 
   "vsicons.dontShowNewVersionMessage": true,
-  "remote.SSH.connectTimeout": 60,
+  "remote.SSH.connectTimeout": 1800,
   "remote.SSH.useLocalServer": true,
   "terminal.integrated.inheritEnv": false,
   "evenBetterToml.formatter.arrayAutoExpand": true,
@@ -154,5 +164,9 @@
   },
   "editor.unicodeHighlight.includeStrings": false,
   "typescript.tsserver.log": "verbose",
-  "window.zoomLevel": 1
+  "window.zoomLevel": 1,
+  "zig.initialSetupDone": true,
+  "zig.zls.path": "/Users/ammar/Library/Application Support/Code/User/globalStorage/ziglang.vscode-zig/zls_install/zls",
+  "remote.SSH.localServerDownload": "always",
+  "github.copilot.editor.enableAutoCompletions": true
 }
