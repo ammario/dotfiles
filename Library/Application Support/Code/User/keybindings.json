@@ -90,10 +90,6 @@
     "when": "editorLangId == julia"
   },
   {
-    "key": "shift+cmd+i",
-    "command": "editor.action.showSnippets"
-  },
-  {
     "key": "tab",
     "command": "insertSnippet",
     "when": "editorTextFocus && hasSnippetCompletions && !editorTabMovesFocus && !inSnippetMode"
@@ -102,10 +98,6 @@
     "key": "tab",
     "command": "-insertSnippet",
     "when": "editorTextFocus && hasSnippetCompletions && !editorTabMovesFocus && !inSnippetMode"
-  },
-  {
-    "key": "shift+cmd+i",
-    "command": "editor.action.insertSnippet"
   },
   {
     "key": "ctrl+shift+o",
@@ -141,5 +133,17 @@
   {
     "key": "shift+alt+t",
     "command": "go.test.coverage"
+  },
+  {
+    "key": "cmd+v",
+    "command": "editor.action.clipboardPasteAction"
+  },
+  {
+    "key": "cmd+v",
+    "command": "-editor.action.clipboardPasteAction"
+  },
+  {
+    "key": "shift+cmd+v",
+    "command": "editor.action.clipboardPasteAction"
   }
 ]
