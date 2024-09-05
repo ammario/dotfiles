@@ -3,7 +3,7 @@
 # This script implements personalize as described
 # here: https://coder.com/docs/coder-oss/latest/dotfiles#persistent-home.
 
-set -e
+set -ex
 pushd ~
 if [ ! -d dotfiles ]; then
 	git clone https://github.com/ammario/dotfiles
@@ -12,7 +12,10 @@ fi
 sudo apt-get update
 sudo apt-get install -y stow autojump redis fish rustc cargo neovim net-tools dstat cloc || true
 
-sudo npm install -g n @withgraphite/graphite-cli@stable
+# npm is installed in some nvim directory
+npm install -g n @withgraphite/graphite-cli@stable
+
+go install github.com/coder/aicommit/cmd/aicommit@main
 
 pushd dotfiles
 ./install
