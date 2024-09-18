@@ -201,3 +201,5 @@ source /Users/ammar/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
 # disable GOPROXY while Go is broken in dogfood
 #
 set --export GOPROXY ""
+
+export HOMEBREW_AUTO_UPDATE_SECS=86400
