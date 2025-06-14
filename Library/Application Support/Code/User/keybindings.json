@@ -1,5 +1,70 @@
 // Place your key bindings in this file to override the defaults
 [
+  // ─────────────────────────────────────────────────────────────
+  //  Fix Neovim “Z was pressed…”             (place at top)
+  //  • Keeps ZZ / ZQ inside real editors
+  //  • Lets plain z / Z work in every web‑view (Cursor chat, Jupyter, etc.)
+  // ─────────────────────────────────────────────────────────────
+  // ─── Wipe ALL Z‑chords everywhere ────────────────────────────────
+  //    • deletes Neovim’s ZZ / ZQ / zo / zc …
+  //    • deletes VS Code “list.*” chords (zo / zc / za / zm …)
+  //    • plain z / Z will now flow straight to the UI / editor
+  // ── Remove every Z‑chord everywhere ───────────────────────────────
+  // ─── Nuke ALL Z‑chords (Neovim + list navigation) ────────────────
+  {
+    "key": "z",
+    "command": "-vscode-neovim.send"
+  },
+  { "key": "shift+z", "command": "-vscode-neovim.send" },
+
+  // list.expand  (zo / zO)
+  {
+    "key": "z o",
+    "command": "-list.expand",
+    "when": "!editorTextFocus && !inputFocus"
+  },
+  {
+    "key": "z shift+o",
+    "command": "-list.expand",
+    "when": "!editorTextFocus && !inputFocus"
+  },
+
+  // list.collapse (zc / zC)
+  {
+    "key": "z c",
+    "command": "-list.collapse",
+    "when": "!editorTextFocus && !inputFocus"
+  },
+  {
+    "key": "z shift+c",
+    "command": "-list.collapseAllToFocus",
+    "when": "!editorTextFocus && !inputFocus"
+  },
+
+  // list.toggleExpand (za / zA)
+  {
+    "key": "z a",
+    "command": "-list.toggleExpand",
+    "when": "!editorTextFocus && !inputFocus"
+  },
+  {
+    "key": "z shift+a",
+    "command": "-list.toggleExpand",
+    "when": "!editorTextFocus && !inputFocus"
+  },
+
+  // list.collapseAll (zm / zM)
+  {
+    "key": "z m",
+    "command": "-list.collapseAll",
+    "when": "!editorTextFocus && !inputFocus"
+  },
+  {
+    "key": "z shift+m",
+    "command": "-list.collapseAll",
+    "when": "!editorTextFocus && !inputFocus"
+  },
+
   { "key": "cmd+t", "command": "workbench.action.terminal.focus" },
   {
     "key": "ctrl+`",
@@ -145,5 +210,101 @@
   {
     "key": "shift+cmd+v",
     "command": "editor.action.clipboardPasteAction"
+  },
+  {
+    "key": "cmd+i",
+    "command": "composerMode.agent"
+  },
+  {
+    "key": "shift+cmd+2",
+    "command": "composerMode.chat_2"
+  },
+  {
+    "key": "shift+cmd+a",
+    "command": "composerMode.chat_2"
+  },
+  {
+    "key": "cmd+f6",
+    "command": "workbench.action.compareEditor.nextChange",
+    "when": "textCompareEditorVisible"
+  },
+  {
+    "key": "alt+f5",
+    "command": "-workbench.action.compareEditor.nextChange",
+    "when": "textCompareEditorVisible"
+  },
+  {
+    "key": "cmd+f6",
+    "command": "chatEditor.action.navigateNext",
+    "when": "chat.hasEditorModifications && editorFocus || chat.hasNotebookEditorModifications && editorFocus"
+  },
+  {
+    "key": "alt+f5",
+    "command": "-chatEditor.action.navigateNext",
+    "when": "chat.hasEditorModifications && editorFocus || chat.hasNotebookEditorModifications && editorFocus"
+  },
+  {
+    "key": "cmd+f6",
+    "command": "workbench.action.editor.nextChange",
+    "when": "editorTextFocus && !textCompareEditorActive"
+  },
+  {
+    "key": "alt+f5",
+    "command": "-workbench.action.editor.nextChange",
+    "when": "editorTextFocus && !textCompareEditorActive"
+  },
+  {
+    "key": "shift+cmd+.",
+    "command": "-editor.action.accessibleViewGoToSymbol",
+    "when": "accessibilityHelpIsShown && accessibleViewGoToSymbolSupported || accessibleViewGoToSymbolSupported && accessibleViewIsShown"
+  },
+  {
+    "key": "shift+cmd+j",
+    "command": "editor.action.inlineDiffs.nextDiffFile",
+    "when": "editorTextFocus && @inlineDiffs.nextDiffFile.hasInlineDiffsInAnyEditor"
+  },
+  {
+    "key": "alt+l",
+    "command": "-editor.action.inlineDiffs.nextDiffFile",
+    "when": "editorTextFocus && @inlineDiffs.nextDiffFile.hasInlineDiffsInAnyEditor"
+  },
+  {
+    "key": "c",
+    "command": "-notebook.cell.copy",
+    "when": "notebookEditorFocused && !inputFocus && !notebookOutputInputFocused"
+  },
+  {
+    "key": "shift+cmd+c",
+    "command": "-workbench.action.terminal.openNativeConsole",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "shift+cmd+c",
+    "command": "notebook.cellOutput.copy"
+  },
+  {
+    "key": "a",
+    "command": "-notebook.cell.insertCodeCellAboveAndFocusContainer",
+    "when": "notebookEditorFocused && !inputFocus && !notebookOutputInputFocused"
+  },
+  {
+    "key": "escape",
+    "command": "-notebook.cell.quitEdit",
+    "when": "inputFocus && notebookEditorFocused && !editorHasMultipleSelections && !editorHasSelection && !editorHoverVisible && !inlineChatFocused"
+  },
+  {
+    "key": "escape",
+    "command": "-notebook.cell.quitEdit",
+    "when": "notebookEditorFocused && notebookOutputFocused"
+  },
+  {
+    "key": "v",
+    "command": "-notebook.cell.paste",
+    "when": "notebookEditorFocused && !inputFocus && !notebookOutputInputFocused"
+  },
+  {
+    "key": "shift+cmd+v",
+    "command": "-notebook.cell.pasteAbove",
+    "when": "notebookEditorFocused && !inputFocus"
   }
 ]
