@@ -1,0 +1,7 @@
+# Ghostty Configuration
+# Theme
+# theme = min-dark.conf
+theme = Nocturnal Winter
+
+# Font settings (adjust as needed)
+font-family = "Berkeley Mono"

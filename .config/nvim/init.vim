@@ -73,3 +73,11 @@ call plug#end()
 			\ textwidth=80
 			\ filetype=gitcommit
 	augroup END
+" vscode-neovim
+  set norevins
+  set noallowrevins
+
+" VS Code cursor fix
+nnoremap Z <Nop>
+nnoremap ZZ <Nop>
+nnoremap ZQ <Nop>

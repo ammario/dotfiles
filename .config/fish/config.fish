@@ -1,3 +1,41 @@
+
+# Set special PATH
+function add_path -a dir
+  if test -d $dir
+    set -x PATH $dir $PATH
+  end
+end
+
+add_path /usr/local/opt/findutils/libexec/gnubin
+add_path /usr/local/opt/make/libexec/gnubin
+
+add_path ~/Projects/ammario/dotfiles/bin
+add_path ~/Projects/dotfiles/bin
+add_path ~/dotfiles/bin
+add_path ~/m/devbin
+add_path ~/c/devbin
+add_path ~/go/bin
+add_path ~/bin
+add_path ~/.cargo/bin
+add_path /usr/local/opt/ruby/bin
+add_path ~/.airplane/bin
+add_path ~/.local/bin
+add_path /usr/local/bin/
+add_path ~/.bun/bin
+set fish_greeting ""
+set GOPATH ~/go
+set GO111MODULE on
+
+# export LIBTORCH="$HOME/libtorch"
+# export DYLD_LIBRARY_PATH="$LIBTORCH/lib:$DYLD_LIBRARY_PATH"
+
+# Force Cursor to use bash because
+# it isn't great at using Fish. We intentionally do this
+# after setting $PATH so tools work the same.
+if set -q CURSOR_TRACE_ID; and set -q COMPOSER_NO_INTERACTION
+    exec /usr/local/bin/bash
+end
+
 set pink eb54c6
 set teal 54ebc5
 set blue 4bb2d3
@@ -106,32 +144,6 @@ alias gcssh="gcloud compute ssh"
 
 alias we="watchexec -r -c --"
 
-# Set special PATH
-
-function add_path -a dir
-  if test -d $dir
-    set PATH $dir $PATH
-  end
-end
-
-add_path /usr/local/opt/findutils/libexec/gnubin
-add_path /usr/local/opt/make/libexec/gnubin
-
-add_path ~/Projects/ammario/dotfiles/bin
-add_path ~/Projects/dotfiles/bin
-add_path ~/dotfiles/bin
-add_path ~/m/devbin
-add_path ~/c/devbin
-add_path ~/go/bin
-add_path ~/bin
-add_path ~/.cargo/bin
-add_path /usr/local/opt/ruby/bin
-add_path ~/.airplane/bin
-add_path ~/.local/bin
-add_path /usr/local/bin/
-set fish_greeting ""
-set GOPATH ~/go
-set GO111MODULE on
 
 # Custom keybinds
 # See https://fishshell.com/docs/current/commands.html#bind for syntax reference.
@@ -203,3 +215,4 @@ source /Users/ammar/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
 set --export GOPROXY ""
 
 export HOMEBREW_AUTO_UPDATE_SECS=86400
+export TERM=xterm-256color

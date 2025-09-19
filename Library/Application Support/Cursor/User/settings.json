@@ -49,9 +49,7 @@
   },
   "workbench.iconTheme": "vscode-icons",
   "terminal.integrated.commandsToSkipShell": ["language-julia.interrupt"],
-  "editor.rulers": [
-    100,
-  ],
+  "editor.rulers": [100],
   "editor.fontLigatures": true,
   "vsicons.dontShowNewVersionMessage": true,
   "remote.SSH.connectTimeout": 1800,
@@ -190,20 +188,36 @@
     "<C-o>": false,
     "<C-e>": false
   },
-  "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
-  },
   "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin//nvim",
   "cursor.composer.shouldAllowCustomModes": true,
   "vscode-neovim.neovimInitVimPaths.darwin": "~/.config/nvim/init.vim",
   "editor.experimentalEditContextEnabled": true,
   "rust-analyzer.runnables.extraEnv": {
-    "LIBTORCH": "/opt/libtorch-2.7.0"
+    // "LIBTORCH": "/Users/ammar/libtorch/"
   },
   "rust-analyzer.server.extraEnv": {
-    "LIBTORCH": "/opt/libtorch-2.7.0"
+    // "LIBTORCH": "/Users/ammar/libtorch/"
   },
-  "cursor.composer.shouldChimeAfterChatFinishes": true,
   "notebook.outline.showCodeCells": true,
-  "workbench.colorTheme": "Min Dark"
+  "workbench.colorTheme": "Min Dark",
+  "cursor-retrieval.canAttemptGithubLogin": false,
+  "search.exclude": {
+    "**/.venv": true,
+    "**/target/**": true
+  },
+  "files.watcherExclude": {
+    "**/.venv/**": true,
+    "**/node_modules/**": true,
+    "**/target/**": true
+  },
+  "rust-analyzer.workspace.symbol.search.kind": "all_symbols",
+  "rust-analyzer.workspace.symbol.search.limit": 16,
+  "rust-analyzer.trace.server": "verbose",
+  "rust-analyzer.files.exclude": ["target", ".cargo", ".git"],
+  "cursor.windowSwitcher.sidebarHoverCollapsed": true,
+  "terminal.integrated.automationProfile.osx": {
+    "path": "/usr/local/bin//bash"
+  },
+  "rust-analyzer.rustfmt.rangeFormatting.enable": true,
+  "rust-analyzer.cargo.extraEnv": {}
 }
